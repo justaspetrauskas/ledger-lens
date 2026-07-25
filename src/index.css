@@ -96,6 +96,10 @@ body { background: var(--bg); font-size: 15px; line-height: 1.55; }
   font-size: 13px; color: var(--text-dim); background: var(--accent-soft);
   border: 1px solid #d6e3ff; border-radius: 10px; padding: 10px 14px; margin-top: 16px;
 }
+/* live mode fell back to a scripted answer — amber, distinct from the info hint */
+.hint--fallback {
+  color: var(--text); background: #fffaf0; border-color: #f0c674; font-weight: 500;
+}
 
 /* proactive "needs review" banner in the empty state */
 .review-banner {

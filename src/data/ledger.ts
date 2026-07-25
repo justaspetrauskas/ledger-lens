@@ -5,7 +5,7 @@
 // so every visitor sees the same books and the scripted answers always match
 // the data they cite.
 
-import csvRaw from './ledger.csv?raw'
+import csvRaw from './ledgerCsv'
 
 export type Category =
   | 'Revenue'

@@ -1,9 +1,9 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { scriptedFallback, scriptedQAs, type ScriptedQA } from './data/scripted'
 import { streamText, type TextStreamHandle } from './lib/streamText'
 import { Markdown } from './lib/markdown'
 import { flaggedForReviewCount } from './lib/ledgerQuery'
-import { askLive, type LiveTurn } from './lib/liveClient'
+import { askLive, LiveError, type LiveTurn } from './lib/liveClient'
 import type { AssistantPayload, AuditEntry, ChatItem, CitationDef, ProposedAction } from './lib/types'
 import { ChartMessage } from './components/ChartMessage'
 import { CitationDrawer } from './components/CitationDrawer'
@@ -21,17 +21,42 @@ const uid = () => `m${++nextId}`
 const reviewCount = flaggedForReviewCount()
 const anomalyQa = scriptedQAs.find((qa) => qa.id === 'anomalies')
 
+// Why live mode fell back to a scripted answer — shown as a small banner.
+function fallbackNoteFor(err: unknown): string {
+  const reason = err instanceof LiveError ? err.reason : 'network'
+  switch (reason) {
+    case 'unauthorized':
+      return 'That demo code wasn’t recognised — showing the scripted answer instead.'
+    case 'exhausted':
+      return 'The live demo budget is spent for now — showing the scripted answer instead.'
+    case 'unavailable':
+      return 'Live mode isn’t configured on this server — showing the scripted answer instead.'
+    default:
+      return 'Couldn’t reach live mode — showing the scripted answer instead.'
+  }
+}
+
 export default function App() {
   const [mode, setMode] = useState<Mode>('scripted')
-  const [apiKey, setApiKey] = useState('')
+  const [accessCode, setAccessCode] = useState('')
   const [items, setItems] = useState<ChatItem[]>([])
   const [input, setInput] = useState('')
   const [busy, setBusy] = useState(false)
   const [active, setActive] = useState<{ itemId: string; n: number } | null>(null)
   const [audit, setAudit] = useState<AuditEntry[]>([])
   const [auditOpen, setAuditOpen] = useState(false)
+  const [fallbackNote, setFallbackNote] = useState<string | null>(null)
+  const [liveStatus, setLiveStatus] = useState<{ available: boolean; remaining: number } | null>(null)
   const streamRef = useRef<TextStreamHandle | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
+
+  // Ask the proxy whether live mode is usable (key configured, budget left).
+  useEffect(() => {
+    fetch('/api/status')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((s) => setLiveStatus(s))
+      .catch(() => setLiveStatus({ available: false, remaining: 0 }))
+  }, [])
 
   const scrollDown = () => {
     requestAnimationFrame(() => {
@@ -97,9 +122,12 @@ export default function App() {
 
   // --- live flow -------------------------------------------------------------
 
-  const askLiveMode = async (question: string) => {
-    if (busy || !apiKey) return
+  // Ask via the proxy. On any live failure (bad code, spent budget, unreachable),
+  // gracefully fall back to the supplied scripted payload so the demo never dead-ends.
+  const askLiveMode = async (question: string, fallback: AssistantPayload) => {
+    if (busy) return
     setBusy(true)
+    setFallbackNote(null)
     const answerId = uid()
     const history: LiveTurn[] = items
       .filter((it) => it.role === 'user' || (it.role === 'assistant' && it.done && it.answer))
@@ -114,7 +142,7 @@ export default function App() {
     ])
     scrollDown()
     try {
-      const payload = await askLive(apiKey, history, question, {
+      const payload = await askLive(accessCode, history, question, {
         onText: (text) => {
           patchItem(answerId, { streamedText: text, answer: text })
           scrollDown()
@@ -130,14 +158,24 @@ export default function App() {
           ),
       })
       patchItem(answerId, { ...payload, streamedText: payload.answer, done: true })
-    } catch (err) {
-      patchItem(answerId, {
-        streamedText: `**Live request failed.** ${err instanceof Error ? err.message : String(err)}`,
-        done: true,
-      })
-    } finally {
       setBusy(false)
       scrollDown()
+    } catch (err) {
+      // Reset the in-flight answer to the scripted fallback and stream it.
+      setFallbackNote(fallbackNoteFor(err))
+      setItems((prev) =>
+        prev.map((it) =>
+          it.id === answerId && it.role === 'assistant'
+            ? { ...it, ...fallback, streamedText: '', done: false }
+            : it,
+        ),
+      )
+      scrollDown()
+      streamRef.current = streamText(fallback.answer, (text, done) => {
+        patchItem(answerId, { streamedText: text, done })
+        if (done) setBusy(false)
+        scrollDown()
+      })
     }
   }
 
@@ -145,14 +183,14 @@ export default function App() {
     const q = input.trim()
     if (!q) return
     setInput('')
-    if (mode === 'live') void askLiveMode(q)
+    if (mode === 'live') void askLiveMode(q, scriptedFallback)
     else askScripted(q, scriptedFallback)
   }
 
   // Ask a curated question — routes through live or scripted depending on mode.
   const askQa = (qa: ScriptedQA) => {
     if (busy) return
-    if (mode === 'live') void askLiveMode(qa.question)
+    if (mode === 'live') void askLiveMode(qa.question, qa.payload)
     else askScripted(qa.question, qa.payload)
   }
 
@@ -187,9 +225,9 @@ export default function App() {
               <input
                 type="password"
                 className="key-input"
-                placeholder="Anthropic API key (memory only)"
-                value={apiKey}
-                onChange={(e) => setApiKey(e.target.value)}
+                placeholder="Demo access code"
+                value={accessCode}
+                onChange={(e) => setAccessCode(e.target.value)}
                 autoComplete="off"
               />
             )}
@@ -260,10 +298,23 @@ export default function App() {
             ),
           )}
 
-          {mode === 'live' && !apiKey && (
+          {fallbackNote && <div className="hint hint--fallback">{fallbackNote}</div>}
+
+          {mode === 'live' && (
             <div className="hint">
-              Live mode calls the Anthropic API directly from your browser with your own key — it
-              stays in memory, is sent only to api.anthropic.com, and is gone on reload.
+              {liveStatus && !liveStatus.available ? (
+                <>
+                  Live mode is currently unavailable (budget spent or not configured) — questions
+                  will answer from the scripted responses.
+                </>
+              ) : (
+                <>
+                  Live mode runs on a funded, budget-capped key (Claude Sonnet, with extended
+                  reasoning) behind a server proxy — your key is never involved. Enter the demo
+                  access code from the email. When the budget’s spent, it falls back to the
+                  scripted answers.
+                </>
+              )}
             </div>
           )}
         </main>
