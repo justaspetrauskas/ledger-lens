@@ -1,0 +1,1407 @@
+id,date,description,counterparty,category,amount
+L-00001,2024-01-01,Webshop order #10429,Shopify payout,Revenue,650
+L-00002,2024-01-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-29800
+L-00003,2024-01-03,Green coffee beans · inv 10447,Highland Beans Ltd,COGS,-17350
+L-00004,2024-01-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00005,2024-01-05,Webshop order #10430,Shopify payout,Revenue,1900
+L-00006,2024-01-05,Webshop order #10432,Shopify payout,Revenue,1150
+L-00007,2024-01-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00008,2024-01-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00009,2024-01-06,Webshop order #10428,Shopify payout,Revenue,1150
+L-00010,2024-01-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00011,2024-01-07,Wholesale coffee delivery · inv 10426,Hotel Øresund A/S,Revenue,16900
+L-00012,2024-01-07,Shipping boxes · inv 10449,Nordic Paper Bags AB,COGS,-4200
+L-00013,2024-01-08,Wholesale coffee delivery · inv 10424,Restaurant Havnen IVS,Revenue,28050
+L-00014,2024-01-09,Webshop order #10440,Shopify payout,Revenue,1500
+L-00015,2024-01-09,Webshop order #10442,Shopify payout,Revenue,700
+L-00016,2024-01-11,Webshop order #10431,Shopify payout,Revenue,2400
+L-00017,2024-01-11,Webshop order #10433,Shopify payout,Revenue,2350
+L-00018,2024-01-12,Webshop order #10439,Shopify payout,Revenue,1650
+L-00019,2024-01-12,Webshop order #10441,Shopify payout,Revenue,2150
+L-00020,2024-01-12,Shipping boxes · inv 10450,Emballagehuset ApS,COGS,-3700
+L-00021,2024-01-13,Wholesale coffee delivery · inv 10425,Baltika Coffee ApS,Revenue,28300
+L-00022,2024-01-14,Webshop order #10438,Shopify payout,Revenue,350
+L-00023,2024-01-14,Webshop order #10444,Shopify payout,Revenue,700
+L-00024,2024-01-14,Green coffee beans · inv 10448,Antigua Importers ApS,COGS,-29000
+L-00025,2024-01-14,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3650
+L-00026,2024-01-15,Webshop order #10434,Shopify payout,Revenue,2550
+L-00027,2024-01-15,Green coffee beans · inv 10446,Highland Beans Ltd,COGS,-17500
+L-00028,2024-01-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-9100
+L-00029,2024-01-15,Water & waste,HOFOR A/S,Utilities,-700
+L-00030,2024-01-17,Payment processing fee · ref 10452,Nets A/S,Fees,-500
+L-00031,2024-01-17,Grinder maintenance,Probat Service Nord ApS,Maintenance,-5100
+L-00032,2024-01-20,Wholesale coffee delivery · inv 10423,Baltika Coffee ApS,Revenue,16900
+L-00033,2024-01-20,Wholesale coffee delivery · inv 10427,Kantine Amager P/S,Revenue,22500
+L-00034,2024-01-22,Wholesale coffee delivery · inv 10422,Baltika Coffee ApS,Revenue,18250
+L-00035,2024-01-22,Webshop order #10443,Shopify payout,Revenue,1800
+L-00036,2024-01-22,Webshop order #10445,Shopify payout,Revenue,2250
+L-00037,2024-01-23,Webshop order #10435,Shopify payout,Revenue,2600
+L-00038,2024-01-24,Wholesale coffee delivery · inv 10420,Kantine Amager P/S,Revenue,27550
+L-00039,2024-01-24,Payment processing fee · ref 10451,Nets A/S,Fees,-400
+L-00040,2024-01-27,Wholesale coffee delivery · inv 10421,Kantine Amager P/S,Revenue,28700
+L-00041,2024-01-27,Webshop order #10436,Shopify payout,Revenue,450
+L-00042,2024-01-27,Webshop order #10437,Shopify payout,Revenue,1150
+L-00043,2024-01-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00044,2024-01-28,Bank account & card fees,Danske Bank A/S,Fees,-550
+L-00045,2024-02-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-29800
+L-00046,2024-02-02,Wholesale coffee delivery · inv 10454,Kaffebar Vesterbro ApS,Revenue,17050
+L-00047,2024-02-02,Webshop order #10476,Shopify payout,Revenue,1150
+L-00048,2024-02-03,Green coffee beans · inv 10480,Cerrado Trading GmbH,COGS,-28100
+L-00049,2024-02-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00050,2024-02-04,Webshop order #10465,Shopify payout,Revenue,450
+L-00051,2024-02-05,Wholesale coffee delivery · inv 10459,Hotel Øresund A/S,Revenue,23150
+L-00052,2024-02-05,Webshop order #10464,Shopify payout,Revenue,2100
+L-00053,2024-02-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00054,2024-02-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00055,2024-02-06,Webshop order #10471,Shopify payout,Revenue,2150
+L-00056,2024-02-06,Webshop order #10474,Shopify payout,Revenue,1300
+L-00057,2024-02-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00058,2024-02-07,Webshop order #10461,Shopify payout,Revenue,1750
+L-00059,2024-02-08,Wholesale coffee delivery · inv 10458,Grønne Kontorer ApS,Revenue,29550
+L-00060,2024-02-08,Webshop order #10477,Shopify payout,Revenue,750
+L-00061,2024-02-08,Payment processing fee · ref 10483,Nets A/S,Fees,-650
+L-00062,2024-02-11,Webshop order #10462,Shopify payout,Revenue,850
+L-00063,2024-02-12,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-4250
+L-00064,2024-02-13,Takeaway cups & lids · inv 10482,Nordic Paper Bags AB,COGS,-5250
+L-00065,2024-02-14,Wholesale coffee delivery · inv 10453,CoWork Nordhavn A/S,Revenue,15000
+L-00066,2024-02-15,Webshop order #10466,Shopify payout,Revenue,2400
+L-00067,2024-02-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-8100
+L-00068,2024-02-15,Water & waste,HOFOR A/S,Utilities,-700
+L-00069,2024-02-16,Wholesale coffee delivery · inv 10460,Restaurant Havnen IVS,Revenue,16550
+L-00070,2024-02-16,Webshop order #10467,Shopify payout,Revenue,500
+L-00071,2024-02-17,Wholesale coffee delivery · inv 10456,Grønne Kontorer ApS,Revenue,31550
+L-00072,2024-02-17,Green coffee beans · inv 10479,Highland Beans Ltd,COGS,-27150
+L-00073,2024-02-18,Webshop order #10463,Shopify payout,Revenue,2550
+L-00074,2024-02-18,"Bags, valves & labels · inv 10481",Emballagehuset ApS,COGS,-2000
+L-00075,2024-02-19,Wholesale coffee delivery · inv 10455,Grønne Kontorer ApS,Revenue,14800
+L-00076,2024-02-19,Webshop order #10470,Shopify payout,Revenue,1100
+L-00077,2024-02-20,Wholesale coffee delivery · inv 10457,Kaffebar Vesterbro ApS,Revenue,10700
+L-00078,2024-02-20,Payment processing fee · ref 10484,Nets A/S,Fees,-600
+L-00079,2024-02-21,Webshop order #10472,Shopify payout,Revenue,550
+L-00080,2024-02-22,Webshop order #10468,Shopify payout,Revenue,2350
+L-00081,2024-02-22,Webshop order #10473,Shopify payout,Revenue,700
+L-00082,2024-02-24,Webshop order #10469,Shopify payout,Revenue,1250
+L-00083,2024-02-24,Webshop order #10475,Shopify payout,Revenue,2450
+L-00084,2024-02-24,Webshop order #10478,Shopify payout,Revenue,2650
+L-00085,2024-02-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00086,2024-02-28,Bank account & card fees,Danske Bank A/S,Fees,-500
+L-00087,2024-03-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-29800
+L-00088,2024-03-02,Webshop order #10493,Shopify payout,Revenue,1350
+L-00089,2024-03-02,Webshop order #10498,Shopify payout,Revenue,600
+L-00090,2024-03-02,Webshop order #10511,Shopify payout,Revenue,1150
+L-00091,2024-03-03,Wholesale coffee delivery · inv 10485,Grønne Kontorer ApS,Revenue,12000
+L-00092,2024-03-03,Green coffee beans · inv 10514,Cerrado Trading GmbH,COGS,-16100
+L-00093,2024-03-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00094,2024-03-04,Webshop order #10505,Shopify payout,Revenue,2200
+L-00095,2024-03-05,Webshop order #10495,Shopify payout,Revenue,700
+L-00096,2024-03-05,Webshop order #10503,Shopify payout,Revenue,1550
+L-00097,2024-03-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00098,2024-03-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00099,2024-03-06,Green coffee beans · inv 10513,Cerrado Trading GmbH,COGS,-31500
+L-00100,2024-03-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00101,2024-03-07,Wholesale coffee delivery · inv 10491,Hotel Øresund A/S,Revenue,12800
+L-00102,2024-03-08,Webshop order #10510,Shopify payout,Revenue,2250
+L-00103,2024-03-11,Payment processing fee · ref 10519,Nets A/S,Fees,-200
+L-00104,2024-03-13,"Bags, valves & labels · inv 10516",Nordic Paper Bags AB,COGS,-6200
+L-00105,2024-03-14,Webshop order #10499,Shopify payout,Revenue,1750
+L-00106,2024-03-14,Webshop order #10500,Shopify payout,Revenue,1500
+L-00107,2024-03-14,"Bags, valves & labels · inv 10517",Emballagehuset ApS,COGS,-4300
+L-00108,2024-03-15,Wholesale coffee delivery · inv 10490,Baltika Coffee ApS,Revenue,18700
+L-00109,2024-03-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-8450
+L-00110,2024-03-15,Water & waste,HOFOR A/S,Utilities,-1200
+L-00111,2024-03-19,Wholesale coffee delivery · inv 10489,Kaffebar Vesterbro ApS,Revenue,15500
+L-00112,2024-03-19,Webshop order #10496,Shopify payout,Revenue,800
+L-00113,2024-03-19,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-4900
+L-00114,2024-03-19,Payment processing fee · ref 10518,Nets A/S,Fees,-350
+L-00115,2024-03-20,Wholesale coffee delivery · inv 10488,Baltika Coffee ApS,Revenue,30450
+L-00116,2024-03-20,Webshop order #10507,Shopify payout,Revenue,1800
+L-00117,2024-03-20,Green coffee beans · inv 10515,Highland Beans Ltd,COGS,-15700
+L-00118,2024-03-21,Webshop order #10502,Shopify payout,Revenue,1800
+L-00119,2024-03-21,Webshop order #10506,Shopify payout,Revenue,1450
+L-00120,2024-03-21,Webshop order #10509,Shopify payout,Revenue,2200
+L-00121,2024-03-22,Wholesale coffee delivery · inv 10486,Hotel Øresund A/S,Revenue,28850
+L-00122,2024-03-22,Wholesale coffee delivery · inv 10487,Kantine Amager P/S,Revenue,11550
+L-00123,2024-03-23,Webshop order #10494,Shopify payout,Revenue,950
+L-00124,2024-03-23,Webshop order #10497,Shopify payout,Revenue,600
+L-00125,2024-03-23,Webshop order #10504,Shopify payout,Revenue,800
+L-00126,2024-03-23,Webshop order #10512,Shopify payout,Revenue,2450
+L-00127,2024-03-26,Webshop order #10492,Shopify payout,Revenue,1400
+L-00128,2024-03-26,Webshop order #10508,Shopify payout,Revenue,1650
+L-00129,2024-03-27,Webshop order #10501,Shopify payout,Revenue,1000
+L-00130,2024-03-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00131,2024-03-28,Bank account & card fees,Danske Bank A/S,Fees,-600
+L-00132,2024-04-01,Webshop order #10542,Shopify payout,Revenue,2800
+L-00133,2024-04-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-29800
+L-00134,2024-04-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00135,2024-04-04,Webshop order #10533,Shopify payout,Revenue,800
+L-00136,2024-04-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00137,2024-04-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00138,2024-04-06,Wholesale coffee delivery · inv 10528,CoWork Nordhavn A/S,Revenue,16000
+L-00139,2024-04-06,Webshop order #10547,Shopify payout,Revenue,2300
+L-00140,2024-04-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00141,2024-04-08,Wholesale coffee delivery · inv 10521,Kantine Amager P/S,Revenue,15900
+L-00142,2024-04-09,Webshop order #10530,Shopify payout,Revenue,550
+L-00143,2024-04-09,Green coffee beans · inv 10548,Highland Beans Ltd,COGS,-21400
+L-00144,2024-04-09,Takeaway cups & lids · inv 10552,Nordic Paper Bags AB,COGS,-5500
+L-00145,2024-04-10,Webshop order #10541,Shopify payout,Revenue,1550
+L-00146,2024-04-10,Cooling repair,Probat Service Nord ApS,Maintenance,-6000
+L-00147,2024-04-11,Webshop order #10531,Shopify payout,Revenue,2400
+L-00148,2024-04-11,Webshop order #10546,Shopify payout,Revenue,1300
+L-00149,2024-04-11,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3050
+L-00150,2024-04-12,Webshop order #10545,Shopify payout,Revenue,1700
+L-00151,2024-04-14,Wholesale coffee delivery · inv 10524,Kantine Amager P/S,Revenue,11800
+L-00152,2024-04-14,Search advertising,Google Ireland Ltd,Marketing,-3750
+L-00153,2024-04-15,Webshop order #10529,Shopify payout,Revenue,950
+L-00154,2024-04-15,Webshop order #10534,Shopify payout,Revenue,2000
+L-00155,2024-04-15,Webshop order #10537,Shopify payout,Revenue,900
+L-00156,2024-04-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-5750
+L-00157,2024-04-15,Water & waste,HOFOR A/S,Utilities,-950
+L-00158,2024-04-15,Payment processing fee · ref 10553,Nets A/S,Fees,-400
+L-00159,2024-04-16,Webshop order #10532,Shopify payout,Revenue,850
+L-00160,2024-04-16,Webshop order #10543,Shopify payout,Revenue,1250
+L-00161,2024-04-16,Webshop order #10544,Shopify payout,Revenue,2800
+L-00162,2024-04-17,Webshop order #10539,Shopify payout,Revenue,1650
+L-00163,2024-04-18,Wholesale coffee delivery · inv 10525,Bageriet Sundby ApS,Revenue,24050
+L-00164,2024-04-19,Wholesale coffee delivery · inv 10522,Kaffebar Vesterbro ApS,Revenue,27100
+L-00165,2024-04-19,Webshop order #10536,Shopify payout,Revenue,1200
+L-00166,2024-04-19,Webshop order #10540,Shopify payout,Revenue,2250
+L-00167,2024-04-19,Shipping boxes · inv 10551,Emballagehuset ApS,COGS,-5300
+L-00168,2024-04-20,Green coffee beans · inv 10549,Highland Beans Ltd,COGS,-31450
+L-00169,2024-04-20,Shipping boxes · inv 10550,Nordic Paper Bags AB,COGS,-4600
+L-00170,2024-04-22,Wholesale coffee delivery · inv 10520,Baltika Coffee ApS,Revenue,21250
+L-00171,2024-04-22,Webshop order #10535,Shopify payout,Revenue,1250
+L-00172,2024-04-22,Webshop order #10538,Shopify payout,Revenue,750
+L-00173,2024-04-23,Wholesale coffee delivery · inv 10527,Kaffebar Vesterbro ApS,Revenue,14350
+L-00174,2024-04-24,Wholesale coffee delivery · inv 10523,CoWork Nordhavn A/S,Revenue,23050
+L-00175,2024-04-27,Wholesale coffee delivery · inv 10526,CoWork Nordhavn A/S,Revenue,12400
+L-00176,2024-04-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00177,2024-04-28,Bank account & card fees,Danske Bank A/S,Fees,-350
+L-00178,2024-05-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-29800
+L-00179,2024-05-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00180,2024-05-04,Shipping boxes · inv 10591,Nordic Paper Bags AB,COGS,-3000
+L-00181,2024-05-05,Webshop order #10578,Shopify payout,Revenue,1550
+L-00182,2024-05-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00183,2024-05-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00184,2024-05-06,Wholesale coffee delivery · inv 10555,Baltika Coffee ApS,Revenue,24700
+L-00185,2024-05-06,Webshop order #10568,Shopify payout,Revenue,2450
+L-00186,2024-05-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00187,2024-05-07,Webshop order #10576,Shopify payout,Revenue,1250
+L-00188,2024-05-07,Green coffee beans · inv 10587,Cerrado Trading GmbH,COGS,-19650
+L-00189,2024-05-08,Webshop order #10567,Shopify payout,Revenue,1400
+L-00190,2024-05-08,Shipping boxes · inv 10590,Emballagehuset ApS,COGS,-5000
+L-00191,2024-05-09,Webshop order #10565,Shopify payout,Revenue,1350
+L-00192,2024-05-10,Webshop order #10564,Shopify payout,Revenue,1050
+L-00193,2024-05-10,Webshop order #10581,Shopify payout,Revenue,2100
+L-00194,2024-05-10,Webshop order #10584,Shopify payout,Revenue,700
+L-00195,2024-05-12,Wholesale coffee delivery · inv 10554,Baltika Coffee ApS,Revenue,26800
+L-00196,2024-05-12,Webshop order #10569,Shopify payout,Revenue,2350
+L-00197,2024-05-12,Webshop order #10570,Shopify payout,Revenue,650
+L-00198,2024-05-12,Payment processing fee · ref 10593,Nets A/S,Fees,-300
+L-00199,2024-05-13,Webshop order #10562,Shopify payout,Revenue,2650
+L-00200,2024-05-13,Webshop order #10563,Shopify payout,Revenue,2250
+L-00201,2024-05-14,Webshop order #10585,Shopify payout,Revenue,1750
+L-00202,2024-05-15,Webshop order #10573,Shopify payout,Revenue,1800
+L-00203,2024-05-15,Webshop order #10580,Shopify payout,Revenue,2650
+L-00204,2024-05-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-8600
+L-00205,2024-05-15,Water & waste,HOFOR A/S,Utilities,-750
+L-00206,2024-05-16,Webshop order #10574,Shopify payout,Revenue,2200
+L-00207,2024-05-17,Webshop order #10582,Shopify payout,Revenue,2550
+L-00208,2024-05-17,Webshop order #10583,Shopify payout,Revenue,1750
+L-00209,2024-05-17,Green coffee beans · inv 10588,Antigua Importers ApS,COGS,-27050
+L-00210,2024-05-18,Webshop order #10577,Shopify payout,Revenue,2150
+L-00211,2024-05-18,Shipping boxes · inv 10592,Emballagehuset ApS,COGS,-7300
+L-00212,2024-05-19,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-5300
+L-00213,2024-05-19,Sourcing trip / trade fair,Hotel Bogotá Centro,Travel,-10200
+L-00214,2024-05-20,Webshop order #10566,Shopify payout,Revenue,2400
+L-00215,2024-05-21,Webshop order #10586,Shopify payout,Revenue,1000
+L-00216,2024-05-21,Green coffee beans · inv 10589,Antigua Importers ApS,COGS,-24700
+L-00217,2024-05-22,Webshop order #10561,Shopify payout,Revenue,400
+L-00218,2024-05-23,Wholesale coffee delivery · inv 10558,Kantine Amager P/S,Revenue,28800
+L-00219,2024-05-23,Wholesale coffee delivery · inv 10559,Hotel Øresund A/S,Revenue,33150
+L-00220,2024-05-23,Webshop order #10571,Shopify payout,Revenue,1850
+L-00221,2024-05-23,Webshop order #10572,Shopify payout,Revenue,2450
+L-00222,2024-05-23,Webshop order #10575,Shopify payout,Revenue,1550
+L-00223,2024-05-24,Wholesale coffee delivery · inv 10556,Restaurant Havnen IVS,Revenue,10900
+L-00224,2024-05-25,Wholesale coffee delivery · inv 10557,Restaurant Havnen IVS,Revenue,22150
+L-00225,2024-05-26,Webshop order #10560,Shopify payout,Revenue,2650
+L-00226,2024-05-27,Webshop order #10579,Shopify payout,Revenue,1600
+L-00227,2024-05-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00228,2024-05-28,Bank account & card fees,Danske Bank A/S,Fees,-500
+L-00229,2024-06-01,Webshop order #10606,Shopify payout,Revenue,550
+L-00230,2024-06-01,Webshop order #10610,Shopify payout,Revenue,900
+L-00231,2024-06-01,Webshop order #10616,Shopify payout,Revenue,1600
+L-00232,2024-06-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-29800
+L-00233,2024-06-03,Wholesale coffee delivery · inv 10598,Baltika Coffee ApS,Revenue,27450
+L-00234,2024-06-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00235,2024-06-04,Webshop order #10614,Shopify payout,Revenue,2800
+L-00236,2024-06-04,Webshop order #10615,Shopify payout,Revenue,450
+L-00237,2024-06-05,Wholesale coffee delivery · inv 10594,Restaurant Havnen IVS,Revenue,21450
+L-00238,2024-06-05,Webshop order #10600,Shopify payout,Revenue,1500
+L-00239,2024-06-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00240,2024-06-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00241,2024-06-06,Webshop order #10603,Shopify payout,Revenue,2700
+L-00242,2024-06-06,Webshop order #10604,Shopify payout,Revenue,750
+L-00243,2024-06-06,Webshop order #10623,Shopify payout,Revenue,800
+L-00244,2024-06-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00245,2024-06-07,Green coffee beans · inv 10624,Cerrado Trading GmbH,COGS,-16650
+L-00246,2024-06-09,Webshop order #10605,Shopify payout,Revenue,2600
+L-00247,2024-06-09,Webshop order #10611,Shopify payout,Revenue,2850
+L-00248,2024-06-10,Webshop order #10620,Shopify payout,Revenue,700
+L-00249,2024-06-10,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3750
+L-00250,2024-06-11,Wholesale coffee delivery · inv 10597,Baltika Coffee ApS,Revenue,23450
+L-00251,2024-06-12,Wholesale coffee delivery · inv 10599,Kantine Amager P/S,Revenue,27150
+L-00252,2024-06-12,Webshop order #10602,Shopify payout,Revenue,1650
+L-00253,2024-06-14,Webshop order #10607,Shopify payout,Revenue,2550
+L-00254,2024-06-14,Webshop order #10613,Shopify payout,Revenue,2550
+L-00255,2024-06-14,Green coffee beans · inv 10625,Cerrado Trading GmbH,COGS,-30300
+L-00256,2024-06-14,Search advertising,Google Ireland Ltd,Marketing,-3850
+L-00257,2024-06-15,Wholesale coffee delivery · inv 10595,Kantine Amager P/S,Revenue,11100
+L-00258,2024-06-15,Webshop order #10612,Shopify payout,Revenue,2800
+L-00259,2024-06-15,Webshop order #10617,Shopify payout,Revenue,1550
+L-00260,2024-06-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-5650
+L-00261,2024-06-15,Water & waste,HOFOR A/S,Utilities,-950
+L-00262,2024-06-16,Webshop order #10608,Shopify payout,Revenue,1250
+L-00263,2024-06-16,Shipping boxes · inv 10626,Emballagehuset ApS,COGS,-3600
+L-00264,2024-06-17,Webshop order #10609,Shopify payout,Revenue,1450
+L-00265,2024-06-18,Webshop order #10618,Shopify payout,Revenue,750
+L-00266,2024-06-21,Webshop order #10621,Shopify payout,Revenue,400
+L-00267,2024-06-22,Payment processing fee · ref 10627,Nets A/S,Fees,-500
+L-00268,2024-06-25,Wholesale coffee delivery · inv 10596,Baltika Coffee ApS,Revenue,13700
+L-00269,2024-06-25,Webshop order #10619,Shopify payout,Revenue,1250
+L-00270,2024-06-25,Webshop order #10622,Shopify payout,Revenue,2000
+L-00271,2024-06-26,Webshop order #10601,Shopify payout,Revenue,600
+L-00272,2024-06-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00273,2024-06-28,Bank account & card fees,Danske Bank A/S,Fees,-300
+L-00274,2024-07-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00275,2024-07-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00276,2024-07-04,Wholesale coffee delivery · inv 10633,Grønne Kontorer ApS,Revenue,13400
+L-00277,2024-07-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00278,2024-07-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00279,2024-07-06,Webshop order #10654,Shopify payout,Revenue,1950
+L-00280,2024-07-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00281,2024-07-08,Wholesale coffee delivery · inv 10632,Restaurant Havnen IVS,Revenue,20700
+L-00282,2024-07-08,Sourcing trip / trade fair,SAS AB,Travel,-3650
+L-00283,2024-07-09,Webshop order #10637,Shopify payout,Revenue,2700
+L-00284,2024-07-09,Webshop order #10649,Shopify payout,Revenue,2750
+L-00285,2024-07-10,Wholesale coffee delivery · inv 10628,Bageriet Sundby ApS,Revenue,34150
+L-00286,2024-07-11,Webshop order #10642,Shopify payout,Revenue,2400
+L-00287,2024-07-11,Webshop order #10648,Shopify payout,Revenue,2000
+L-00288,2024-07-12,Wholesale coffee delivery · inv 10635,Restaurant Havnen IVS,Revenue,23250
+L-00289,2024-07-13,Webshop order #10646,Shopify payout,Revenue,2650
+L-00290,2024-07-13,Webshop order #10652,Shopify payout,Revenue,2850
+L-00291,2024-07-13,"Bags, valves & labels · inv 10657",Nordic Paper Bags AB,COGS,-5850
+L-00292,2024-07-13,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3950
+L-00293,2024-07-13,Cooling repair,Probat Service Nord ApS,Maintenance,-2550
+L-00294,2024-07-15,Wholesale coffee delivery · inv 10636,Kaffebar Vesterbro ApS,Revenue,31550
+L-00295,2024-07-15,Webshop order #10653,Shopify payout,Revenue,2300
+L-00296,2024-07-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-6550
+L-00297,2024-07-15,Water & waste,HOFOR A/S,Utilities,-950
+L-00298,2024-07-16,Green coffee beans · inv 10655,Highland Beans Ltd,COGS,-27600
+L-00299,2024-07-17,Wholesale coffee delivery · inv 10634,Kantine Amager P/S,Revenue,33550
+L-00300,2024-07-17,Webshop order #10638,Shopify payout,Revenue,2200
+L-00301,2024-07-18,Green coffee beans · inv 10656,Cerrado Trading GmbH,COGS,-27650
+L-00302,2024-07-19,Wholesale coffee delivery · inv 10629,Baltika Coffee ApS,Revenue,22450
+L-00303,2024-07-20,Webshop order #10647,Shopify payout,Revenue,2950
+L-00304,2024-07-21,Webshop order #10651,Shopify payout,Revenue,1300
+L-00305,2024-07-22,Webshop order #10640,Shopify payout,Revenue,2450
+L-00306,2024-07-22,"Bags, valves & labels · inv 10658",Emballagehuset ApS,COGS,-4500
+L-00307,2024-07-22,Payment processing fee · ref 10661,Nets A/S,Fees,-200
+L-00308,2024-07-23,Webshop order #10644,Shopify payout,Revenue,550
+L-00309,2024-07-23,Webshop order #10650,Shopify payout,Revenue,2400
+L-00310,2024-07-24,Wholesale coffee delivery · inv 10631,Bageriet Sundby ApS,Revenue,23500
+L-00311,2024-07-24,Webshop order #10645,Shopify payout,Revenue,3000
+L-00312,2024-07-24,Payment processing fee · ref 10659,Nets A/S,Fees,-650
+L-00313,2024-07-24,Payment processing fee · ref 10660,Nets A/S,Fees,-700
+L-00314,2024-07-25,Webshop order #10639,Shopify payout,Revenue,450
+L-00315,2024-07-25,Webshop order #10641,Shopify payout,Revenue,2200
+L-00316,2024-07-25,Webshop order #10643,Shopify payout,Revenue,1650
+L-00317,2024-07-26,Wholesale coffee delivery · inv 10630,Kantine Amager P/S,Revenue,34100
+L-00318,2024-07-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00319,2024-07-28,Bank account & card fees,Danske Bank A/S,Fees,-450
+L-00320,2024-08-01,Webshop order #10687,Shopify payout,Revenue,1700
+L-00321,2024-08-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00322,2024-08-02,Webshop order #10690,Shopify payout,Revenue,1950
+L-00323,2024-08-03,Webshop order #10678,Shopify payout,Revenue,1400
+L-00324,2024-08-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00325,2024-08-04,Wholesale coffee delivery · inv 10666,CoWork Nordhavn A/S,Revenue,16250
+L-00326,2024-08-05,Wholesale coffee delivery · inv 10664,Kantine Amager P/S,Revenue,30900
+L-00327,2024-08-05,Webshop order #10673,Shopify payout,Revenue,2400
+L-00328,2024-08-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00329,2024-08-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00330,2024-08-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00331,2024-08-07,Takeaway cups & lids · inv 10694,Nordic Paper Bags AB,COGS,-2850
+L-00332,2024-08-08,Wholesale coffee delivery · inv 10665,Kaffebar Vesterbro ApS,Revenue,19650
+L-00333,2024-08-08,Green coffee beans · inv 10691,Highland Beans Ltd,COGS,-23800
+L-00334,2024-08-09,Webshop order #10668,Shopify payout,Revenue,900
+L-00335,2024-08-09,Green coffee beans · inv 10693,Cerrado Trading GmbH,COGS,-18250
+L-00336,2024-08-10,Webshop order #10669,Shopify payout,Revenue,600
+L-00337,2024-08-11,Webshop order #10675,Shopify payout,Revenue,2650
+L-00338,2024-08-11,Webshop order #10684,Shopify payout,Revenue,2050
+L-00339,2024-08-12,Webshop order #10677,Shopify payout,Revenue,450
+L-00340,2024-08-13,Webshop order #10683,Shopify payout,Revenue,2850
+L-00341,2024-08-14,Webshop order #10676,Shopify payout,Revenue,450
+L-00342,2024-08-15,Webshop order #10679,Shopify payout,Revenue,2400
+L-00343,2024-08-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-5450
+L-00344,2024-08-15,Water & waste,HOFOR A/S,Utilities,-1050
+L-00345,2024-08-17,Sourcing trip / trade fair,Hotel Bogotá Centro,Travel,-3350
+L-00346,2024-08-18,Webshop order #10670,Shopify payout,Revenue,1650
+L-00347,2024-08-18,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3350
+L-00348,2024-08-19,Wholesale coffee delivery · inv 10663,Hotel Øresund A/S,Revenue,37200
+L-00349,2024-08-19,Takeaway cups & lids · inv 10695,Emballagehuset ApS,COGS,-6750
+L-00350,2024-08-20,Webshop order #10680,Shopify payout,Revenue,2450
+L-00351,2024-08-20,Payment processing fee · ref 10696,Nets A/S,Fees,-500
+L-00352,2024-08-21,Webshop order #10674,Shopify payout,Revenue,2750
+L-00353,2024-08-21,Webshop order #10685,Shopify payout,Revenue,1950
+L-00354,2024-08-21,Webshop order #10686,Shopify payout,Revenue,2050
+L-00355,2024-08-21,Webshop order #10689,Shopify payout,Revenue,2450
+L-00356,2024-08-23,Wholesale coffee delivery · inv 10662,Hotel Øresund A/S,Revenue,12500
+L-00357,2024-08-24,Webshop order #10671,Shopify payout,Revenue,2100
+L-00358,2024-08-24,Webshop order #10688,Shopify payout,Revenue,2250
+L-00359,2024-08-24,Green coffee beans · inv 10692,Antigua Importers ApS,COGS,-33200
+L-00360,2024-08-26,Webshop order #10681,Shopify payout,Revenue,2300
+L-00361,2024-08-27,Wholesale coffee delivery · inv 10667,Restaurant Havnen IVS,Revenue,38050
+L-00362,2024-08-27,Webshop order #10672,Shopify payout,Revenue,2100
+L-00363,2024-08-27,Webshop order #10682,Shopify payout,Revenue,2150
+L-00364,2024-08-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00365,2024-08-28,Bank account & card fees,Danske Bank A/S,Fees,-450
+L-00366,2024-09-01,Webshop order #10706,Shopify payout,Revenue,3150
+L-00367,2024-09-01,Webshop order #10716,Shopify payout,Revenue,2650
+L-00368,2024-09-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00369,2024-09-02,Webshop order #10720,Shopify payout,Revenue,3000
+L-00370,2024-09-02,Webshop order #10722,Shopify payout,Revenue,700
+L-00371,2024-09-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00372,2024-09-05,Webshop order #10705,Shopify payout,Revenue,3100
+L-00373,2024-09-05,Webshop order #10723,Shopify payout,Revenue,1550
+L-00374,2024-09-05,Shipping boxes · inv 10731,Emballagehuset ApS,COGS,-7850
+L-00375,2024-09-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00376,2024-09-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00377,2024-09-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00378,2024-09-07,Wholesale coffee delivery · inv 10698,CoWork Nordhavn A/S,Revenue,28400
+L-00379,2024-09-07,Wholesale coffee delivery · inv 10702,Kantine Amager P/S,Revenue,33650
+L-00380,2024-09-07,Wholesale coffee delivery · inv 10703,Baltika Coffee ApS,Revenue,23550
+L-00381,2024-09-07,Webshop order #10717,Shopify payout,Revenue,1800
+L-00382,2024-09-08,Wholesale coffee delivery · inv 10700,Hotel Øresund A/S,Revenue,14100
+L-00383,2024-09-09,Wholesale coffee delivery · inv 10699,Restaurant Havnen IVS,Revenue,32900
+L-00384,2024-09-09,Webshop order #10707,Shopify payout,Revenue,750
+L-00385,2024-09-09,Webshop order #10709,Shopify payout,Revenue,1550
+L-00386,2024-09-09,"Bags, valves & labels · inv 10732",Nordic Paper Bags AB,COGS,-3100
+L-00387,2024-09-10,Shipping boxes · inv 10730,Nordic Paper Bags AB,COGS,-7700
+L-00388,2024-09-11,Wholesale coffee delivery · inv 10697,Grønne Kontorer ApS,Revenue,28850
+L-00389,2024-09-11,Webshop order #10713,Shopify payout,Revenue,1800
+L-00390,2024-09-11,Green coffee beans · inv 10727,Antigua Importers ApS,COGS,-29800
+L-00391,2024-09-11,Sourcing trip / trade fair,SAS AB,Travel,-2700
+L-00392,2024-09-12,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-5600
+L-00393,2024-09-13,Webshop order #10712,Shopify payout,Revenue,2950
+L-00394,2024-09-13,Webshop order #10719,Shopify payout,Revenue,2750
+L-00395,2024-09-14,Webshop order #10714,Shopify payout,Revenue,1800
+L-00396,2024-09-14,Webshop order #10724,Shopify payout,Revenue,600
+L-00397,2024-09-14,Webshop order #10726,Shopify payout,Revenue,2450
+L-00398,2024-09-15,Webshop order #10710,Shopify payout,Revenue,2450
+L-00399,2024-09-15,Green coffee beans · inv 10728,Highland Beans Ltd,COGS,-31900
+L-00400,2024-09-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-7850
+L-00401,2024-09-15,Water & waste,HOFOR A/S,Utilities,-1000
+L-00402,2024-09-19,Webshop order #10708,Shopify payout,Revenue,3200
+L-00403,2024-09-19,Webshop order #10711,Shopify payout,Revenue,3050
+L-00404,2024-09-19,Webshop order #10725,Shopify payout,Revenue,450
+L-00405,2024-09-20,Green coffee beans · inv 10729,Cerrado Trading GmbH,COGS,-31750
+L-00406,2024-09-20,Search advertising,Google Ireland Ltd,Marketing,-2400
+L-00407,2024-09-22,Webshop order #10715,Shopify payout,Revenue,2300
+L-00408,2024-09-23,Wholesale coffee delivery · inv 10701,Bageriet Sundby ApS,Revenue,28000
+L-00409,2024-09-24,Webshop order #10718,Shopify payout,Revenue,650
+L-00410,2024-09-25,Payment processing fee · ref 10733,Nets A/S,Fees,-300
+L-00411,2024-09-27,Webshop order #10704,Shopify payout,Revenue,550
+L-00412,2024-09-27,Webshop order #10721,Shopify payout,Revenue,1550
+L-00413,2024-09-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00414,2024-09-28,Bank account & card fees,Danske Bank A/S,Fees,-300
+L-00415,2024-10-01,Webshop order #10752,Shopify payout,Revenue,3100
+L-00416,2024-10-01,Webshop order #10757,Shopify payout,Revenue,1000
+L-00417,2024-10-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00418,2024-10-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00419,2024-10-04,Webshop order #10764,Shopify payout,Revenue,2550
+L-00420,2024-10-05,Shipping boxes · inv 10769,Emballagehuset ApS,COGS,-3150
+L-00421,2024-10-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00422,2024-10-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00423,2024-10-06,Wholesale coffee delivery · inv 10734,Hotel Øresund A/S,Revenue,28100
+L-00424,2024-10-06,Webshop order #10741,Shopify payout,Revenue,1500
+L-00425,2024-10-06,Webshop order #10762,Shopify payout,Revenue,2600
+L-00426,2024-10-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00427,2024-10-07,Webshop order #10751,Shopify payout,Revenue,700
+L-00428,2024-10-07,Green coffee beans · inv 10767,Highland Beans Ltd,COGS,-33350
+L-00429,2024-10-08,Webshop order #10748,Shopify payout,Revenue,2950
+L-00430,2024-10-08,Webshop order #10749,Shopify payout,Revenue,1850
+L-00431,2024-10-08,Webshop order #10760,Shopify payout,Revenue,1400
+L-00432,2024-10-08,Payment processing fee · ref 10770,Nets A/S,Fees,-200
+L-00433,2024-10-09,Wholesale coffee delivery · inv 10740,Restaurant Havnen IVS,Revenue,27550
+L-00434,2024-10-09,Webshop order #10765,Shopify payout,Revenue,2500
+L-00435,2024-10-10,Wholesale coffee delivery · inv 10737,Kantine Amager P/S,Revenue,11600
+L-00436,2024-10-10,Webshop order #10746,Shopify payout,Revenue,2600
+L-00437,2024-10-11,Wholesale coffee delivery · inv 10736,Bageriet Sundby ApS,Revenue,15100
+L-00438,2024-10-11,Webshop order #10750,Shopify payout,Revenue,3250
+L-00439,2024-10-11,Webshop order #10756,Shopify payout,Revenue,2050
+L-00440,2024-10-11,Sourcing trip / trade fair,SAS AB,Travel,-6450
+L-00441,2024-10-12,Webshop order #10747,Shopify payout,Revenue,1750
+L-00442,2024-10-12,Webshop order #10759,Shopify payout,Revenue,850
+L-00443,2024-10-13,Webshop order #10744,Shopify payout,Revenue,2600
+L-00444,2024-10-14,Webshop order #10761,Shopify payout,Revenue,650
+L-00445,2024-10-14,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-5350
+L-00446,2024-10-14,Search advertising,Google Ireland Ltd,Marketing,-3200
+L-00447,2024-10-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-8450
+L-00448,2024-10-15,Water & waste,HOFOR A/S,Utilities,-900
+L-00449,2024-10-16,Shipping boxes · inv 10768,Emballagehuset ApS,COGS,-4650
+L-00450,2024-10-17,Webshop order #10743,Shopify payout,Revenue,3200
+L-00451,2024-10-17,Webshop order #10754,Shopify payout,Revenue,1950
+L-00452,2024-10-17,Webshop order #10763,Shopify payout,Revenue,650
+L-00453,2024-10-17,Green coffee beans · inv 10766,Cerrado Trading GmbH,COGS,-34000
+L-00454,2024-10-18,Webshop order #10753,Shopify payout,Revenue,3250
+L-00455,2024-10-18,Webshop order #10758,Shopify payout,Revenue,1700
+L-00456,2024-10-19,Wholesale coffee delivery · inv 10738,Grønne Kontorer ApS,Revenue,21100
+L-00457,2024-10-21,Webshop order #10745,Shopify payout,Revenue,1700
+L-00458,2024-10-23,Webshop order #10742,Shopify payout,Revenue,2400
+L-00459,2024-10-24,Wholesale coffee delivery · inv 10739,CoWork Nordhavn A/S,Revenue,27750
+L-00460,2024-10-26,Wholesale coffee delivery · inv 10735,Grønne Kontorer ApS,Revenue,14850
+L-00461,2024-10-26,Webshop order #10755,Shopify payout,Revenue,3050
+L-00462,2024-10-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00463,2024-10-28,Bank account & card fees,Danske Bank A/S,Fees,-350
+L-00464,2024-11-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00465,2024-11-02,Webshop order #10779,Shopify payout,Revenue,2050
+L-00466,2024-11-02,Webshop order #10798,Shopify payout,Revenue,3000
+L-00467,2024-11-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00468,2024-11-04,Webshop order #10795,Shopify payout,Revenue,2700
+L-00469,2024-11-04,Webshop order #10799,Shopify payout,Revenue,900
+L-00470,2024-11-05,Webshop order #10790,Shopify payout,Revenue,1700
+L-00471,2024-11-05,Shipping boxes · inv 10805,Emballagehuset ApS,COGS,-2850
+L-00472,2024-11-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00473,2024-11-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00474,2024-11-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00475,2024-11-07,Wholesale coffee delivery · inv 10777,Kantine Amager P/S,Revenue,28500
+L-00476,2024-11-08,Webshop order #10793,Shopify payout,Revenue,3150
+L-00477,2024-11-08,Green coffee beans · inv 10804,Cerrado Trading GmbH,COGS,-19650
+L-00478,2024-11-10,Wholesale coffee delivery · inv 10776,Bageriet Sundby ApS,Revenue,37300
+L-00479,2024-11-11,Webshop order #10785,Shopify payout,Revenue,2100
+L-00480,2024-11-11,Webshop order #10800,Shopify payout,Revenue,1650
+L-00481,2024-11-14,Wholesale coffee delivery · inv 10771,Bageriet Sundby ApS,Revenue,41000
+L-00482,2024-11-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-8800
+L-00483,2024-11-15,Water & waste,HOFOR A/S,Utilities,-1100
+L-00484,2024-11-16,Webshop order #10780,Shopify payout,Revenue,2700
+L-00485,2024-11-17,Webshop order #10786,Shopify payout,Revenue,1000
+L-00486,2024-11-17,Webshop order #10788,Shopify payout,Revenue,2300
+L-00487,2024-11-17,Green coffee beans · inv 10803,Cerrado Trading GmbH,COGS,-35800
+L-00488,2024-11-18,Wholesale coffee delivery · inv 10774,Restaurant Havnen IVS,Revenue,14200
+L-00489,2024-11-18,Webshop order #10781,Shopify payout,Revenue,3250
+L-00490,2024-11-18,Webshop order #10789,Shopify payout,Revenue,1350
+L-00491,2024-11-19,Webshop order #10794,Shopify payout,Revenue,2050
+L-00492,2024-11-19,Takeaway cups & lids · inv 10806,Emballagehuset ApS,COGS,-5400
+L-00493,2024-11-19,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-5650
+L-00494,2024-11-20,Wholesale coffee delivery · inv 10775,Hotel Øresund A/S,Revenue,25700
+L-00495,2024-11-20,Webshop order #10792,Shopify payout,Revenue,950
+L-00496,2024-11-21,Wholesale coffee delivery · inv 10773,Kantine Amager P/S,Revenue,36000
+L-00497,2024-11-21,Webshop order #10791,Shopify payout,Revenue,3050
+L-00498,2024-11-21,Payment processing fee · ref 10807,Nets A/S,Fees,-350
+L-00499,2024-11-21,Roaster service & calibration,Probat Service Nord ApS,Maintenance,-5650
+L-00500,2024-11-22,Webshop order #10783,Shopify payout,Revenue,3150
+L-00501,2024-11-23,Webshop order #10784,Shopify payout,Revenue,1850
+L-00502,2024-11-23,Webshop order #10797,Shopify payout,Revenue,2300
+L-00503,2024-11-23,Webshop order #10802,Shopify payout,Revenue,1700
+L-00504,2024-11-24,Wholesale coffee delivery · inv 10778,Baltika Coffee ApS,Revenue,37050
+L-00505,2024-11-24,Webshop order #10782,Shopify payout,Revenue,2000
+L-00506,2024-11-24,Webshop order #10787,Shopify payout,Revenue,1250
+L-00507,2024-11-24,Webshop order #10796,Shopify payout,Revenue,550
+L-00508,2024-11-25,Payment processing fee · ref 10808,Nets A/S,Fees,-550
+L-00509,2024-11-26,Wholesale coffee delivery · inv 10772,Hotel Øresund A/S,Revenue,15350
+L-00510,2024-11-26,Webshop order #10801,Shopify payout,Revenue,2550
+L-00511,2024-11-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00512,2024-11-28,Bank account & card fees,Danske Bank A/S,Fees,-350
+L-00513,2024-12-01,Webshop order #10821,Shopify payout,Revenue,2150
+L-00514,2024-12-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00515,2024-12-03,Webshop order #10818,Shopify payout,Revenue,3950
+L-00516,2024-12-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00517,2024-12-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00518,2024-12-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00519,2024-12-06,Webshop order #10820,Shopify payout,Revenue,4000
+L-00520,2024-12-06,Webshop order #10822,Shopify payout,Revenue,1450
+L-00521,2024-12-06,Green coffee beans · inv 10831,Cerrado Trading GmbH,COGS,-29300
+L-00522,2024-12-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00523,2024-12-07,Takeaway cups & lids · inv 10832,Emballagehuset ApS,COGS,-5050
+L-00524,2024-12-09,Wholesale coffee delivery · inv 10814,Bageriet Sundby ApS,Revenue,29650
+L-00525,2024-12-10,Wholesale coffee delivery · inv 10811,Kaffebar Vesterbro ApS,Revenue,42350
+L-00526,2024-12-11,Webshop order #10817,Shopify payout,Revenue,1950
+L-00527,2024-12-12,Webshop order #10815,Shopify payout,Revenue,3400
+L-00528,2024-12-12,Webshop order #10823,Shopify payout,Revenue,650
+L-00529,2024-12-14,Webshop order #10828,Shopify payout,Revenue,3550
+L-00530,2024-12-15,Wholesale coffee delivery · inv 10813,CoWork Nordhavn A/S,Revenue,56350
+L-00531,2024-12-15,Webshop order #10827,Shopify payout,Revenue,2050
+L-00532,2024-12-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-10700
+L-00533,2024-12-15,Water & waste,HOFOR A/S,Utilities,-750
+L-00534,2024-12-16,Webshop order #10819,Shopify payout,Revenue,3750
+L-00535,2024-12-17,Wholesale coffee delivery · inv 10809,Grønne Kontorer ApS,Revenue,45400
+L-00536,2024-12-17,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3550
+L-00537,2024-12-18,Wholesale coffee delivery · inv 10812,Kantine Amager P/S,Revenue,48600
+L-00538,2024-12-18,Green coffee beans · inv 10830,Cerrado Trading GmbH,COGS,-46950
+L-00539,2024-12-18,Payment processing fee · ref 10834,Nets A/S,Fees,-600
+L-00540,2024-12-19,Webshop order #10824,Shopify payout,Revenue,2800
+L-00541,2024-12-19,Sourcing trip / trade fair,DSB,Travel,-3450
+L-00542,2024-12-22,Webshop order #10825,Shopify payout,Revenue,4050
+L-00543,2024-12-22,Payment processing fee · ref 10833,Nets A/S,Fees,-600
+L-00544,2024-12-23,Webshop order #10816,Shopify payout,Revenue,3550
+L-00545,2024-12-25,Wholesale coffee delivery · inv 10810,Baltika Coffee ApS,Revenue,21750
+L-00546,2024-12-27,Webshop order #10826,Shopify payout,Revenue,900
+L-00547,2024-12-27,Webshop order #10829,Shopify payout,Revenue,3250
+L-00548,2024-12-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-118000
+L-00549,2024-12-28,Bank account & card fees,Danske Bank A/S,Fees,-600
+L-00550,2025-01-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00551,2025-01-02,Wholesale coffee delivery · inv 10835,Bageriet Sundby ApS,Revenue,42550
+L-00552,2025-01-02,Webshop order #10844,Shopify payout,Revenue,1350
+L-00553,2025-01-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00554,2025-01-04,Green coffee beans · inv 10865,Cerrado Trading GmbH,COGS,-19650
+L-00555,2025-01-05,Wholesale coffee delivery · inv 10840,Baltika Coffee ApS,Revenue,15200
+L-00556,2025-01-05,Webshop order #10846,Shopify payout,Revenue,3150
+L-00557,2025-01-05,Webshop order #10848,Shopify payout,Revenue,1750
+L-00558,2025-01-05,"Bags, valves & labels · inv 10867",Nordic Paper Bags AB,COGS,-5450
+L-00559,2025-01-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00560,2025-01-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00561,2025-01-06,Webshop order #10843,Shopify payout,Revenue,3400
+L-00562,2025-01-06,Webshop order #10863,Shopify payout,Revenue,700
+L-00563,2025-01-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00564,2025-01-07,Webshop order #10845,Shopify payout,Revenue,2400
+L-00565,2025-01-07,Webshop order #10847,Shopify payout,Revenue,2450
+L-00566,2025-01-07,Webshop order #10859,Shopify payout,Revenue,1600
+L-00567,2025-01-07,"Bags, valves & labels · inv 10868",Emballagehuset ApS,COGS,-7200
+L-00568,2025-01-09,Webshop order #10849,Shopify payout,Revenue,3500
+L-00569,2025-01-11,Webshop order #10853,Shopify payout,Revenue,2650
+L-00570,2025-01-11,Webshop order #10861,Shopify payout,Revenue,3350
+L-00571,2025-01-12,Search advertising,Google Ireland Ltd,Marketing,-3600
+L-00572,2025-01-14,Webshop order #10850,Shopify payout,Revenue,2550
+L-00573,2025-01-14,Webshop order #10852,Shopify payout,Revenue,1750
+L-00574,2025-01-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-10100
+L-00575,2025-01-15,Water & waste,HOFOR A/S,Utilities,-1300
+L-00576,2025-01-15,Sourcing trip / trade fair,DSB,Travel,-9650
+L-00577,2025-01-16,Wholesale coffee delivery · inv 10841,CoWork Nordhavn A/S,Revenue,42600
+L-00578,2025-01-16,Webshop order #10856,Shopify payout,Revenue,3500
+L-00579,2025-01-17,Webshop order #10855,Shopify payout,Revenue,2850
+L-00580,2025-01-17,Webshop order #10860,Shopify payout,Revenue,650
+L-00581,2025-01-17,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-4600
+L-00582,2025-01-18,Webshop order #10851,Shopify payout,Revenue,3000
+L-00583,2025-01-18,Payment processing fee · ref 10870,Nets A/S,Fees,-200
+L-00584,2025-01-18,Grinder maintenance,Probat Service Nord ApS,Maintenance,-5200
+L-00585,2025-01-19,Wholesale coffee delivery · inv 10838,Kaffebar Vesterbro ApS,Revenue,23600
+L-00586,2025-01-20,Webshop order #10858,Shopify payout,Revenue,3350
+L-00587,2025-01-20,Webshop order #10862,Shopify payout,Revenue,2100
+L-00588,2025-01-21,Wholesale coffee delivery · inv 10837,Grønne Kontorer ApS,Revenue,23650
+L-00589,2025-01-21,Green coffee beans · inv 10866,Highland Beans Ltd,COGS,-26000
+L-00590,2025-01-22,Payment processing fee · ref 10869,Nets A/S,Fees,-400
+L-00591,2025-01-23,Wholesale coffee delivery · inv 10836,Baltika Coffee ApS,Revenue,32900
+L-00592,2025-01-25,Webshop order #10842,Shopify payout,Revenue,3250
+L-00593,2025-01-25,Webshop order #10857,Shopify payout,Revenue,1550
+L-00594,2025-01-26,Wholesale coffee delivery · inv 10839,Restaurant Havnen IVS,Revenue,22750
+L-00595,2025-01-27,Webshop order #10854,Shopify payout,Revenue,650
+L-00596,2025-01-27,Webshop order #10864,Shopify payout,Revenue,1000
+L-00597,2025-01-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-00598,2025-01-28,Bank account & card fees,Danske Bank A/S,Fees,-550
+L-00599,2025-02-01,Webshop order #10894,Shopify payout,Revenue,1050
+L-00600,2025-02-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00601,2025-02-02,Wholesale coffee delivery · inv 10877,Bageriet Sundby ApS,Revenue,26550
+L-00602,2025-02-02,Webshop order #10900,Shopify payout,Revenue,2150
+L-00603,2025-02-03,Wholesale coffee delivery · inv 10878,CoWork Nordhavn A/S,Revenue,22200
+L-00604,2025-02-03,Green coffee beans · inv 10905,Cerrado Trading GmbH,COGS,-32300
+L-00605,2025-02-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00606,2025-02-04,Webshop order #10889,Shopify payout,Revenue,2550
+L-00607,2025-02-04,Webshop order #10896,Shopify payout,Revenue,3350
+L-00608,2025-02-05,Wholesale coffee delivery · inv 10871,Kantine Amager P/S,Revenue,23650
+L-00609,2025-02-05,Webshop order #10901,Shopify payout,Revenue,3500
+L-00610,2025-02-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00611,2025-02-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00612,2025-02-06,Webshop order #10884,Shopify payout,Revenue,550
+L-00613,2025-02-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00614,2025-02-07,Webshop order #10880,Shopify payout,Revenue,2500
+L-00615,2025-02-07,Webshop order #10902,Shopify payout,Revenue,2450
+L-00616,2025-02-08,Webshop order #10895,Shopify payout,Revenue,2550
+L-00617,2025-02-09,Webshop order #10890,Shopify payout,Revenue,2950
+L-00618,2025-02-09,Green coffee beans · inv 10904,Highland Beans Ltd,COGS,-25950
+L-00619,2025-02-09,"Bags, valves & labels · inv 10908",Nordic Paper Bags AB,COGS,-7650
+L-00620,2025-02-11,Webshop order #10883,Shopify payout,Revenue,2400
+L-00621,2025-02-11,Webshop order #10897,Shopify payout,Revenue,950
+L-00622,2025-02-11,Takeaway cups & lids · inv 10906,Nordic Paper Bags AB,COGS,-4950
+L-00623,2025-02-12,Wholesale coffee delivery · inv 10876,Bageriet Sundby ApS,Revenue,27250
+L-00624,2025-02-12,Webshop order #10888,Shopify payout,Revenue,800
+L-00625,2025-02-12,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3900
+L-00626,2025-02-12,Sourcing trip / trade fair,SAS AB,Travel,-4450
+L-00627,2025-02-13,Wholesale coffee delivery · inv 10874,Restaurant Havnen IVS,Revenue,30650
+L-00628,2025-02-13,Webshop order #10881,Shopify payout,Revenue,3050
+L-00629,2025-02-13,Green coffee beans · inv 10903,Cerrado Trading GmbH,COGS,-31750
+L-00630,2025-02-13,Payment processing fee · ref 10909,Nets A/S,Fees,-400
+L-00631,2025-02-14,"Bags, valves & labels · inv 10907",Nordic Paper Bags AB,COGS,-6700
+L-00632,2025-02-14,Search advertising,Google Ireland Ltd,Marketing,-3050
+L-00633,2025-02-15,Wholesale coffee delivery · inv 10873,Kaffebar Vesterbro ApS,Revenue,23100
+L-00634,2025-02-15,Webshop order #10886,Shopify payout,Revenue,3300
+L-00635,2025-02-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-11500
+L-00636,2025-02-15,Water & waste,HOFOR A/S,Utilities,-950
+L-00637,2025-02-16,Webshop order #10899,Shopify payout,Revenue,850
+L-00638,2025-02-17,Webshop order #10882,Shopify payout,Revenue,2400
+L-00639,2025-02-17,Webshop order #10893,Shopify payout,Revenue,2300
+L-00640,2025-02-20,Webshop order #10898,Shopify payout,Revenue,2800
+L-00641,2025-02-22,Webshop order #10887,Shopify payout,Revenue,2600
+L-00642,2025-02-23,Webshop order #10879,Shopify payout,Revenue,1100
+L-00643,2025-02-23,Webshop order #10891,Shopify payout,Revenue,1000
+L-00644,2025-02-26,Wholesale coffee delivery · inv 10872,Kaffebar Vesterbro ApS,Revenue,28650
+L-00645,2025-02-26,Webshop order #10892,Shopify payout,Revenue,3550
+L-00646,2025-02-27,Wholesale coffee delivery · inv 10875,Bageriet Sundby ApS,Revenue,18650
+L-00647,2025-02-27,Webshop order #10885,Shopify payout,Revenue,900
+L-00648,2025-02-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-00649,2025-02-28,Bank account & card fees,Danske Bank A/S,Fees,-550
+L-00650,2025-03-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00651,2025-03-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00652,2025-03-05,Wholesale coffee delivery · inv 10915,Kaffebar Vesterbro ApS,Revenue,26600
+L-00653,2025-03-05,Webshop order #10922,Shopify payout,Revenue,3500
+L-00654,2025-03-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00655,2025-03-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00656,2025-03-06,Wholesale coffee delivery · inv 10912,Baltika Coffee ApS,Revenue,41100
+L-00657,2025-03-06,Webshop order #10923,Shopify payout,Revenue,550
+L-00658,2025-03-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00659,2025-03-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-00660,2025-03-08,Webshop order #10926,Shopify payout,Revenue,1900
+L-00661,2025-03-09,Wholesale coffee delivery · inv 10914,Restaurant Havnen IVS,Revenue,21100
+L-00662,2025-03-09,Green coffee beans · inv 10936,Antigua Importers ApS,COGS,-31300
+L-00663,2025-03-10,Wholesale coffee delivery · inv 10911,Restaurant Havnen IVS,Revenue,41600
+L-00664,2025-03-12,Webshop order #10918,Shopify payout,Revenue,1400
+L-00665,2025-03-12,Webshop order #10927,Shopify payout,Revenue,2050
+L-00666,2025-03-12,Webshop order #10934,Shopify payout,Revenue,3550
+L-00667,2025-03-12,Payment processing fee · ref 10940,Nets A/S,Fees,-550
+L-00668,2025-03-14,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-5900
+L-00669,2025-03-14,Payment processing fee · ref 10941,Nets A/S,Fees,-650
+L-00670,2025-03-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-6100
+L-00671,2025-03-15,Water & waste,HOFOR A/S,Utilities,-1000
+L-00672,2025-03-16,Webshop order #10919,Shopify payout,Revenue,1350
+L-00673,2025-03-16,Webshop order #10921,Shopify payout,Revenue,2400
+L-00674,2025-03-16,Webshop order #10925,Shopify payout,Revenue,1900
+L-00675,2025-03-16,Webshop order #10929,Shopify payout,Revenue,2000
+L-00676,2025-03-16,Webshop order #10931,Shopify payout,Revenue,3050
+L-00677,2025-03-16,Green coffee beans · inv 10935,Highland Beans Ltd,COGS,-35700
+L-00678,2025-03-17,Wholesale coffee delivery · inv 10913,Baltika Coffee ApS,Revenue,41150
+L-00679,2025-03-17,Webshop order #10933,Shopify payout,Revenue,1450
+L-00680,2025-03-18,Payment processing fee · ref 10939,Nets A/S,Fees,-200
+L-00681,2025-03-19,Search advertising,Google Ireland Ltd,Marketing,-1550
+L-00682,2025-03-20,Webshop order #10917,Shopify payout,Revenue,3600
+L-00683,2025-03-20,Webshop order #10920,Shopify payout,Revenue,2650
+L-00684,2025-03-20,Green coffee beans · inv 10937,Cerrado Trading GmbH,COGS,-31500
+L-00685,2025-03-20,Takeaway cups & lids · inv 10938,Emballagehuset ApS,COGS,-3450
+L-00686,2025-03-22,Wholesale coffee delivery · inv 10910,Kaffebar Vesterbro ApS,Revenue,31450
+L-00687,2025-03-24,Webshop order #10924,Shopify payout,Revenue,3200
+L-00688,2025-03-26,Webshop order #10916,Shopify payout,Revenue,600
+L-00689,2025-03-26,Webshop order #10932,Shopify payout,Revenue,2150
+L-00690,2025-03-27,Webshop order #10928,Shopify payout,Revenue,2950
+L-00691,2025-03-27,Webshop order #10930,Shopify payout,Revenue,3650
+L-00692,2025-03-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-00693,2025-03-28,Bank account & card fees,Danske Bank A/S,Fees,-450
+L-00694,2025-04-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00695,2025-04-03,Webshop order #10951,Shopify payout,Revenue,3050
+L-00696,2025-04-03,Webshop order #10955,Shopify payout,Revenue,3700
+L-00697,2025-04-03,Green coffee beans · inv 10965,Highland Beans Ltd,COGS,-31950
+L-00698,2025-04-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00699,2025-04-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00700,2025-04-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00701,2025-04-06,Wholesale coffee delivery · inv 10945,Bageriet Sundby ApS,Revenue,39050
+L-00702,2025-04-06,Webshop order #10949,Shopify payout,Revenue,1600
+L-00703,2025-04-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00704,2025-04-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-00705,2025-04-07,Webshop order #10953,Shopify payout,Revenue,1200
+L-00706,2025-04-07,Webshop order #10963,Shopify payout,Revenue,2950
+L-00707,2025-04-08,Webshop order #10957,Shopify payout,Revenue,2600
+L-00708,2025-04-08,Webshop order #10961,Shopify payout,Revenue,2400
+L-00709,2025-04-09,Wholesale coffee delivery · inv 10946,CoWork Nordhavn A/S,Revenue,24500
+L-00710,2025-04-09,Green coffee beans · inv 10966,Antigua Importers ApS,COGS,-28150
+L-00711,2025-04-10,Webshop order #10956,Shopify payout,Revenue,1950
+L-00712,2025-04-10,Webshop order #10964,Shopify payout,Revenue,550
+L-00713,2025-04-11,Wholesale coffee delivery · inv 10943,Grønne Kontorer ApS,Revenue,15650
+L-00714,2025-04-12,Wholesale coffee delivery · inv 10947,Hotel Øresund A/S,Revenue,18200
+L-00715,2025-04-13,Webshop order #10952,Shopify payout,Revenue,3450
+L-00716,2025-04-15,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3900
+L-00717,2025-04-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-7200
+L-00718,2025-04-15,Water & waste,HOFOR A/S,Utilities,-950
+L-00719,2025-04-16,Search advertising,Google Ireland Ltd,Marketing,-3700
+L-00720,2025-04-18,Webshop order #10948,Shopify payout,Revenue,1750
+L-00721,2025-04-18,Takeaway cups & lids · inv 10968,Emballagehuset ApS,COGS,-9300
+L-00722,2025-04-18,Shipping boxes · inv 10969,Emballagehuset ApS,COGS,-3850
+L-00723,2025-04-19,Payment processing fee · ref 10970,Nets A/S,Fees,-550
+L-00724,2025-04-20,Webshop order #10950,Shopify payout,Revenue,1550
+L-00725,2025-04-21,Webshop order #10958,Shopify payout,Revenue,1200
+L-00726,2025-04-21,Webshop order #10960,Shopify payout,Revenue,3150
+L-00727,2025-04-22,Wholesale coffee delivery · inv 10942,Kantine Amager P/S,Revenue,30250
+L-00728,2025-04-22,Webshop order #10959,Shopify payout,Revenue,550
+L-00729,2025-04-23,Green coffee beans · inv 10967,Highland Beans Ltd,COGS,-30800
+L-00730,2025-04-24,Webshop order #10962,Shopify payout,Revenue,700
+L-00731,2025-04-27,Wholesale coffee delivery · inv 10944,Hotel Øresund A/S,Revenue,21200
+L-00732,2025-04-27,Webshop order #10954,Shopify payout,Revenue,1050
+L-00733,2025-04-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-00734,2025-04-28,Bank account & card fees,Danske Bank A/S,Fees,-450
+L-00735,2025-05-01,Webshop order #10984,Shopify payout,Revenue,1850
+L-00736,2025-05-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00737,2025-05-02,Wholesale coffee delivery · inv 10975,Grønne Kontorer ApS,Revenue,41350
+L-00738,2025-05-02,Wholesale coffee delivery · inv 10976,Kaffebar Vesterbro ApS,Revenue,36600
+L-00739,2025-05-02,Webshop order #10999,Shopify payout,Revenue,2200
+L-00740,2025-05-02,Webshop order #11000,Shopify payout,Revenue,3500
+L-00741,2025-05-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00742,2025-05-04,Webshop order #11002,Shopify payout,Revenue,1800
+L-00743,2025-05-04,Takeaway cups & lids · inv 11006,Nordic Paper Bags AB,COGS,-8650
+L-00744,2025-05-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00745,2025-05-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00746,2025-05-06,Webshop order #10993,Shopify payout,Revenue,2000
+L-00747,2025-05-06,Webshop order #11001,Shopify payout,Revenue,2100
+L-00748,2025-05-06,Green coffee beans · inv 11005,Antigua Importers ApS,COGS,-40900
+L-00749,2025-05-06,Shipping boxes · inv 11007,Nordic Paper Bags AB,COGS,-5350
+L-00750,2025-05-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00751,2025-05-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-00752,2025-05-07,Wholesale coffee delivery · inv 10972,Kaffebar Vesterbro ApS,Revenue,27550
+L-00753,2025-05-07,Webshop order #10982,Shopify payout,Revenue,850
+L-00754,2025-05-07,Webshop order #11003,Shopify payout,Revenue,2350
+L-00755,2025-05-08,Webshop order #10978,Shopify payout,Revenue,3000
+L-00756,2025-05-08,Webshop order #10983,Shopify payout,Revenue,1100
+L-00757,2025-05-08,Webshop order #10990,Shopify payout,Revenue,3500
+L-00758,2025-05-09,Wholesale coffee delivery · inv 10971,Kaffebar Vesterbro ApS,Revenue,40000
+L-00759,2025-05-10,Webshop order #10991,Shopify payout,Revenue,2000
+L-00760,2025-05-11,Webshop order #10998,Shopify payout,Revenue,3050
+L-00761,2025-05-11,Takeaway cups & lids · inv 11008,Nordic Paper Bags AB,COGS,-9200
+L-00762,2025-05-12,Payment processing fee · ref 11009,Nets A/S,Fees,-700
+L-00763,2025-05-13,Webshop order #10980,Shopify payout,Revenue,1100
+L-00764,2025-05-15,Webshop order #10979,Shopify payout,Revenue,650
+L-00765,2025-05-15,Webshop order #10985,Shopify payout,Revenue,1650
+L-00766,2025-05-15,Webshop order #10989,Shopify payout,Revenue,1100
+L-00767,2025-05-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-5550
+L-00768,2025-05-15,Water & waste,HOFOR A/S,Utilities,-1250
+L-00769,2025-05-17,Webshop order #10981,Shopify payout,Revenue,3450
+L-00770,2025-05-18,Search advertising,Google Ireland Ltd,Marketing,-1950
+L-00771,2025-05-19,Webshop order #10992,Shopify payout,Revenue,2200
+L-00772,2025-05-19,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3900
+L-00773,2025-05-20,Webshop order #10994,Shopify payout,Revenue,2350
+L-00774,2025-05-21,Wholesale coffee delivery · inv 10973,Kantine Amager P/S,Revenue,15150
+L-00775,2025-05-21,Webshop order #10986,Shopify payout,Revenue,3050
+L-00776,2025-05-22,Green coffee beans · inv 11004,Antigua Importers ApS,COGS,-39700
+L-00777,2025-05-23,Webshop order #10996,Shopify payout,Revenue,1050
+L-00778,2025-05-23,Webshop order #10997,Shopify payout,Revenue,2100
+L-00779,2025-05-23,Payment processing fee · ref 11010,Nets A/S,Fees,-250
+L-00780,2025-05-26,Wholesale coffee delivery · inv 10977,Kaffebar Vesterbro ApS,Revenue,15050
+L-00781,2025-05-26,Webshop order #10987,Shopify payout,Revenue,1500
+L-00782,2025-05-26,Webshop order #10988,Shopify payout,Revenue,2750
+L-00783,2025-05-26,Webshop order #10995,Shopify payout,Revenue,2850
+L-00784,2025-05-27,Wholesale coffee delivery · inv 10974,Hotel Øresund A/S,Revenue,29450
+L-00785,2025-05-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-00786,2025-05-28,Bank account & card fees,Danske Bank A/S,Fees,-400
+L-00787,2025-06-01,Webshop order #11028,Shopify payout,Revenue,1850
+L-00788,2025-06-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-31000
+L-00789,2025-06-02,Wholesale coffee delivery · inv 11016,Kaffebar Vesterbro ApS,Revenue,36300
+L-00790,2025-06-03,Wholesale coffee delivery · inv 11013,Kantine Amager P/S,Revenue,46300
+L-00791,2025-06-03,Webshop order #11039,Shopify payout,Revenue,1350
+L-00792,2025-06-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00793,2025-06-05,Webshop order #11026,Shopify payout,Revenue,3150
+L-00794,2025-06-05,Webshop order #11035,Shopify payout,Revenue,750
+L-00795,2025-06-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00796,2025-06-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00797,2025-06-06,Webshop order #11027,Shopify payout,Revenue,3550
+L-00798,2025-06-06,Webshop order #11041,Shopify payout,Revenue,3500
+L-00799,2025-06-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00800,2025-06-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-00801,2025-06-07,Wholesale coffee delivery · inv 11012,Grønne Kontorer ApS,Revenue,29600
+L-00802,2025-06-07,Webshop order #11037,Shopify payout,Revenue,1050
+L-00803,2025-06-07,Green coffee beans · inv 11046,Antigua Importers ApS,COGS,-38700
+L-00804,2025-06-09,Wholesale coffee delivery · inv 11015,Bageriet Sundby ApS,Revenue,32500
+L-00805,2025-06-09,Webshop order #11030,Shopify payout,Revenue,1950
+L-00806,2025-06-09,Webshop order #11036,Shopify payout,Revenue,1250
+L-00807,2025-06-11,Wholesale coffee delivery · inv 11011,Baltika Coffee ApS,Revenue,30900
+L-00808,2025-06-12,Wholesale coffee delivery · inv 11018,Hotel Øresund A/S,Revenue,31900
+L-00809,2025-06-12,Webshop order #11034,Shopify payout,Revenue,1750
+L-00810,2025-06-12,Webshop order #11038,Shopify payout,Revenue,1550
+L-00811,2025-06-13,Webshop order #11043,Shopify payout,Revenue,1400
+L-00812,2025-06-14,Webshop order #11044,Shopify payout,Revenue,3750
+L-00813,2025-06-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-6150
+L-00814,2025-06-15,Water & waste,HOFOR A/S,Utilities,-800
+L-00815,2025-06-16,Webshop order #11042,Shopify payout,Revenue,600
+L-00816,2025-06-16,Sourcing trip / trade fair,SAS AB,Travel,-9450
+L-00817,2025-06-17,Webshop order #11040,Shopify payout,Revenue,2350
+L-00818,2025-06-17,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3650
+L-00819,2025-06-18,Takeaway cups & lids · inv 11047,Emballagehuset ApS,COGS,-4450
+L-00820,2025-06-19,Wholesale coffee delivery · inv 11017,Grønne Kontorer ApS,Revenue,17150
+L-00821,2025-06-20,Webshop order #11029,Shopify payout,Revenue,2950
+L-00822,2025-06-21,Webshop order #11022,Shopify payout,Revenue,2150
+L-00823,2025-06-21,Webshop order #11032,Shopify payout,Revenue,1350
+L-00824,2025-06-22,Wholesale coffee delivery · inv 11014,Bageriet Sundby ApS,Revenue,18150
+L-00825,2025-06-22,Webshop order #11019,Shopify payout,Revenue,2050
+L-00826,2025-06-22,Webshop order #11020,Shopify payout,Revenue,3900
+L-00827,2025-06-23,Webshop order #11033,Shopify payout,Revenue,1500
+L-00828,2025-06-23,Green coffee beans · inv 11045,Antigua Importers ApS,COGS,-33750
+L-00829,2025-06-25,Webshop order #11024,Shopify payout,Revenue,1650
+L-00830,2025-06-25,Webshop order #11025,Shopify payout,Revenue,1300
+L-00831,2025-06-25,Payment processing fee · ref 11048,Nets A/S,Fees,-300
+L-00832,2025-06-25,Payment processing fee · ref 11049,Nets A/S,Fees,-250
+L-00833,2025-06-26,Webshop order #11031,Shopify payout,Revenue,3750
+L-00834,2025-06-27,Webshop order #11021,Shopify payout,Revenue,1650
+L-00835,2025-06-27,Webshop order #11023,Shopify payout,Revenue,3850
+L-00836,2025-06-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-00837,2025-06-28,Bank account & card fees,Danske Bank A/S,Fees,-350
+L-00838,2025-07-01,Webshop order #11075,Shopify payout,Revenue,1450
+L-00839,2025-07-01,Webshop order #11076,Shopify payout,Revenue,3750
+L-00840,2025-07-01,Webshop order #11077,Shopify payout,Revenue,3200
+L-00841,2025-07-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-00842,2025-07-02,Webshop order #11067,Shopify payout,Revenue,1750
+L-00843,2025-07-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00844,2025-07-04,Wholesale coffee delivery · inv 11051,Kantine Amager P/S,Revenue,21750
+L-00845,2025-07-04,Webshop order #11064,Shopify payout,Revenue,1950
+L-00846,2025-07-05,Wholesale coffee delivery · inv 11052,CoWork Nordhavn A/S,Revenue,48550
+L-00847,2025-07-05,Webshop order #11056,Shopify payout,Revenue,3200
+L-00848,2025-07-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00849,2025-07-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00850,2025-07-06,Webshop order #11081,Shopify payout,Revenue,3550
+L-00851,2025-07-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00852,2025-07-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-00853,2025-07-07,Wholesale coffee delivery · inv 11053,Bageriet Sundby ApS,Revenue,47500
+L-00854,2025-07-07,Webshop order #11080,Shopify payout,Revenue,2700
+L-00855,2025-07-08,Wholesale coffee delivery · inv 11055,Kaffebar Vesterbro ApS,Revenue,38600
+L-00856,2025-07-08,Webshop order #11070,Shopify payout,Revenue,900
+L-00857,2025-07-08,Green coffee beans · inv 11082,Highland Beans Ltd,COGS,-35650
+L-00858,2025-07-11,Shipping boxes · inv 11086,Nordic Paper Bags AB,COGS,-5350
+L-00859,2025-07-12,Shipping boxes · inv 11085,Nordic Paper Bags AB,COGS,-3400
+L-00860,2025-07-13,Webshop order #11057,Shopify payout,Revenue,3850
+L-00861,2025-07-13,Webshop order #11061,Shopify payout,Revenue,2650
+L-00862,2025-07-13,Webshop order #11071,Shopify payout,Revenue,3250
+L-00863,2025-07-13,Sourcing trip / trade fair,Hotel Bogotá Centro,Travel,-9650
+L-00864,2025-07-14,Webshop order #11063,Shopify payout,Revenue,2650
+L-00865,2025-07-15,Green coffee beans · inv 11083,Highland Beans Ltd,COGS,-27250
+L-00866,2025-07-15,Search advertising,Google Ireland Ltd,Marketing,-2700
+L-00867,2025-07-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-6250
+L-00868,2025-07-15,Water & waste,HOFOR A/S,Utilities,-700
+L-00869,2025-07-16,Wholesale coffee delivery · inv 11050,Hotel Øresund A/S,Revenue,27350
+L-00870,2025-07-17,Webshop order #11079,Shopify payout,Revenue,1700
+L-00871,2025-07-17,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-4100
+L-00872,2025-07-18,Wholesale coffee delivery · inv 11054,Hotel Øresund A/S,Revenue,40350
+L-00873,2025-07-18,Green coffee beans · inv 11084,Cerrado Trading GmbH,COGS,-38650
+L-00874,2025-07-20,Webshop order #11060,Shopify payout,Revenue,3600
+L-00875,2025-07-20,Webshop order #11066,Shopify payout,Revenue,2950
+L-00876,2025-07-20,Webshop order #11078,Shopify payout,Revenue,3350
+L-00877,2025-07-22,Webshop order #11069,Shopify payout,Revenue,1450
+L-00878,2025-07-22,Webshop order #11073,Shopify payout,Revenue,1650
+L-00879,2025-07-22,Payment processing fee · ref 11087,Nets A/S,Fees,-650
+L-00880,2025-07-23,Webshop order #11065,Shopify payout,Revenue,1300
+L-00881,2025-07-24,Webshop order #11062,Shopify payout,Revenue,1100
+L-00882,2025-07-24,Webshop order #11072,Shopify payout,Revenue,3850
+L-00883,2025-07-26,Webshop order #11059,Shopify payout,Revenue,550
+L-00884,2025-07-27,Webshop order #11058,Shopify payout,Revenue,2850
+L-00885,2025-07-27,Webshop order #11068,Shopify payout,Revenue,600
+L-00886,2025-07-27,Webshop order #11074,Shopify payout,Revenue,3950
+L-00887,2025-07-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-00888,2025-07-28,Bank account & card fees,Danske Bank A/S,Fees,-450
+L-00889,2025-08-01,Webshop order #11103,Shopify payout,Revenue,650
+L-00890,2025-08-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-00891,2025-08-03,Webshop order #11108,Shopify payout,Revenue,3850
+L-00892,2025-08-03,Webshop order #11121,Shopify payout,Revenue,2750
+L-00893,2025-08-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00894,2025-08-04,Webshop order #11095,Shopify payout,Revenue,3650
+L-00895,2025-08-04,Webshop order #11101,Shopify payout,Revenue,1800
+L-00896,2025-08-04,Webshop order #11107,Shopify payout,Revenue,1050
+L-00897,2025-08-05,Webshop order #11115,Shopify payout,Revenue,2900
+L-00898,2025-08-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00899,2025-08-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00900,2025-08-06,Wholesale coffee delivery · inv 11088,Kantine Amager P/S,Revenue,40800
+L-00901,2025-08-06,Webshop order #11094,Shopify payout,Revenue,2950
+L-00902,2025-08-06,Webshop order #11114,Shopify payout,Revenue,1050
+L-00903,2025-08-06,Webshop order #11117,Shopify payout,Revenue,2450
+L-00904,2025-08-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00905,2025-08-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-00906,2025-08-07,Webshop order #11102,Shopify payout,Revenue,3550
+L-00907,2025-08-07,Webshop order #11106,Shopify payout,Revenue,3200
+L-00908,2025-08-08,Webshop order #11118,Shopify payout,Revenue,3450
+L-00909,2025-08-08,Webshop order #11119,Shopify payout,Revenue,3150
+L-00910,2025-08-08,Green coffee beans · inv 11123,Antigua Importers ApS,COGS,-25200
+L-00911,2025-08-09,Green coffee beans · inv 11122,Antigua Importers ApS,COGS,-36750
+L-00912,2025-08-09,Sourcing trip / trade fair,Hotel Bogotá Centro,Travel,-4150
+L-00913,2025-08-10,Webshop order #11097,Shopify payout,Revenue,4050
+L-00914,2025-08-11,Webshop order #11096,Shopify payout,Revenue,3700
+L-00915,2025-08-12,Webshop order #11105,Shopify payout,Revenue,3900
+L-00916,2025-08-12,Webshop order #11112,Shopify payout,Revenue,850
+L-00917,2025-08-12,Payment processing fee · ref 11126,Nets A/S,Fees,-650
+L-00918,2025-08-15,Webshop order #11100,Shopify payout,Revenue,1100
+L-00919,2025-08-15,Webshop order #11109,Shopify payout,Revenue,1950
+L-00920,2025-08-15,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-5950
+L-00921,2025-08-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-7550
+L-00922,2025-08-15,Water & waste,HOFOR A/S,Utilities,-900
+L-00923,2025-08-16,Webshop order #11120,Shopify payout,Revenue,2500
+L-00924,2025-08-16,Search advertising,Google Ireland Ltd,Marketing,-3800
+L-00925,2025-08-17,Webshop order #11099,Shopify payout,Revenue,3350
+L-00926,2025-08-17,Webshop order #11104,Shopify payout,Revenue,1300
+L-00927,2025-08-17,Webshop order #11116,Shopify payout,Revenue,3500
+L-00928,2025-08-17,Payment processing fee · ref 11128,Nets A/S,Fees,-450
+L-00929,2025-08-19,Webshop order #11110,Shopify payout,Revenue,3200
+L-00930,2025-08-19,Webshop order #11113,Shopify payout,Revenue,2950
+L-00931,2025-08-20,Wholesale coffee delivery · inv 11091,Hotel Øresund A/S,Revenue,29750
+L-00932,2025-08-20,Wholesale coffee delivery · inv 11093,Hotel Øresund A/S,Revenue,17600
+L-00933,2025-08-20,Shipping boxes · inv 11125,Nordic Paper Bags AB,COGS,-3150
+L-00934,2025-08-22,Wholesale coffee delivery · inv 11092,Restaurant Havnen IVS,Revenue,19550
+L-00935,2025-08-22,Webshop order #11098,Shopify payout,Revenue,2100
+L-00936,2025-08-22,Green coffee beans · inv 11124,Cerrado Trading GmbH,COGS,-31900
+L-00937,2025-08-24,Wholesale coffee delivery · inv 11089,Baltika Coffee ApS,Revenue,22100
+L-00938,2025-08-25,Wholesale coffee delivery · inv 11090,Kaffebar Vesterbro ApS,Revenue,26300
+L-00939,2025-08-25,Webshop order #11111,Shopify payout,Revenue,2600
+L-00940,2025-08-25,Payment processing fee · ref 11127,Nets A/S,Fees,-250
+L-00941,2025-08-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-00942,2025-08-28,Bank account & card fees,Danske Bank A/S,Fees,-400
+L-00943,2025-09-01,Webshop order #11152,Shopify payout,Revenue,3700
+L-00944,2025-09-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-00945,2025-09-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00946,2025-09-04,Webshop order #11146,Shopify payout,Revenue,750
+L-00947,2025-09-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00948,2025-09-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00949,2025-09-06,Wholesale coffee delivery · inv 11133,CoWork Nordhavn A/S,Revenue,38650
+L-00950,2025-09-06,Wholesale coffee delivery · inv 11136,Grønne Kontorer ApS,Revenue,47300
+L-00951,2025-09-06,"Bags, valves & labels · inv 11157",Nordic Paper Bags AB,COGS,-9950
+L-00952,2025-09-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00953,2025-09-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-00954,2025-09-07,Webshop order #11144,Shopify payout,Revenue,3050
+L-00955,2025-09-08,Wholesale coffee delivery · inv 11131,Kaffebar Vesterbro ApS,Revenue,26850
+L-00956,2025-09-10,Webshop order #11147,Shopify payout,Revenue,3500
+L-00957,2025-09-10,Takeaway cups & lids · inv 11156,Emballagehuset ApS,COGS,-9050
+L-00958,2025-09-11,Webshop order #11142,Shopify payout,Revenue,1950
+L-00959,2025-09-12,Webshop order #11138,Shopify payout,Revenue,4000
+L-00960,2025-09-12,Webshop order #11148,Shopify payout,Revenue,3050
+L-00961,2025-09-12,Payment processing fee · ref 11159,Nets A/S,Fees,-500
+L-00962,2025-09-13,Wholesale coffee delivery · inv 11137,CoWork Nordhavn A/S,Revenue,50400
+L-00963,2025-09-13,Webshop order #11150,Shopify payout,Revenue,2450
+L-00964,2025-09-13,Green coffee beans · inv 11154,Antigua Importers ApS,COGS,-45300
+L-00965,2025-09-14,Wholesale coffee delivery · inv 11129,Baltika Coffee ApS,Revenue,35200
+L-00966,2025-09-14,Webshop order #11139,Shopify payout,Revenue,2200
+L-00967,2025-09-14,Green coffee beans · inv 11153,Cerrado Trading GmbH,COGS,-43450
+L-00968,2025-09-15,Takeaway cups & lids · inv 11155,Emballagehuset ApS,COGS,-3400
+L-00969,2025-09-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-8450
+L-00970,2025-09-15,Water & waste,HOFOR A/S,Utilities,-950
+L-00971,2025-09-16,Webshop order #11143,Shopify payout,Revenue,2550
+L-00972,2025-09-18,Wholesale coffee delivery · inv 11135,Bageriet Sundby ApS,Revenue,37950
+L-00973,2025-09-19,Wholesale coffee delivery · inv 11130,Bageriet Sundby ApS,Revenue,42100
+L-00974,2025-09-19,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-4550
+L-00975,2025-09-20,Webshop order #11140,Shopify payout,Revenue,2300
+L-00976,2025-09-20,Webshop order #11141,Shopify payout,Revenue,3650
+L-00977,2025-09-20,Payment processing fee · ref 11158,Nets A/S,Fees,-650
+L-00978,2025-09-21,Webshop order #11151,Shopify payout,Revenue,2400
+L-00979,2025-09-23,Wholesale coffee delivery · inv 11132,Grønne Kontorer ApS,Revenue,21700
+L-00980,2025-09-23,Webshop order #11149,Shopify payout,Revenue,1850
+L-00981,2025-09-24,Wholesale coffee delivery · inv 11134,Bageriet Sundby ApS,Revenue,39000
+L-00982,2025-09-24,Webshop order #11145,Shopify payout,Revenue,2300
+L-00983,2025-09-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-00984,2025-09-28,Bank account & card fees,Danske Bank A/S,Fees,-500
+L-00985,2025-10-01,Webshop order #11179,Shopify payout,Revenue,1000
+L-00986,2025-10-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-00987,2025-10-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-00988,2025-10-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-00989,2025-10-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-00990,2025-10-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-00991,2025-10-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-00992,2025-10-07,Wholesale coffee delivery · inv 11160,CoWork Nordhavn A/S,Revenue,19150
+L-00993,2025-10-07,Wholesale coffee delivery · inv 11166,Restaurant Havnen IVS,Revenue,40550
+L-00994,2025-10-08,Webshop order #11180,Shopify payout,Revenue,3000
+L-00995,2025-10-09,Webshop order #11175,Shopify payout,Revenue,2050
+L-00996,2025-10-09,Webshop order #11176,Shopify payout,Revenue,3650
+L-00997,2025-10-09,Webshop order #11188,Shopify payout,Revenue,3700
+L-00998,2025-10-09,Green coffee beans · inv 11191,Cerrado Trading GmbH,COGS,-31400
+L-00999,2025-10-10,Webshop order #11168,Shopify payout,Revenue,2750
+L-01000,2025-10-10,Webshop order #11182,Shopify payout,Revenue,650
+L-01001,2025-10-10,Webshop order #11187,Shopify payout,Revenue,1050
+L-01002,2025-10-10,Takeaway cups & lids · inv 11192,Emballagehuset ApS,COGS,-4500
+L-01003,2025-10-11,Webshop order #11183,Shopify payout,Revenue,1550
+L-01004,2025-10-12,Webshop order #11173,Shopify payout,Revenue,1900
+L-01005,2025-10-12,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-5850
+L-01006,2025-10-12,Grinder maintenance,Probat Service Nord ApS,Maintenance,-4850
+L-01007,2025-10-13,Wholesale coffee delivery · inv 11162,Kantine Amager P/S,Revenue,36850
+L-01008,2025-10-14,Green coffee beans · inv 11189,Cerrado Trading GmbH,COGS,-25550
+L-01009,2025-10-14,Takeaway cups & lids · inv 11193,Nordic Paper Bags AB,COGS,-8400
+L-01010,2025-10-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-5950
+L-01011,2025-10-15,Water & waste,HOFOR A/S,Utilities,-700
+L-01012,2025-10-16,Green coffee beans · inv 11190,Antigua Importers ApS,COGS,-48250
+L-01013,2025-10-17,Wholesale coffee delivery · inv 11163,Hotel Øresund A/S,Revenue,45950
+L-01014,2025-10-18,Wholesale coffee delivery · inv 11161,Restaurant Havnen IVS,Revenue,34600
+L-01015,2025-10-18,Wholesale coffee delivery · inv 11164,Hotel Øresund A/S,Revenue,30750
+L-01016,2025-10-18,"Bags, valves & labels · inv 11194",Emballagehuset ApS,COGS,-7000
+L-01017,2025-10-19,Wholesale coffee delivery · inv 11165,Kantine Amager P/S,Revenue,47000
+L-01018,2025-10-19,Wholesale coffee delivery · inv 11167,Grønne Kontorer ApS,Revenue,48850
+L-01019,2025-10-19,Webshop order #11170,Shopify payout,Revenue,1550
+L-01020,2025-10-20,Webshop order #11185,Shopify payout,Revenue,2450
+L-01021,2025-10-21,Webshop order #11169,Shopify payout,Revenue,1200
+L-01022,2025-10-21,Webshop order #11171,Shopify payout,Revenue,1200
+L-01023,2025-10-21,Webshop order #11181,Shopify payout,Revenue,800
+L-01024,2025-10-22,Webshop order #11174,Shopify payout,Revenue,1150
+L-01025,2025-10-22,Payment processing fee · ref 11195,Nets A/S,Fees,-200
+L-01026,2025-10-23,Webshop order #11184,Shopify payout,Revenue,2800
+L-01027,2025-10-23,Webshop order #11186,Shopify payout,Revenue,1200
+L-01028,2025-10-24,Webshop order #11172,Shopify payout,Revenue,1500
+L-01029,2025-10-26,Webshop order #11178,Shopify payout,Revenue,700
+L-01030,2025-10-27,Webshop order #11177,Shopify payout,Revenue,2250
+L-01031,2025-10-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-01032,2025-10-28,Bank account & card fees,Danske Bank A/S,Fees,-300
+L-01033,2025-11-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-01034,2025-11-02,Wholesale coffee delivery · inv 11203,Restaurant Havnen IVS,Revenue,44750
+L-01035,2025-11-02,Webshop order #11217,Shopify payout,Revenue,2600
+L-01036,2025-11-03,Wholesale coffee delivery · inv 11202,CoWork Nordhavn A/S,Revenue,20050
+L-01037,2025-11-03,Webshop order #11206,Shopify payout,Revenue,700
+L-01038,2025-11-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-01039,2025-11-04,Shipping boxes · inv 11226,Emballagehuset ApS,COGS,-9800
+L-01040,2025-11-05,Webshop order #11204,Shopify payout,Revenue,2450
+L-01041,2025-11-05,Webshop order #11219,Shopify payout,Revenue,950
+L-01042,2025-11-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-01043,2025-11-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-01044,2025-11-06,Webshop order #11220,Shopify payout,Revenue,2200
+L-01045,2025-11-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-01046,2025-11-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-01047,2025-11-08,Webshop order #11215,Shopify payout,Revenue,1200
+L-01048,2025-11-09,Webshop order #11214,Shopify payout,Revenue,3600
+L-01049,2025-11-10,Green coffee beans · inv 11224,Antigua Importers ApS,COGS,-26750
+L-01050,2025-11-11,Webshop order #11211,Shopify payout,Revenue,3250
+L-01051,2025-11-11,Webshop order #11213,Shopify payout,Revenue,1650
+L-01052,2025-11-12,Webshop order #11216,Shopify payout,Revenue,4000
+L-01053,2025-11-12,Takeaway cups & lids · inv 11227,Nordic Paper Bags AB,COGS,-6100
+L-01054,2025-11-13,Wholesale coffee delivery · inv 11198,Restaurant Havnen IVS,Revenue,46750
+L-01055,2025-11-13,Wholesale coffee delivery · inv 11199,Bageriet Sundby ApS,Revenue,21700
+L-01056,2025-11-14,Wholesale coffee delivery · inv 11197,Grønne Kontorer ApS,Revenue,46350
+L-01057,2025-11-14,Webshop order #11210,Shopify payout,Revenue,1850
+L-01058,2025-11-15,Wholesale coffee delivery · inv 11200,Kaffebar Vesterbro ApS,Revenue,17700
+L-01059,2025-11-15,Webshop order #11218,Shopify payout,Revenue,3550
+L-01060,2025-11-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-9150
+L-01061,2025-11-15,Water & waste,HOFOR A/S,Utilities,-1300
+L-01062,2025-11-16,Webshop order #11205,Shopify payout,Revenue,3700
+L-01063,2025-11-16,Payment processing fee · ref 11228,Nets A/S,Fees,-300
+L-01064,2025-11-17,Webshop order #11208,Shopify payout,Revenue,1000
+L-01065,2025-11-18,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-4200
+L-01066,2025-11-19,Payment processing fee · ref 11229,Nets A/S,Fees,-500
+L-01067,2025-11-20,Webshop order #11207,Shopify payout,Revenue,1850
+L-01068,2025-11-21,Wholesale coffee delivery · inv 11196,Hotel Øresund A/S,Revenue,16300
+L-01069,2025-11-21,Green coffee beans · inv 11225,Antigua Importers ApS,COGS,-35650
+L-01070,2025-11-23,Green coffee beans · inv 11223,Highland Beans Ltd,COGS,-28000
+L-01071,2025-11-25,Webshop order #11221,Shopify payout,Revenue,1200
+L-01072,2025-11-26,Wholesale coffee delivery · inv 11201,Hotel Øresund A/S,Revenue,16650
+L-01073,2025-11-26,Webshop order #11212,Shopify payout,Revenue,2400
+L-01074,2025-11-27,Webshop order #11209,Shopify payout,Revenue,3750
+L-01075,2025-11-27,Webshop order #11222,Shopify payout,Revenue,1700
+L-01076,2025-11-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-01077,2025-11-28,Bank account & card fees,Danske Bank A/S,Fees,-600
+L-01078,2025-12-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-01079,2025-12-02,Webshop order #11240,Shopify payout,Revenue,2350
+L-01080,2025-12-02,Webshop order #11243,Shopify payout,Revenue,3450
+L-01081,2025-12-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-01082,2025-12-05,Webshop order #11241,Shopify payout,Revenue,3950
+L-01083,2025-12-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-01084,2025-12-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-01085,2025-12-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-01086,2025-12-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-01087,2025-12-07,Webshop order #11242,Shopify payout,Revenue,4150
+L-01088,2025-12-09,Shipping boxes · inv 11254,Emballagehuset ApS,COGS,-3550
+L-01089,2025-12-10,Wholesale coffee delivery · inv 11235,Kaffebar Vesterbro ApS,Revenue,29300
+L-01090,2025-12-11,Wholesale coffee delivery · inv 11234,Restaurant Havnen IVS,Revenue,40750
+L-01091,2025-12-11,Webshop order #11244,Shopify payout,Revenue,2650
+L-01092,2025-12-11,Takeaway cups & lids · inv 11255,Emballagehuset ApS,COGS,-6700
+L-01093,2025-12-11,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3900
+L-01094,2025-12-12,Webshop order #11238,Shopify payout,Revenue,4950
+L-01095,2025-12-13,Webshop order #11239,Shopify payout,Revenue,2100
+L-01096,2025-12-13,Webshop order #11247,Shopify payout,Revenue,5650
+L-01097,2025-12-15,Wholesale coffee delivery · inv 11231,CoWork Nordhavn A/S,Revenue,33700
+L-01098,2025-12-15,Webshop order #11246,Shopify payout,Revenue,3100
+L-01099,2025-12-15,Webshop order #11251,Shopify payout,Revenue,2950
+L-01100,2025-12-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-8500
+L-01101,2025-12-15,Water & waste,HOFOR A/S,Utilities,-1250
+L-01102,2025-12-19,Wholesale coffee delivery · inv 11230,CoWork Nordhavn A/S,Revenue,47150
+L-01103,2025-12-19,Webshop order #11249,Shopify payout,Revenue,5250
+L-01104,2025-12-19,Green coffee beans · inv 11253,Antigua Importers ApS,COGS,-64900
+L-01105,2025-12-20,Green coffee beans · inv 11252,Antigua Importers ApS,COGS,-56600
+L-01106,2025-12-23,Wholesale coffee delivery · inv 11236,Hotel Øresund A/S,Revenue,44050
+L-01107,2025-12-23,Webshop order #11237,Shopify payout,Revenue,2800
+L-01108,2025-12-23,Webshop order #11245,Shopify payout,Revenue,2350
+L-01109,2025-12-23,Webshop order #11250,Shopify payout,Revenue,5600
+L-01110,2025-12-23,Payment processing fee · ref 11256,Nets A/S,Fees,-300
+L-01111,2025-12-25,Wholesale coffee delivery · inv 11233,Grønne Kontorer ApS,Revenue,46700
+L-01112,2025-12-25,Webshop order #11248,Shopify payout,Revenue,4000
+L-01113,2025-12-27,Wholesale coffee delivery · inv 11232,Grønne Kontorer ApS,Revenue,45450
+L-01114,2025-12-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-138000
+L-01115,2025-12-28,Bank account & card fees,Danske Bank A/S,Fees,-550
+L-01116,2026-01-01,Webshop order #11265,Shopify payout,Revenue,2300
+L-01117,2026-01-01,Webshop order #11274,Shopify payout,Revenue,2750
+L-01118,2026-01-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-01119,2026-01-02,Wholesale coffee delivery · inv 11257,Bageriet Sundby ApS,Revenue,32450
+L-01120,2026-01-02,Webshop order #11269,Shopify payout,Revenue,4300
+L-01121,2026-01-02,Webshop order #11275,Shopify payout,Revenue,2350
+L-01122,2026-01-03,Webshop order #11267,Shopify payout,Revenue,1050
+L-01123,2026-01-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-01124,2026-01-04,Webshop order #11276,Shopify payout,Revenue,3850
+L-01125,2026-01-04,Webshop order #11279,Shopify payout,Revenue,4200
+L-01126,2026-01-04,Takeaway cups & lids · inv 11284,Emballagehuset ApS,COGS,-7800
+L-01127,2026-01-05,Wholesale coffee delivery · inv 11262,Kantine Amager P/S,Revenue,20200
+L-01128,2026-01-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-01129,2026-01-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-01130,2026-01-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-01131,2026-01-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-01132,2026-01-07,Webshop order #11270,Shopify payout,Revenue,3050
+L-01133,2026-01-09,"Bags, valves & labels · inv 11285",Emballagehuset ApS,COGS,-8250
+L-01134,2026-01-10,Webshop order #11271,Shopify payout,Revenue,1600
+L-01135,2026-01-13,Webshop order #11281,Shopify payout,Revenue,2950
+L-01136,2026-01-15,Webshop order #11263,Shopify payout,Revenue,650
+L-01137,2026-01-15,Webshop order #11266,Shopify payout,Revenue,1700
+L-01138,2026-01-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-8600
+L-01139,2026-01-15,Water & waste,HOFOR A/S,Utilities,-1250
+L-01140,2026-01-18,Wholesale coffee delivery · inv 11259,Baltika Coffee ApS,Revenue,54800
+L-01141,2026-01-18,Wholesale coffee delivery · inv 11261,Restaurant Havnen IVS,Revenue,40350
+L-01142,2026-01-18,Webshop order #11278,Shopify payout,Revenue,1500
+L-01143,2026-01-18,Search advertising,Google Ireland Ltd,Marketing,-2600
+L-01144,2026-01-19,Wholesale coffee delivery · inv 11258,Bageriet Sundby ApS,Revenue,43150
+L-01145,2026-01-19,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-4850
+L-01146,2026-01-20,Webshop order #11272,Shopify payout,Revenue,1850
+L-01147,2026-01-20,Payment processing fee · ref 11286,Nets A/S,Fees,-300
+L-01148,2026-01-20,Cooling repair,Probat Service Nord ApS,Maintenance,-6700
+L-01149,2026-01-20,Sourcing trip / trade fair,SAS AB,Travel,-10800
+L-01150,2026-01-22,Green coffee beans · inv 11282,Highland Beans Ltd,COGS,-44000
+L-01151,2026-01-22,Green coffee beans · inv 11283,Antigua Importers ApS,COGS,-43600
+L-01152,2026-01-23,Webshop order #11264,Shopify payout,Revenue,4300
+L-01153,2026-01-24,Webshop order #11277,Shopify payout,Revenue,600
+L-01154,2026-01-25,Wholesale coffee delivery · inv 11260,Kantine Amager P/S,Revenue,29950
+L-01155,2026-01-25,Webshop order #11273,Shopify payout,Revenue,2750
+L-01156,2026-01-25,Webshop order #11280,Shopify payout,Revenue,1550
+L-01157,2026-01-25,Payment processing fee · ref 11287,Nets A/S,Fees,-700
+L-01158,2026-01-27,Webshop order #11268,Shopify payout,Revenue,2500
+L-01159,2026-01-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-156000
+L-01160,2026-01-28,Bank account & card fees,Danske Bank A/S,Fees,-350
+L-01161,2026-02-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-01162,2026-02-02,Wholesale coffee delivery · inv 11290,Hotel Øresund A/S,Revenue,33750
+L-01163,2026-02-02,Wholesale coffee delivery · inv 11293,Kantine Amager P/S,Revenue,42400
+L-01164,2026-02-02,Webshop order #11296,Shopify payout,Revenue,1050
+L-01165,2026-02-02,Webshop order #11308,Shopify payout,Revenue,4050
+L-01166,2026-02-03,Webshop order #11316,Shopify payout,Revenue,1650
+L-01167,2026-02-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-01168,2026-02-04,Webshop order #11300,Shopify payout,Revenue,1800
+L-01169,2026-02-05,Wholesale coffee delivery · inv 11294,Kantine Amager P/S,Revenue,25200
+L-01170,2026-02-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-01171,2026-02-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-01172,2026-02-06,Wholesale coffee delivery · inv 11291,Grønne Kontorer ApS,Revenue,52500
+L-01173,2026-02-06,Webshop order #11305,Shopify payout,Revenue,3900
+L-01174,2026-02-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-01175,2026-02-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-01176,2026-02-08,Wholesale coffee delivery · inv 11288,Bageriet Sundby ApS,Revenue,25900
+L-01177,2026-02-08,Wholesale coffee delivery · inv 11292,Baltika Coffee ApS,Revenue,47550
+L-01178,2026-02-08,Webshop order #11312,Shopify payout,Revenue,4150
+L-01179,2026-02-08,Payment processing fee · ref 11323,Nets A/S,Fees,-650
+L-01180,2026-02-09,Green coffee beans · inv 11320,Cerrado Trading GmbH,COGS,-27500
+L-01181,2026-02-11,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3550
+L-01182,2026-02-12,Webshop order #11318,Shopify payout,Revenue,4400
+L-01183,2026-02-12,Cooling repair,Probat Service Nord ApS,Maintenance,-4250
+L-01184,2026-02-13,Green coffee beans · inv 11319,Cerrado Trading GmbH,COGS,-26800
+L-01185,2026-02-13,Green coffee beans · inv 11321,Highland Beans Ltd,COGS,-39050
+L-01186,2026-02-14,Webshop order #11315,Shopify payout,Revenue,1050
+L-01187,2026-02-14,"Bags, valves & labels · inv 11322",Nordic Paper Bags AB,COGS,-3350
+L-01188,2026-02-15,Webshop order #11301,Shopify payout,Revenue,3100
+L-01189,2026-02-15,Webshop order #11302,Shopify payout,Revenue,3000
+L-01190,2026-02-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-9900
+L-01191,2026-02-15,Water & waste,HOFOR A/S,Utilities,-1200
+L-01192,2026-02-16,Webshop order #11314,Shopify payout,Revenue,3850
+L-01193,2026-02-17,Webshop order #11297,Shopify payout,Revenue,2500
+L-01194,2026-02-17,Webshop order #11310,Shopify payout,Revenue,900
+L-01195,2026-02-18,Webshop order #11311,Shopify payout,Revenue,1500
+L-01196,2026-02-18,Sourcing trip / trade fair,SAS AB,Travel,-10350
+L-01197,2026-02-20,Webshop order #11313,Shopify payout,Revenue,1700
+L-01198,2026-02-22,Webshop order #11306,Shopify payout,Revenue,4050
+L-01199,2026-02-23,Webshop order #11309,Shopify payout,Revenue,2600
+L-01200,2026-02-23,Payment processing fee · ref 11324,Nets A/S,Fees,-400
+L-01201,2026-02-24,Webshop order #11298,Shopify payout,Revenue,1450
+L-01202,2026-02-24,Webshop order #11303,Shopify payout,Revenue,1850
+L-01203,2026-02-25,Webshop order #11299,Shopify payout,Revenue,4100
+L-01204,2026-02-25,Webshop order #11304,Shopify payout,Revenue,3250
+L-01205,2026-02-25,Webshop order #11317,Shopify payout,Revenue,1250
+L-01206,2026-02-26,Wholesale coffee delivery · inv 11289,Grønne Kontorer ApS,Revenue,44150
+L-01207,2026-02-26,Wholesale coffee delivery · inv 11295,CoWork Nordhavn A/S,Revenue,42850
+L-01208,2026-02-27,Webshop order #11307,Shopify payout,Revenue,4350
+L-01209,2026-02-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-156000
+L-01210,2026-02-28,Bank account & card fees,Danske Bank A/S,Fees,-500
+L-01211,2026-03-01,Webshop order #11342,Shopify payout,Revenue,4350
+L-01212,2026-03-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-01213,2026-03-03,Webshop order #11334,Shopify payout,Revenue,1650
+L-01214,2026-03-03,Webshop order #11346,Shopify payout,Revenue,3600
+L-01215,2026-03-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-01216,2026-03-04,Spring campaign — agency retainer,Bureau København ApS,Marketing,-38000
+L-01217,2026-03-05,Wholesale coffee delivery · inv 11328,CoWork Nordhavn A/S,Revenue,56200
+L-01218,2026-03-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-01219,2026-03-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-01220,2026-03-06,Webshop order #11338,Shopify payout,Revenue,2000
+L-01221,2026-03-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-01222,2026-03-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-01223,2026-03-07,Webshop order #11335,Shopify payout,Revenue,1850
+L-01224,2026-03-07,Webshop order #11343,Shopify payout,Revenue,4000
+L-01225,2026-03-08,Wholesale coffee delivery · inv 11325,Hotel Øresund A/S,Revenue,16900
+L-01226,2026-03-08,Webshop order #11340,Shopify payout,Revenue,3100
+L-01227,2026-03-08,Webshop order #11341,Shopify payout,Revenue,750
+L-01228,2026-03-09,Webshop order #11336,Shopify payout,Revenue,2250
+L-01229,2026-03-09,Sourcing trip / trade fair,Hotel Bogotá Centro,Travel,-5400
+L-01230,2026-03-10,Wholesale coffee delivery · inv 11329,Kantine Amager P/S,Revenue,19550
+L-01231,2026-03-10,Shipping boxes · inv 11352,Emballagehuset ApS,COGS,-6150
+L-01232,2026-03-10,Takeaway cups & lids · inv 11353,Nordic Paper Bags AB,COGS,-10100
+L-01233,2026-03-10,Payment processing fee · ref 11354,Nets A/S,Fees,-700
+L-01234,2026-03-11,Webshop order #11333,Shopify payout,Revenue,3900
+L-01235,2026-03-12,Webshop order #11345,Shopify payout,Revenue,3000
+L-01236,2026-03-13,Search advertising,Google Ireland Ltd,Marketing,-1950
+L-01237,2026-03-14,Webshop order #11344,Shopify payout,Revenue,3500
+L-01238,2026-03-14,Webshop order #11349,Shopify payout,Revenue,2350
+L-01239,2026-03-15,Green coffee beans · inv 11351,Cerrado Trading GmbH,COGS,-31000
+L-01240,2026-03-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-6450
+L-01241,2026-03-15,Water & waste,HOFOR A/S,Utilities,-700
+L-01242,2026-03-18,Webshop order #11337,Shopify payout,Revenue,2050
+L-01243,2026-03-18,Webshop order #11348,Shopify payout,Revenue,2550
+L-01244,2026-03-18,Spring campaign — paid media budget,Meta Platforms Ireland Ltd,Marketing,-24500
+L-01245,2026-03-19,Wholesale coffee delivery · inv 11327,Bageriet Sundby ApS,Revenue,28800
+L-01246,2026-03-19,Wholesale coffee delivery · inv 11331,Bageriet Sundby ApS,Revenue,19450
+L-01247,2026-03-19,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-4950
+L-01248,2026-03-20,Webshop order #11347,Shopify payout,Revenue,2500
+L-01249,2026-03-20,Green coffee beans · inv 11350,Highland Beans Ltd,COGS,-46900
+L-01250,2026-03-23,Wholesale coffee delivery · inv 11330,Bageriet Sundby ApS,Revenue,27250
+L-01251,2026-03-23,Wholesale coffee delivery · inv 11332,Hotel Øresund A/S,Revenue,23500
+L-01252,2026-03-23,Webshop order #11339,Shopify payout,Revenue,3100
+L-01253,2026-03-23,Payment processing fee · ref 11355,Nets A/S,Fees,-350
+L-01254,2026-03-27,Wholesale coffee delivery · inv 11326,Kaffebar Vesterbro ApS,Revenue,39650
+L-01255,2026-03-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-156000
+L-01256,2026-03-28,Bank account & card fees,Danske Bank A/S,Fees,-350
+L-01257,2026-04-01,Webshop order #11374,Shopify payout,Revenue,1500
+L-01258,2026-04-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-01259,2026-04-02,Wholesale coffee delivery · inv 11360,Bageriet Sundby ApS,Revenue,16450
+L-01260,2026-04-03,Webshop order #11377,Shopify payout,Revenue,2900
+L-01261,2026-04-03,Green coffee beans · inv 11386,Antigua Importers ApS,COGS,-46800
+L-01262,2026-04-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-01263,2026-04-04,Wholesale coffee delivery · inv 11358,Restaurant Havnen IVS,Revenue,21150
+L-01264,2026-04-04,Webshop order #11379,Shopify payout,Revenue,2150
+L-01265,2026-04-04,"Bags, valves & labels · inv 11387",Emballagehuset ApS,COGS,-9850
+L-01266,2026-04-05,Webshop order #11364,Shopify payout,Revenue,3150
+L-01267,2026-04-05,Webshop order #11382,Shopify payout,Revenue,2400
+L-01268,2026-04-05,Webshop order #11383,Shopify payout,Revenue,1250
+L-01269,2026-04-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-01270,2026-04-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-01271,2026-04-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-01272,2026-04-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-01273,2026-04-07,Green coffee beans · inv 11384,Cerrado Trading GmbH,COGS,-39000
+L-01274,2026-04-08,Webshop order #11376,Shopify payout,Revenue,1350
+L-01275,2026-04-09,Wholesale coffee delivery · inv 11363,Baltika Coffee ApS,Revenue,34300
+L-01276,2026-04-09,Payment processing fee · ref 11390,Nets A/S,Fees,-250
+L-01277,2026-04-09,"Spring campaign — trade fair stand, CPH Coffee Week",CPH Coffee Week ApS,Marketing,-17800
+L-01278,2026-04-10,Webshop order #11378,Shopify payout,Revenue,2550
+L-01279,2026-04-11,Wholesale coffee delivery · inv 11362,Grønne Kontorer ApS,Revenue,41600
+L-01280,2026-04-14,Webshop order #11370,Shopify payout,Revenue,3750
+L-01281,2026-04-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-5700
+L-01282,2026-04-15,Water & waste,HOFOR A/S,Utilities,-900
+L-01283,2026-04-16,Webshop order #11366,Shopify payout,Revenue,4200
+L-01284,2026-04-16,Webshop order #11381,Shopify payout,Revenue,4550
+L-01285,2026-04-17,Wholesale coffee delivery · inv 11357,Kaffebar Vesterbro ApS,Revenue,45550
+L-01286,2026-04-17,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3150
+L-01287,2026-04-17,Payment processing fee · ref 11391,Nets A/S,Fees,-200
+L-01288,2026-04-18,Webshop order #11367,Shopify payout,Revenue,2550
+L-01289,2026-04-18,Webshop order #11373,Shopify payout,Revenue,3100
+L-01290,2026-04-18,Webshop order #11375,Shopify payout,Revenue,3450
+L-01291,2026-04-19,Webshop order #11371,Shopify payout,Revenue,3350
+L-01292,2026-04-20,Wholesale coffee delivery · inv 11356,Bageriet Sundby ApS,Revenue,31600
+L-01293,2026-04-20,Webshop order #11365,Shopify payout,Revenue,2750
+L-01294,2026-04-20,"Bags, valves & labels · inv 11388",Nordic Paper Bags AB,COGS,-4150
+L-01295,2026-04-20,Shipping boxes · inv 11389,Nordic Paper Bags AB,COGS,-9550
+L-01296,2026-04-21,Webshop order #11380,Shopify payout,Revenue,4500
+L-01297,2026-04-21,Green coffee beans · inv 11385,Cerrado Trading GmbH,COGS,-48450
+L-01298,2026-04-23,Webshop order #11368,Shopify payout,Revenue,1200
+L-01299,2026-04-24,Wholesale coffee delivery · inv 11359,Baltika Coffee ApS,Revenue,42000
+L-01300,2026-04-25,Wholesale coffee delivery · inv 11361,CoWork Nordhavn A/S,Revenue,34400
+L-01301,2026-04-27,Webshop order #11369,Shopify payout,Revenue,2650
+L-01302,2026-04-27,Webshop order #11372,Shopify payout,Revenue,3300
+L-01303,2026-04-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-156000
+L-01304,2026-04-28,Bank account & card fees,Danske Bank A/S,Fees,-300
+L-01305,2026-05-01,Webshop order #11412,Shopify payout,Revenue,2200
+L-01306,2026-05-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-01307,2026-05-02,Webshop order #11415,Shopify payout,Revenue,1950
+L-01308,2026-05-03,Webshop order #11402,Shopify payout,Revenue,4650
+L-01309,2026-05-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-01310,2026-05-04,Webshop order #11411,Shopify payout,Revenue,3550
+L-01311,2026-05-04,Webshop order #11414,Shopify payout,Revenue,2800
+L-01312,2026-05-04,Webshop order #11423,Shopify payout,Revenue,3550
+L-01313,2026-05-05,Webshop order #11403,Shopify payout,Revenue,3750
+L-01314,2026-05-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-01315,2026-05-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-01316,2026-05-06,Webshop order #11417,Shopify payout,Revenue,1350
+L-01317,2026-05-06,Webshop order #11419,Shopify payout,Revenue,1050
+L-01318,2026-05-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-01319,2026-05-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-01320,2026-05-06,"Label printer lease, invoice 8841",Nordisk Kontorteknik A/S,Software,-7900
+L-01321,2026-05-07,Wholesale coffee delivery · inv 11393,Kaffebar Vesterbro ApS,Revenue,51100
+L-01322,2026-05-08,Green coffee beans · inv 11424,Cerrado Trading GmbH,COGS,-42550
+L-01323,2026-05-08,Payment processing fee · ref 11428,Nets A/S,Fees,-550
+L-01324,2026-05-09,Webshop order #11400,Shopify payout,Revenue,3000
+L-01325,2026-05-10,Webshop order #11405,Shopify payout,Revenue,2250
+L-01326,2026-05-10,Webshop order #11406,Shopify payout,Revenue,2200
+L-01327,2026-05-11,Webshop order #11407,Shopify payout,Revenue,3400
+L-01328,2026-05-11,Webshop order #11410,Shopify payout,Revenue,4650
+L-01329,2026-05-11,Webshop order #11416,Shopify payout,Revenue,2500
+L-01330,2026-05-12,Wholesale coffee delivery · inv 11396,Baltika Coffee ApS,Revenue,47900
+L-01331,2026-05-12,Webshop order #11422,Shopify payout,Revenue,850
+L-01332,2026-05-14,Webshop order #11418,Shopify payout,Revenue,4000
+L-01333,2026-05-15,Wholesale coffee delivery · inv 11397,Kantine Amager P/S,Revenue,20300
+L-01334,2026-05-15,Webshop order #11409,Shopify payout,Revenue,2800
+L-01335,2026-05-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-8450
+L-01336,2026-05-15,Water & waste,HOFOR A/S,Utilities,-900
+L-01337,2026-05-18,Webshop order #11408,Shopify payout,Revenue,3150
+L-01338,2026-05-18,Green coffee beans · inv 11426,Highland Beans Ltd,COGS,-33100
+L-01339,2026-05-18,Search advertising,Google Ireland Ltd,Marketing,-2250
+L-01340,2026-05-19,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-5900
+L-01341,2026-05-20,Wholesale coffee delivery · inv 11395,Bageriet Sundby ApS,Revenue,39250
+L-01342,2026-05-20,Wholesale coffee delivery · inv 11398,CoWork Nordhavn A/S,Revenue,33100
+L-01343,2026-05-20,Webshop order #11421,Shopify payout,Revenue,2450
+L-01344,2026-05-20,Takeaway cups & lids · inv 11427,Emballagehuset ApS,COGS,-5000
+L-01345,2026-05-21,Webshop order #11404,Shopify payout,Revenue,3150
+L-01346,2026-05-21,Webshop order #11413,Shopify payout,Revenue,4600
+L-01347,2026-05-21,"Label printer lease, invoice 8841",Nordisk Kontorteknik A/S,Software,-7900
+L-01348,2026-05-22,Wholesale coffee delivery · inv 11392,CoWork Nordhavn A/S,Revenue,47800
+L-01349,2026-05-23,Wholesale coffee delivery · inv 11394,Kantine Amager P/S,Revenue,30150
+L-01350,2026-05-23,Green coffee beans · inv 11425,Cerrado Trading GmbH,COGS,-26150
+L-01351,2026-05-24,Webshop order #11420,Shopify payout,Revenue,3650
+L-01352,2026-05-25,Webshop order #11401,Shopify payout,Revenue,3450
+L-01353,2026-05-25,Payment processing fee · ref 11429,Nets A/S,Fees,-200
+L-01354,2026-05-26,Wholesale coffee delivery · inv 11399,Kantine Amager P/S,Revenue,57100
+L-01355,2026-05-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-156000
+L-01356,2026-05-28,Bank account & card fees,Danske Bank A/S,Fees,-600
+L-01357,2026-06-01,Webshop order #11438,Shopify payout,Revenue,2850
+L-01358,2026-06-01,Webshop order #11442,Shopify payout,Revenue,4600
+L-01359,2026-06-01,Webshop order #11450,Shopify payout,Revenue,4300
+L-01360,2026-06-01,Webshop order #11452,Shopify payout,Revenue,1300
+L-01361,2026-06-01,Webshop order #11455,Shopify payout,Revenue,1500
+L-01362,2026-06-01,"Roastery & warehouse rent, Nordhavn",Ejendomsselskabet Nordhavn A/S,Rent,-32240
+L-01363,2026-06-03,Webshop order #11454,Shopify payout,Revenue,750
+L-01364,2026-06-03,Business & liability insurance,Tryg Forsikring A/S,Insurance,-2450
+L-01365,2026-06-04,Webshop order #11448,Shopify payout,Revenue,3850
+L-01366,2026-06-04,Webshop order #11460,Shopify payout,Revenue,2350
+L-01367,2026-06-05,Webshop order #11439,Shopify payout,Revenue,2950
+L-01368,2026-06-05,Accounting software subscription,e-conomic (Visma),Software,-1450
+L-01369,2026-06-05,Webshop platform subscription,Shopify International Ltd,Software,-2100
+L-01370,2026-06-06,Webshop order #11441,Shopify payout,Revenue,2700
+L-01371,2026-06-06,Email & docs subscription,Google Ireland Ltd,Software,-640
+L-01372,2026-06-06,CRM subscription,HubSpot Ireland Ltd,Software,-1180
+L-01373,2026-06-08,Wholesale coffee delivery · inv 11430,Hotel Øresund A/S,Revenue,35550
+L-01374,2026-06-08,Wholesale coffee delivery · inv 11437,Hotel Øresund A/S,Revenue,39650
+L-01375,2026-06-08,Webshop order #11446,Shopify payout,Revenue,2250
+L-01376,2026-06-08,Green coffee beans · inv 11463,Cerrado Trading GmbH,COGS,-33650
+L-01377,2026-06-09,Webshop order #11459,Shopify payout,Revenue,4800
+L-01378,2026-06-10,Webshop order #11447,Shopify payout,Revenue,2700
+L-01379,2026-06-10,Shipping boxes · inv 11467,Emballagehuset ApS,COGS,-5850
+L-01380,2026-06-12,Green coffee beans · inv 11464,Antigua Importers ApS,COGS,-50750
+L-01381,2026-06-12,Takeaway cups & lids · inv 11465,Emballagehuset ApS,COGS,-9550
+L-01382,2026-06-12,Payment processing fee · ref 11468,Nets A/S,Fees,-200
+L-01383,2026-06-14,Wholesale coffee delivery · inv 11436,Hotel Øresund A/S,Revenue,56950
+L-01384,2026-06-14,Webshop order #11443,Shopify payout,Revenue,4050
+L-01385,2026-06-14,Webshop order #11461,Shopify payout,Revenue,4500
+L-01386,2026-06-14,"Bags, valves & labels · inv 11466",Emballagehuset ApS,COGS,-7400
+L-01387,2026-06-15,Wholesale coffee delivery · inv 11434,Grønne Kontorer ApS,Revenue,50400
+L-01388,2026-06-15,Webshop order #11449,Shopify payout,Revenue,2150
+L-01389,2026-06-15,Electricity & heating (roaster),Ørsted Salg & Service A/S,Utilities,-5500
+L-01390,2026-06-15,Water & waste,HOFOR A/S,Utilities,-1050
+L-01391,2026-06-17,Webshop order #11456,Shopify payout,Revenue,4650
+L-01392,2026-06-19,Wholesale coffee delivery · inv 11433,Baltika Coffee ApS,Revenue,44200
+L-01393,2026-06-19,Social media advertising,Meta Platforms Ireland Ltd,Marketing,-3600
+L-01394,2026-06-20,Wholesale coffee delivery · inv 11431,Restaurant Havnen IVS,Revenue,23700
+L-01395,2026-06-20,Green coffee beans · inv 11462,Cerrado Trading GmbH,COGS,-34000
+L-01396,2026-06-21,Webshop order #11444,Shopify payout,Revenue,4400
+L-01397,2026-06-22,Webshop order #11440,Shopify payout,Revenue,1100
+L-01398,2026-06-23,Wholesale coffee delivery · inv 11432,Baltika Coffee ApS,Revenue,20300
+L-01399,2026-06-24,Webshop order #11451,Shopify payout,Revenue,3450
+L-01400,2026-06-25,Webshop order #11445,Shopify payout,Revenue,4450
+L-01401,2026-06-25,Webshop order #11457,Shopify payout,Revenue,3200
+L-01402,2026-06-26,Wholesale coffee delivery · inv 11435,CoWork Nordhavn A/S,Revenue,22500
+L-01403,2026-06-26,Webshop order #11458,Shopify payout,Revenue,1850
+L-01404,2026-06-27,Webshop order #11453,Shopify payout,Revenue,4550
+L-01405,2026-06-28,Salaries incl. pension & ATP,DataLøn A/S,Salaries,-156000
+L-01406,2026-06-28,Bank account & card fees,Danske Bank A/S,Fees,-300
