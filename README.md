@@ -36,9 +36,6 @@ forwards `/api` to the proxy, so the browser only ever sees one origin:
 
 ```bash
 npm run dev            # client (Vite, :5173)
-ANTHROPIC_API_KEY=sk-... DEMO_ACCESS_CODES=letmein npm run dev:server   # proxy (:8080)
-```
-
 ## Live mode & the proxy
 
 Live mode does **not** call Anthropic from the browser. The browser POSTs the
@@ -46,11 +43,11 @@ question to `/api/ask`; the proxy (`server/`) holds the funded key, runs the
 tool-use loop, and streams the answer back. So:
 
 - **The key is server-side only** — never in the bundle, never in the client.
-- **Access is gated by a demo code** (`DEMO_ACCESS_CODES`), not a key you paste.
+- **Access is gated by a demo code** (`DEMO_ACCESS_CODES`)
 - **Spend is capped three ways**: the funded path is pinned to **Claude Sonnet**
   (extended reasoning on); an in-memory budget limits tokens/requests per day
   (`DAILY_TOKEN_CAP`, `PER_CODE_DAILY_REQUESTS`); and the Anthropic **workspace
-  spend cap** (set in the console) is the hard backstop.
+  spend cap**
 - **It degrades gracefully** — a wrong code, a spent budget, or an unreachable
   proxy falls back to the scripted answer, so the demo never dead-ends.
 - **Enforcement lives in the tool layer, not the prompt.** The model can only
@@ -59,7 +56,6 @@ tool-use loop, and streams the answer back. So:
   scripted answers can't contradict the data, or each other.
 
 Deploy is a single container (`Dockerfile`) that serves the static client and
-`/api` same-origin. Set `ANTHROPIC_API_KEY` and `DEMO_ACCESS_CODES` in the host
-(e.g. Railway) environment.
+`/api` same-origin. Set `ANTHROPIC_API_KEY` and `DEMO_ACCESS_CODES` in the enviroment variables.
 
 *All company names, amounts and transactions are fictional.*

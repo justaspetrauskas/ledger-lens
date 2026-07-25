@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:server": "tsx watch --env-file-if-exists=.env server/index.ts",
+    "dev:server": "DOTENV_CONFIG_OVERRIDE=true DOTENV_CONFIG_QUIET=true tsx watch -r dotenv/config server/index.ts",
     "build": "tsc -b && vite build",
     "build:server": "tsc -p tsconfig.server.json && esbuild server/index.ts --bundle --platform=node --format=esm --outfile=dist-server/index.js",
     "build:all": "npm run build && npm run build:server",
-    "start": "node dist-server/index.js",
+    "start": "DOTENV_CONFIG_OVERRIDE=true DOTENV_CONFIG_QUIET=true node -r dotenv/config dist-server/index.js",
     "lint": "oxlint",
     "preview": "vite preview"
   },
@@ -19,6 +19,7 @@
     "@tanstack/react-query": "^5.101.4",
     "@tanstack/react-table": "^8.21.3",
     "apexcharts": "^6.5.0",
+    "dotenv": "^17.4.2",
     "hono": "^4.12.32",
     "react": "^19.2.7",
     "react-apexcharts": "^2.1.1",
