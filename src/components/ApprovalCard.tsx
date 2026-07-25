@@ -3,19 +3,14 @@ import type { ProposedAction } from '../lib/types'
 
 type Decision = 'pending' | 'approved' | 'rejected'
 
-/**
- * Human-in-the-loop review: the assistant proposes a side-effectful action;
- * nothing happens until the user explicitly approves. The draft is editable
- * before approval — review means being able to change it, not just rubber-
- * stamp it.
- *
- * Elevated actions (moving money) add a step-up: approving opens a
- * confirmation where the user must re-type the consequential value. Actively
- * re-typing the amount — rather than clicking through a second dialog — is a
- * real friction pattern (GitHub's "type the repo name to delete" style), and
- * it scales the ceremony to the stakes.
- */
-export function ApprovalCard({ action }: { action: ProposedAction }) {
+// Human-in-the-loop review: nothing happens until approved; draft is editable; elevated actions require re-typing the value; the decision is lifted out via onDecision for the audit log.
+export function ApprovalCard({
+  action,
+  onDecision,
+}: {
+  action: ProposedAction
+  onDecision?: (outcome: { decision: 'approved' | 'rejected'; draftEdited: boolean }) => void
+}) {
   const [decision, setDecision] = useState<Decision>('pending')
   const [draft, setDraft] = useState(action.draft)
   const [editing, setEditing] = useState(false)
@@ -25,6 +20,9 @@ export function ApprovalCard({ action }: { action: ProposedAction }) {
   const elevated = action.risk === 'elevated'
   const confirmMatches = typed.trim() === action.confirmValue
 
+  // Did the human alter the draft? Compared at decision time, so edit-then-revert reads as "not edited".
+  const draftEdited = () => draft.trim() !== action.draft.trim()
+
   const approve = () => {
     if (elevated && !confirming) {
       setConfirming(true)
@@ -32,6 +30,12 @@ export function ApprovalCard({ action }: { action: ProposedAction }) {
     }
     if (elevated && !confirmMatches) return
     setDecision('approved')
+    onDecision?.({ decision: 'approved', draftEdited: draftEdited() })
+  }
+
+  const reject = () => {
+    setDecision('rejected')
+    onDecision?.({ decision: 'rejected', draftEdited: draftEdited() })
   }
 
   return (
@@ -106,7 +110,7 @@ export function ApprovalCard({ action }: { action: ProposedAction }) {
             <button type="button" className="btn" onClick={() => setEditing((e) => !e)}>
               {editing ? 'Done editing' : 'Edit draft'}
             </button>
-            <button type="button" className="btn btn-danger" onClick={() => setDecision('rejected')}>
+            <button type="button" className="btn btn-danger" onClick={reject}>
               Reject
             </button>
           </div>

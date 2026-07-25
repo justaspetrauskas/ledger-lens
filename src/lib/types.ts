@@ -20,11 +20,7 @@ export interface ProposedAction {
   title: string
   description: string
   draft: string
-  /**
-   * Risk tier. 'elevated' actions (moving money) require a step-up
-   * confirmation before they can be approved; 'standard' (the default,
-   * e.g. sending an email) approves in one click.
-   */
+  /** 'elevated' (moves money) needs a step-up confirmation; 'standard' (default) approves in one click. */
   risk?: 'standard' | 'elevated'
   /** For elevated actions: the exact string the user must re-type to authorize. */
   confirmValue?: string
@@ -35,13 +31,23 @@ export interface AssistantPayload {
   citations: CitationDef[]
   chart?: ChartSpec
   action?: ProposedAction
-  /**
-   * Marks an interpretive answer (analysis, recommendation) rather than a
-   * plain factual lookup — renders a quiet "not financial advice" footer.
-   */
+  /** Interpretive answer (analysis, not a plain lookup) — renders a quiet "not financial advice" footer. */
   advisory?: boolean
 }
 
 export type ChatItem =
   | { role: 'user'; id: string; text: string }
   | ({ role: 'assistant'; id: string; streamedText: string; done: boolean } & AssistantPayload)
+
+// One recorded human decision on a proposed action (what, when, whether the draft was edited).
+export interface AuditEntry {
+  /** The assistant message id that carried the action (one action per message). */
+  id: string
+  /** Wall-clock time the decision was made. */
+  at: number
+  title: string
+  risk: 'standard' | 'elevated'
+  decision: 'approved' | 'rejected'
+  /** True if the human changed the AI's draft before deciding. */
+  draftEdited: boolean
+}
