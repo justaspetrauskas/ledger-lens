@@ -24,6 +24,13 @@ const CODES = new Set(
     .filter(Boolean),
 )
 
+// Optional public code, safe to reveal to any visitor so a stranger (a recruiter)
+// can try live mode without emailing for a code. It's still spend-capped by the
+// same per-code/daily budget as any handed-out code. When set, we fold it into
+// CODES and surface its value via /api/status so the client can offer one click.
+const PUBLIC_CODE = process.env.PUBLIC_DEMO_CODE?.trim() || null
+if (PUBLIC_CODE) CODES.add(PUBLIC_CODE)
+
 const app = new Hono()
 
 // Whether live mode is usable at all right now: key configured, at least one
@@ -31,8 +38,28 @@ const app = new Hono()
 const liveAvailable = () => !!client && CODES.size > 0 && budget.hasHeadroom()
 
 app.get('/api/status', (c) =>
-  c.json({ available: liveAvailable(), remaining: budget.remainingTokens() }),
+  c.json({
+    available: liveAvailable(),
+    remaining: budget.remainingTokens(),
+    publicCode: PUBLIC_CODE,
+  }),
 )
+
+// Check a code without spending any budget, so the field can tell the visitor
+// whether their code is live *before* they ask. 503 = live mode isn't configured
+// here at all (no key), which is different from a code that simply isn't valid.
+app.post('/api/verify', async (c) => {
+  let body: { code?: string }
+  try {
+    body = await c.req.json()
+  } catch {
+    return c.json({ valid: false }, 400)
+  }
+  if (!client || CODES.size === 0) return c.json({ valid: false, reason: 'unavailable' }, 503)
+  const code = (body.code ?? '').trim()
+  const valid = !!code && CODES.has(code)
+  return c.json({ valid, remaining: budget.remainingTokens() }, valid ? 200 : 401)
+})
 
 app.post('/api/ask', async (c) => {
   let body: { question?: string; history?: AgentTurn[]; code?: string }

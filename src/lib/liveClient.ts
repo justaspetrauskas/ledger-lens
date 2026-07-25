@@ -34,6 +34,31 @@ export interface LiveTurn {
   text: string
 }
 
+export type CodeStatus = 'valid' | 'invalid' | 'unavailable'
+
+/**
+ * Check a demo code against the proxy without spending budget, so the field can
+ * confirm the code is live before the visitor asks anything. 'unavailable' means
+ * live mode isn't configured on this server (or it's unreachable) — distinct from
+ * a code that's simply wrong, so the UI doesn't cry "invalid" on a scripted-only host.
+ */
+export async function verifyCode(code: string): Promise<CodeStatus> {
+  let res: Response
+  try {
+    res = await fetch('/api/verify', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ code }),
+    })
+  } catch {
+    return 'unavailable'
+  }
+  if (res.status === 503) return 'unavailable'
+  if (!res.ok) return 'invalid'
+  const body = (await res.json().catch(() => null)) as { valid?: boolean } | null
+  return body?.valid ? 'valid' : 'invalid'
+}
+
 function parseSseEvent(raw: string): { event?: string; data: string } {
   let event: string | undefined
   const dataLines: string[] = []

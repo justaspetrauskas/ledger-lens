@@ -188,8 +188,8 @@ Nordhavn Roastery ApS`,
 export const scriptedQAs: ScriptedQA[] = [marketingQA, revenueQA, spendQA, anomalyQA, rentQA, vatQA]
 
 export const scriptedFallback: AssistantPayload = {
-  answer: `Scripted demo mode can only answer the suggested questions — there's no model behind it, by design: the hosted demo has **no backend, no API keys and nothing to break**.
+  answer: `Scripted demo mode can only answer the suggested questions — there's no model behind it, by design: the hosted demo has **no backend, no keys in the browser and nothing to break**.
 
-Switch to **Live mode** (top right) with an Anthropic API key to ask anything about the books — same UI, same query engine, real model with tool use.`,
+Switch to **Live API** (top right) and enter a demo access code to ask anything about the books — same UI, same query engine, real model with tool use. The key stays server-side; access is a code, not something you paste.`,
   citations: [],
 }

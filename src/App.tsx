@@ -3,7 +3,7 @@ import { scriptedFallback, scriptedQAs, type ScriptedQA } from './data/scripted'
 import { streamText, type TextStreamHandle } from './lib/streamText'
 import { Markdown } from './lib/markdown'
 import { flaggedForReviewCount } from './lib/ledgerQuery'
-import { askLive, LiveError, type LiveTurn } from './lib/liveClient'
+import { askLive, LiveError, verifyCode, type CodeStatus, type LiveTurn } from './lib/liveClient'
 import type { AssistantPayload, AuditEntry, ChatItem, CitationDef, ProposedAction } from './lib/types'
 import { ChartMessage } from './components/ChartMessage'
 import { CitationDrawer } from './components/CitationDrawer'
@@ -12,6 +12,14 @@ import { AuditDrawer } from './components/AuditDrawer'
 import { KpiStrip } from './components/KpiStrip'
 
 type Mode = 'scripted' | 'live'
+
+// Where a visitor without a code is pointed to request one. Live mode is gated
+// only to cap API spend, so the ask is low-friction on purpose.
+const CONTACT_EMAIL = 'justbeready@gmail.com'
+const requestCodeHref =
+  `mailto:${CONTACT_EMAIL}` +
+  `?subject=${encodeURIComponent('Ledger Lens — demo access code')}` +
+  `&body=${encodeURIComponent("Hi Justas,\n\nCould I get a demo access code to try Ledger Lens in live mode?\n\nThanks!")}`
 
 let nextId = 0
 const uid = () => `m${++nextId}`
@@ -46,7 +54,14 @@ export default function App() {
   const [audit, setAudit] = useState<AuditEntry[]>([])
   const [auditOpen, setAuditOpen] = useState(false)
   const [fallbackNote, setFallbackNote] = useState<string | null>(null)
-  const [liveStatus, setLiveStatus] = useState<{ available: boolean; remaining: number } | null>(null)
+  const [liveStatus, setLiveStatus] = useState<{
+    available: boolean
+    remaining: number
+    publicCode?: string | null
+  } | null>(null)
+  // Whether the typed code has been confirmed live — null while empty/unchecked,
+  // 'checking' mid-request. Lets the field say so *before* the visitor asks.
+  const [codeStatus, setCodeStatus] = useState<CodeStatus | 'checking' | null>(null)
   const streamRef = useRef<TextStreamHandle | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
 
@@ -57,6 +72,41 @@ export default function App() {
       .then((s) => setLiveStatus(s))
       .catch(() => setLiveStatus({ available: false, remaining: 0 }))
   }, [])
+
+  // Confirm the demo code against the proxy as it's typed (debounced), so the
+  // field can show 'active' before the first question rather than only failing
+  // silently into scripted mode. Skips the round-trip when live mode is off.
+  useEffect(() => {
+    const code = accessCode.trim()
+    if (mode !== 'live' || !code) {
+      setCodeStatus(null)
+      return
+    }
+    if (liveStatus && !liveStatus.available) {
+      setCodeStatus('unavailable')
+      return
+    }
+    setCodeStatus('checking')
+    let cancelled = false
+    const t = setTimeout(() => {
+      verifyCode(code).then((s) => {
+        if (!cancelled) setCodeStatus(s)
+      })
+    }, 450)
+    return () => {
+      cancelled = true
+      clearTimeout(t)
+    }
+  }, [accessCode, mode, liveStatus])
+
+  // One-click "try live mode": switch to live and drop in the public demo code
+  // the server advertised (spend-capped like any other), so a stranger never
+  // hits a locked door with no way in.
+  const useDemoCode = () => {
+    if (!liveStatus?.publicCode) return
+    setMode('live')
+    setAccessCode(liveStatus.publicCode)
+  }
 
   const scrollDown = () => {
     requestAnimationFrame(() => {
@@ -220,16 +270,38 @@ export default function App() {
             <label className={`mode-pill${mode === 'live' ? ' mode-pill--on' : ''}`}>
               <input type="radio" checked={mode === 'live'} onChange={() => setMode('live')} />
               Live API
+              {mode === 'live' && codeStatus === 'valid' && (
+                <span className="mode-live-dot" aria-label="live access active" />
+              )}
             </label>
             {mode === 'live' && (
-              <input
-                type="password"
-                className="key-input"
-                placeholder="Demo access code"
-                value={accessCode}
-                onChange={(e) => setAccessCode(e.target.value)}
-                autoComplete="off"
-              />
+              <div className="code-field">
+                <input
+                  type="text"
+                  className={`key-input${codeStatus === 'invalid' ? ' key-input--bad' : ''}${codeStatus === 'valid' ? ' key-input--good' : ''}`}
+                  placeholder="Demo access code"
+                  value={accessCode}
+                  onChange={(e) => setAccessCode(e.target.value)}
+                  autoComplete="off"
+                  spellCheck={false}
+                  aria-invalid={codeStatus === 'invalid'}
+                />
+                {codeStatus === 'checking' && <span className="code-status">Checking…</span>}
+                {codeStatus === 'valid' && (
+                  <span className="code-status code-status--good">✓ Live access active</span>
+                )}
+                {codeStatus === 'invalid' && (
+                  <span className="code-status code-status--bad">Code not recognised</span>
+                )}
+                {codeStatus === 'unavailable' && (
+                  <span className="code-status">Live mode unavailable here</span>
+                )}
+                {codeStatus !== 'valid' && (
+                  <a className="need-code" href={requestCodeHref}>
+                    Need a code?
+                  </a>
+                )}
+              </div>
             )}
           </div>
           <button
@@ -262,6 +334,16 @@ export default function App() {
                   {reviewCount === 1 ? '1 item needs review' : `${reviewCount} items need review`}
                   <span className="review-banner-cta">Show me →</span>
                 </button>
+              )}
+              {mode === 'scripted' && liveStatus?.available && liveStatus.publicCode && (
+                <p className="empty-live">
+                  <button type="button" className="empty-live-btn" onClick={useDemoCode}>
+                    Try live mode with a real model →
+                  </button>
+                  <span className="empty-live-note">
+                    Free, spend-capped demo code — ask anything, not just the suggestions.
+                  </span>
+                </p>
               )}
             </div>
           )}
@@ -310,9 +392,10 @@ export default function App() {
               ) : (
                 <>
                   Live mode runs on a funded, budget-capped key (Claude Sonnet, with extended
-                  reasoning) behind a server proxy — your key is never involved. Enter the demo
-                  access code from the email. When the budget’s spent, it falls back to the
-                  scripted answers.
+                  reasoning) behind a server proxy — your key is never involved. Enter a demo
+                  access code above{liveStatus?.publicCode ? ' (or use the public one)' : ''}, or{' '}
+                  <a href={requestCodeHref}>request one</a>. When the budget’s spent, it falls back
+                  to the scripted answers.
                 </>
               )}
             </div>

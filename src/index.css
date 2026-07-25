@@ -36,10 +36,26 @@ body { background: var(--bg); font-size: 15px; line-height: 1.55; }
 }
 .mode-pill--on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
 .mode-pill input { display: none; }
+/* green "you're actually live" dot on the Live pill once a code checks out */
+.mode-live-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--green);
+  box-shadow: 0 0 0 3px rgba(22, 128, 60, 0.18);
+}
+
+.code-field { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .key-input {
   border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px;
-  font-size: 13px; width: 250px;
+  font-size: 13px; width: 190px; font-variant-numeric: tabular-nums;
 }
+.key-input:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+.key-input--good, .key-input--good:focus { border-color: var(--green); outline-color: #e6f6ec; }
+.key-input--bad, .key-input--bad:focus { border-color: var(--red); outline-color: #fdeceb; }
+/* inline verdict beside the code field — confirms the code before the first ask */
+.code-status { font-size: 12px; color: var(--text-dim); white-space: nowrap; }
+.code-status--good { color: var(--green); font-weight: 600; }
+.code-status--bad { color: var(--red); font-weight: 600; }
+.need-code { font-size: 12px; color: var(--accent); text-decoration: none; white-space: nowrap; }
+.need-code:hover { text-decoration: underline; }
 .topbar-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .audit-toggle {
   display: inline-flex; align-items: center; gap: 7px; padding: 5px 12px;
@@ -114,6 +130,15 @@ body { background: var(--bg); font-size: 15px; line-height: 1.55; }
   box-shadow: 0 0 0 3px rgba(224, 166, 58, 0.22);
 }
 .review-banner-cta { color: var(--accent); font-weight: 700; }
+
+/* secondary "try the real model" invitation under the empty-state banner */
+.empty-live { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 20px; }
+.empty-live-btn {
+  border: 1px solid var(--accent); background: var(--accent); color: #fff;
+  border-radius: 999px; padding: 9px 18px; font-size: 13.5px; font-weight: 600; cursor: pointer;
+}
+.empty-live-btn:hover { background: #1d4fd0; border-color: #1d4fd0; }
+.empty-live-note { font-size: 12px; color: var(--text-dim); }
 
 /* ---- messages ---- */
 .msg { margin-bottom: 18px; }
