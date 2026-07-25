@@ -6,25 +6,19 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run build
+# Builds the client (dist/) and bundles the proxy (dist-server/index.js).
+RUN npm run build:all
 
-FROM nginx:1.27-alpine AS runtime
+FROM node:22-alpine AS runtime
 
-COPY --from=build /app/dist /usr/share/nginx/html
+WORKDIR /app
+ENV NODE_ENV=production
 
-RUN cat <<'EOF' > /etc/nginx/conf.d/default.conf
-server {
-	listen 80;
-	server_name _;
-	root /usr/share/nginx/html;
-	index index.html;
+# The proxy is a single bundled file that also serves the static client, so the
+# runtime image needs only the two build outputs — no node_modules.
+COPY --from=build /app/dist ./dist
+COPY --from=build /app/dist-server ./dist-server
+ENV PORT=8080
+EXPOSE 8080
 
-	location / {
-		try_files $uri $uri/ /index.html;
-	}
-}
-EOF
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "dist-server/index.js"]

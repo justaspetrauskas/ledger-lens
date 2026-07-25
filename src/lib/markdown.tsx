@@ -1,14 +1,6 @@
 import type { ReactNode } from 'react'
 
-/**
- * Minimal markdown renderer for the scripted-answer subset:
- * paragraphs, unordered lists, **bold**, and [n] citation markers.
- *
- * Hand-rolled on purpose: it stays correct on *partial* input while text
- * is still streaming (an unclosed ** or a half-written list item must
- * never break the layout), which is the hard part of chat UIs that
- * generic markdown libraries don't always handle gracefully.
- */
+// Minimal markdown renderer (paragraphs, "- " lists, **bold**, [n] markers), hand-rolled to stay correct on partial streaming input.
 
 interface RenderOptions {
   onCitationClick?: (index: number) => void

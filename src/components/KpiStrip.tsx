@@ -10,19 +10,12 @@ import {
   priorMonth,
 } from '../lib/ledgerQuery'
 
-/**
- * The always-on financial header — cash position, latest-month spend, and the
- * open review count — computed from the ledger, not hardcoded. Two trust
- * details matter here: the cash figure declares the opening-balance assumption
- * it rests on, and the whole strip carries an explicit "as of" month, because a
- * KPI without an as-of date invites the reader to assume it's current.
- */
+// Always-on financial header (cash, latest-month spend, review count) computed from the ledger, with a declared opening-balance assumption and an explicit "as of" month.
 export function KpiStrip() {
   const cash = cashPosition()
   const spend = monthSpend(latestMonth)
   const prevSpend = priorMonth ? monthSpend(priorMonth) : 0
-  // Month-over-month change in spend. For an expense, down is the good
-  // direction — so the sign drives the color, not the magnitude alone.
+  // Month-over-month spend change; for an expense, down is good, so the sign drives the color.
   const deltaPct = prevSpend ? Math.round(((spend - prevSpend) / prevSpend) * 100) : 0
   const down = deltaPct < 0
   const flagged = flaggedForReviewCount()
