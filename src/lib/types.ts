@@ -20,6 +20,14 @@ export interface ProposedAction {
   title: string
   description: string
   draft: string
+  /**
+   * Risk tier. 'elevated' actions (moving money) require a step-up
+   * confirmation before they can be approved; 'standard' (the default,
+   * e.g. sending an email) approves in one click.
+   */
+  risk?: 'standard' | 'elevated'
+  /** For elevated actions: the exact string the user must re-type to authorize. */
+  confirmValue?: string
 }
 
 export interface AssistantPayload {
@@ -27,6 +35,11 @@ export interface AssistantPayload {
   citations: CitationDef[]
   chart?: ChartSpec
   action?: ProposedAction
+  /**
+   * Marks an interpretive answer (analysis, recommendation) rather than a
+   * plain factual lookup — renders a quiet "not financial advice" footer.
+   */
+  advisory?: boolean
 }
 
 export type ChatItem =

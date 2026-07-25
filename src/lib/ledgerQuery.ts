@@ -61,14 +61,23 @@ export function categoryTotals(fromMonth: string, toMonth: string): { categories
  * without it, legitimate recurring payments (rent, salaries, subscriptions)
  * are false positives.
  */
-export function findDuplicateCandidates(): LedgerEntry[] {
+function duplicateGroups(): LedgerEntry[][] {
   const seen = new Map<string, LedgerEntry[]>()
   for (const e of ledger) {
     if (e.amount >= 0) continue
     const key = `${e.counterparty}|${e.description}|${e.amount}|${e.date.slice(0, 7)}`
     seen.set(key, [...(seen.get(key) ?? []), e])
   }
-  return [...seen.values()].filter((g) => g.length > 1).flat()
+  return [...seen.values()].filter((g) => g.length > 1)
+}
+
+export function findDuplicateCandidates(): LedgerEntry[] {
+  return duplicateGroups().flat()
+}
+
+/** Count of distinct items flagged for review (currently: duplicate-payment groups). */
+export function flaggedForReviewCount(): number {
+  return duplicateGroups().length
 }
 
 export function sum(entries: LedgerEntry[]): number {

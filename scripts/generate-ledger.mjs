@@ -133,15 +133,21 @@ MONTHS.forEach((month, mi) => {
     amount: -salaryBase,
   })
 
-  // Rent — indexation steps
+  // Rent — indexation steps. June 2026 rent is deliberately left out: a
+  // genuine gap in the books (a payment that was never recorded), which the
+  // "Did we pay June rent?" scenario surfaces and proposes to settle. The
+  // amount is fixed (no PRNG), so omitting it leaves every other row byte-
+  // identical — only the ids after it shift down by one.
   const rent = month >= '2025-07' ? 32240 : month >= '2024-07' ? 31000 : 29800
-  add({
-    date: day(month, 1),
-    description: 'Roastery & warehouse rent, Nordhavn',
-    counterparty: 'Ejendomsselskabet Nordhavn A/S',
-    category: 'Rent',
-    amount: -rent,
-  })
+  if (month !== '2026-06') {
+    add({
+      date: day(month, 1),
+      description: 'Roastery & warehouse rent, Nordhavn',
+      counterparty: 'Ejendomsselskabet Nordhavn A/S',
+      category: 'Rent',
+      amount: -rent,
+    })
+  }
 
   // Software subscriptions (recurring, distinct months → never false-positive duplicates)
   add({ date: day(month, 5), description: 'Accounting software subscription', counterparty: 'e-conomic (Visma)', category: 'Software', amount: -1450 })

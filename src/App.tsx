@@ -1,7 +1,8 @@
 import { useCallback, useRef, useState } from 'react'
-import { scriptedFallback, scriptedQAs } from './data/scripted'
+import { scriptedFallback, scriptedQAs, type ScriptedQA } from './data/scripted'
 import { streamText, type TextStreamHandle } from './lib/streamText'
 import { Markdown } from './lib/markdown'
+import { flaggedForReviewCount } from './lib/ledgerQuery'
 import { askLive, type LiveTurn } from './lib/liveClient'
 import type { AssistantPayload, ChatItem, CitationDef } from './lib/types'
 import { ChartMessage } from './components/ChartMessage'
@@ -12,6 +13,11 @@ type Mode = 'scripted' | 'live'
 
 let nextId = 0
 const uid = () => `m${++nextId}`
+
+// Computed once from the static ledger: how many items the assistant would
+// proactively flag, and the question that surfaces them.
+const reviewCount = flaggedForReviewCount()
+const anomalyQa = scriptedQAs.find((qa) => qa.id === 'anomalies')
 
 export default function App() {
   const [mode, setMode] = useState<Mode>('scripted')
@@ -106,6 +112,13 @@ export default function App() {
     else askScripted(q, scriptedFallback)
   }
 
+  // Ask a curated question — routes through live or scripted depending on mode.
+  const askQa = (qa: ScriptedQA) => {
+    if (busy) return
+    if (mode === 'live') void askLiveMode(qa.question)
+    else askScripted(qa.question, qa.payload)
+  }
+
   const activeItem = items.find((it) => it.id === active?.itemId)
   const activeCitation =
     activeItem?.role === 'assistant' && active ? activeItem.citations[active.n - 1] : undefined
@@ -155,6 +168,13 @@ export default function App() {
                 ~1,400 ledger rows. Every answer streams in, cites the exact rows behind it, and
                 asks before acting.
               </p>
+              {reviewCount > 0 && anomalyQa && (
+                <button type="button" className="review-banner" onClick={() => askQa(anomalyQa)}>
+                  <span className="review-banner-dot" aria-hidden />
+                  {reviewCount === 1 ? '1 item needs review' : `${reviewCount} items need review`}
+                  <span className="review-banner-cta">Show me →</span>
+                </button>
+              )}
             </div>
           )}
 
@@ -175,6 +195,11 @@ export default function App() {
                 {!it.done && <span className="cursor" aria-hidden />}
                 {it.done && it.chart && <ChartMessage spec={it.chart} />}
                 {it.done && it.action && <ApprovalCard action={it.action} />}
+                {it.done && it.advisory && (
+                  <div className="advisory-note">
+                    Analysis, not financial advice — verify against the cited rows.
+                  </div>
+                )}
               </div>
             ),
           )}
@@ -204,9 +229,7 @@ export default function App() {
               type="button"
               className="chip"
               disabled={busy}
-              onClick={() =>
-                mode === 'live' ? void askLiveMode(qa.question) : askScripted(qa.question, qa.payload)
-              }
+              onClick={() => askQa(qa)}
             >
               {qa.question}
             </button>

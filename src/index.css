@@ -55,6 +55,20 @@ body { background: var(--bg); font-size: 15px; line-height: 1.55; }
   border: 1px solid #d6e3ff; border-radius: 10px; padding: 10px 14px; margin-top: 16px;
 }
 
+/* proactive "needs review" banner in the empty state */
+.review-banner {
+  display: inline-flex; align-items: center; gap: 10px; margin: 24px auto 0;
+  padding: 10px 16px; border: 1px solid #f0c674; background: #fffaf0;
+  border-radius: 999px; font-size: 13.5px; font-weight: 600; color: var(--text);
+  cursor: pointer;
+}
+.review-banner:hover { border-color: #e0a63a; background: #fff4e0; }
+.review-banner-dot {
+  width: 9px; height: 9px; border-radius: 50%; background: #e0a63a; flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(224, 166, 58, 0.22);
+}
+.review-banner-cta { color: var(--accent); font-weight: 700; }
+
 /* ---- messages ---- */
 .msg { margin-bottom: 18px; }
 .msg-user {
@@ -141,8 +155,35 @@ body { background: var(--bg); font-size: 15px; line-height: 1.55; }
   width: 100%; font-family: inherit; font-size: 13px; padding: 12px;
   border: 1px solid var(--accent); border-radius: 8px; resize: vertical;
 }
-.approval-actions { display: flex; gap: 8px; margin-top: 10px; }
+.approval-actions { display: flex; gap: 8px; margin-top: 10px; align-items: center; }
 .approval-verdict { margin-top: 10px; font-size: 13px; font-weight: 600; }
+
+/* elevated (money-moving) actions get a heavier, warier treatment */
+.approval--elevated { border-color: #e0a3a0; background: #fef6f5; }
+.approval--elevated.approval--approved { border-color: #9adbb2; background: #f2fbf5; }
+.approval-title-row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.approval-risk {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase;
+  color: var(--red); background: #fdeceb; border: 1px solid #e0a3a0;
+  border-radius: 999px; padding: 2px 8px;
+}
+.approval-stepup { margin-top: 12px; }
+.approval-stepup-label { display: block; font-size: 13px; color: var(--text); margin-bottom: 8px; }
+.approval-stepup-label code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-weight: 700;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px;
+}
+.approval-stepup-input {
+  flex: 1; min-width: 120px; border: 1px solid var(--accent); border-radius: 10px;
+  padding: 9px 14px; font-size: 14px; font-variant-numeric: tabular-nums;
+}
+.approval-stepup-input:focus { outline: 2px solid var(--accent-soft); }
+
+/* advisory footer on interpretive answers */
+.advisory-note {
+  margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);
+  font-size: 12px; font-style: italic; color: var(--text-dim);
+}
 
 /* ---- composer ---- */
 .composer {

@@ -89,12 +89,66 @@ Salaries reflect the January raise round and are fixed months ahead; bean purcha
     citations: [
       { label: 'All expense entries, Apr–Jun 2026', filter: { fromMonth: '2026-04', toMonth: '2026-06' } },
     ],
+    advisory: true,
     chart: {
       type: 'donut',
       title: 'Expenses by category, Q2 2026 (DKK)',
       labels: catQ2.categories,
       series: [{ name: 'Spend', data: catQ2.totals }],
     },
+  },
+}
+
+// --- Q4: spend breakdown carries an advisory footer (analysis, not fact) --------
+// (marked below via advisory: true)
+
+// --- Q5: missing payment + elevated (money-moving) approval ----------------------
+
+const juneRent = filterEntries({ category: 'Rent', fromMonth: '2026-06', toMonth: '2026-06' })
+const rentHistory = filterEntries({ category: 'Rent', fromMonth: '2026-01', toMonth: '2026-05' })
+// Most recent posted rent = the amount the missing June payment should be.
+const rentAmount = Math.abs(rentHistory[rentHistory.length - 1]?.amount ?? 0)
+
+const rentQA: ScriptedQA = {
+  id: 'june-rent',
+  question: 'Did we pay June rent?',
+  payload: {
+    answer: `**No — there's no June 2026 rent payment in the books.** Rent of ${fmtDKK(rentAmount)} has posted on the 1st of every month for over two years, but June 2026 has **no rent entry at all** [1].
+
+Every prior month is present and June is the only gap, so this reads as a **missed payment**, not a change in terms${juneRent.length === 0 ? '' : ' (note: a June rent entry now exists — the books have changed)'}.
+
+I can prepare the missing rent payment to Ejendomsselskabet Nordhavn A/S for your authorization. **Moving money needs your explicit sign-off — nothing is paid without it.**`,
+    citations: [
+      { label: 'Rent payments, Jan–Jun 2026 (June absent)', filter: { category: 'Rent', fromMonth: '2026-01', toMonth: '2026-06' } },
+    ],
+    action: {
+      risk: 'elevated',
+      confirmValue: String(rentAmount),
+      title: 'Pay June 2026 rent — Ejendomsselskabet Nordhavn A/S',
+      description: `Initiate the missing June rent payment of ${fmtDKK(rentAmount)} to the landlord's account on file.`,
+      draft: `Payment instruction
+
+Payee:      Ejendomsselskabet Nordhavn A/S
+Reference:  Roastery & warehouse rent — June 2026
+Amount:     ${fmtDKK(rentAmount)}
+Account:    usual rent account (on file)
+Requested:  Nordhavn Roastery ApS`,
+    },
+  },
+}
+
+// --- Q6: abstention — a question the ledger honestly cannot answer ----------------
+
+const vatQA: ScriptedQA = {
+  id: 'vat-q2',
+  question: 'How much VAT do we owe for Q2?',
+  payload: {
+    answer: `**I can't answer that from these books — and I won't guess.**
+
+The ledger records cash movements by category, but it **doesn't track VAT**: there's no VAT category, no gross/net split, and no per-line VAT code telling me which amounts are VAT-liable. Computing Q2 VAT owed would need the VAT rate on each transaction, the split between VAT-able and exempt turnover, and input VAT on purchases — none of which is in this dataset.
+
+A confidently-wrong VAT figure is worse than none, so I'm stopping here rather than estimating. This one belongs with your accountant or the VAT-coded records in e-conomic.`,
+    citations: [],
   },
 }
 
@@ -113,6 +167,7 @@ const anomalyQA: ScriptedQA = {
 
 I can draft a refund request for your review. **Nothing is sent without your approval.**`,
     citations: [{ label: 'Suspected duplicate payments', entryIds: dupes.map((d) => d.id) }],
+    advisory: true,
     action: {
       title: 'Request refund from Nordisk Kontorteknik A/S',
       description: `Refund request for a suspected double payment of invoice 8841 (${fmtDKK(Math.abs(dupes[0]?.amount ?? 0))} paid twice in May 2026).`,
@@ -130,7 +185,7 @@ Nordhavn Roastery ApS`,
   },
 }
 
-export const scriptedQAs: ScriptedQA[] = [marketingQA, revenueQA, spendQA, anomalyQA]
+export const scriptedQAs: ScriptedQA[] = [marketingQA, revenueQA, spendQA, anomalyQA, rentQA, vatQA]
 
 export const scriptedFallback: AssistantPayload = {
   answer: `Scripted demo mode can only answer the suggested questions — there's no model behind it, by design: the hosted demo has **no backend, no API keys and nothing to break**.
