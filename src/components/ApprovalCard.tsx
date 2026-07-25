@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import type { ProposedAction } from '../lib/types'
 
 type Decision = 'pending' | 'approved' | 'rejected'
@@ -16,6 +16,7 @@ export function ApprovalCard({
   const [editing, setEditing] = useState(false)
   const [confirming, setConfirming] = useState(false)
   const [typed, setTyped] = useState('')
+  const confirmId = useId()
 
   const elevated = action.risk === 'elevated'
   const confirmMatches = typed.trim() === action.confirmValue
@@ -69,12 +70,12 @@ export function ApprovalCard({
       {decision === 'pending' ? (
         confirming ? (
           <div className="approval-stepup">
-            <label className="approval-stepup-label" htmlFor="approval-confirm">
+            <label className="approval-stepup-label" htmlFor={confirmId}>
               This authorizes a real payment. Type <code>{action.confirmValue}</code> to confirm.
             </label>
             <div className="approval-actions">
               <input
-                id="approval-confirm"
+                id={confirmId}
                 className="approval-stepup-input"
                 value={typed}
                 onChange={(e) => setTyped(e.target.value)}
