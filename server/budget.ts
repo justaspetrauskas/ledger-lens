@@ -1,20 +1,9 @@
-// In-memory budget for the funded demo. Two independent, soft caps that degrade
-// gracefully to scripted mode:
-//   - a daily token cap across ALL traffic (the money knob)
-//   - a per-code daily request cap (stops one shared code from draining the day)
-//
-// The hard backstop is the Anthropic *workspace spend cap*, configured in the
-// console — that's what actually guarantees you can't be billed past a limit.
-// This module is the friendly layer in front of it: when it says "exhausted",
-// the client falls back to scripted rather than erroring.
-//
-// State is process-local (fine for a single Railway container). If this ever
-// runs multi-instance or on Cloudflare Workers, swap this for KV/Durable Objects.
+// In-memory soft caps (daily tokens + per-code daily requests) in front of the Anthropic workspace spend cap; process-local.
 
 const DAILY_TOKEN_CAP = Number(process.env.DAILY_TOKEN_CAP ?? 300_000)
 const PER_CODE_DAILY_REQUESTS = Number(process.env.PER_CODE_DAILY_REQUESTS ?? 40)
 
-const today = () => new Date().toISOString().slice(0, 10) // UTC yyyy-mm-dd
+const today = () => new Date().toISOString().slice(0, 10)
 
 let day = today()
 let tokensUsed = 0

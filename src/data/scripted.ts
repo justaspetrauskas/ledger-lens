@@ -1,6 +1,4 @@
-// Scripted demo mode. Answers are pre-written, but every number, chart and
-// citation is computed from the live dataset via the same query engine the
-// AI uses in live mode — so the text can never contradict the books.
+// Scripted mode: pre-written answers whose numbers, charts and citations are computed from the dataset via the same query engine live mode uses.
 
 import {
   categoryTotals,
@@ -99,9 +97,6 @@ Salaries reflect the January raise round and are fixed months ahead; bean purcha
   },
 }
 
-// --- Q4: spend breakdown carries an advisory footer (analysis, not fact) --------
-// (marked below via advisory: true)
-
 // --- Q5: missing payment + elevated (money-moving) approval ----------------------
 
 const juneRent = filterEntries({ category: 'Rent', fromMonth: '2026-06', toMonth: '2026-06' })
@@ -188,8 +183,8 @@ Nordhavn Roastery ApS`,
 export const scriptedQAs: ScriptedQA[] = [marketingQA, revenueQA, spendQA, anomalyQA, rentQA, vatQA]
 
 export const scriptedFallback: AssistantPayload = {
-  answer: `Scripted demo mode can only answer the suggested questions — there's no model behind it, by design: the hosted demo has **no backend, no keys in the browser and nothing to break**.
+  answer: `Scripted mode only answers the suggested questions below.
 
-Switch to **Live API** (top right) and enter a demo access code to ask anything about the books — same UI, same query engine, real model with tool use. The key stays server-side; access is a code, not something you paste.`,
+Switch to **Live API** (top right) and enter a demo access code to ask anything about the books.`,
   citations: [],
 }

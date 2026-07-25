@@ -1,8 +1,4 @@
-// Ledger Lens proxy. One process serves both the built SPA (dist/) and the
-// /api/* endpoints, same-origin, so there's no CORS to configure. It holds the
-// funded Anthropic key, gates live mode behind a demo access code, and caps
-// spend — falling back to scripted mode (client-side) when a code is wrong or
-// the budget is spent.
+// Proxy: serves the built SPA + /api/* same-origin, holds the key, gates live mode behind a demo code, and caps spend.
 
 import { readFile } from 'node:fs/promises'
 import { serve } from '@hono/node-server'
@@ -16,7 +12,7 @@ import * as budget from './budget'
 const apiKey = process.env.ANTHROPIC_API_KEY
 const client = apiKey ? new Anthropic({ apiKey }) : null
 
-// Demo access codes you hand out (in a CV, an email). Comma-separated in env.
+// Demo access codes you hand out, comma-separated in env.
 const CODES = new Set(
   (process.env.DEMO_ACCESS_CODES ?? '')
     .split(',')
@@ -24,17 +20,13 @@ const CODES = new Set(
     .filter(Boolean),
 )
 
-// Optional public code, safe to reveal to any visitor so a stranger (a recruiter)
-// can try live mode without emailing for a code. It's still spend-capped by the
-// same per-code/daily budget as any handed-out code. When set, we fold it into
-// CODES and surface its value via /api/status so the client can offer one click.
+// Optional public code, safe to reveal so a visitor can try live mode without asking; still spend-capped, surfaced via /api/status.
 const PUBLIC_CODE = process.env.PUBLIC_DEMO_CODE?.trim() || null
 if (PUBLIC_CODE) CODES.add(PUBLIC_CODE)
 
 const app = new Hono()
 
-// Whether live mode is usable at all right now: key configured, at least one
-// code configured, and the budget not yet spent for the day.
+// Live mode usable now: key set, a code configured, budget not spent.
 const liveAvailable = () => !!client && CODES.size > 0 && budget.hasHeadroom()
 
 app.get('/api/status', (c) =>
@@ -45,9 +37,7 @@ app.get('/api/status', (c) =>
   }),
 )
 
-// Check a code without spending any budget, so the field can tell the visitor
-// whether their code is live *before* they ask. 503 = live mode isn't configured
-// here at all (no key), which is different from a code that simply isn't valid.
+// Check a code without spending budget; 503 = live mode not configured here (distinct from an invalid code).
 app.post('/api/verify', async (c) => {
   let body: { code?: string }
   try {
@@ -97,8 +87,7 @@ app.post('/api/ask', async (c) => {
   })
 })
 
-// Static SPA. API routes are registered first, so they win; anything else falls
-// through to the built assets, and unknown paths get index.html (client routing).
+// Static SPA (API routes registered first win); unknown paths fall through to index.html.
 app.use('/*', serveStatic({ root: './dist' }))
 app.get('*', async (c) => {
   try {

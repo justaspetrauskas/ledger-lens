@@ -1,20 +1,10 @@
-// Server-side agent. This is the whole point of Phase 4: the Anthropic key, the
-// system prompt, the tool definitions, the ledger query engine, and the tool-use
-// loop all live here, on the server. The browser sends a question and receives a
-// merged event stream — it can't see or tamper with any of the below.
-//
-// It reuses the exact same query engine the scripted mode uses
-// (src/lib/ledgerQuery.ts), so live and scripted answers still can't drift.
+// Server-side agent: key, system prompt, tools, and the tool-use loop, reusing the same ledgerQuery engine as scripted mode.
 
 import Anthropic from '@anthropic-ai/sdk'
 import { MONTHS, type Category } from '../src/data/ledger'
 import { categoryTotals, filterEntries, monthlyTotals, type LedgerFilter } from '../src/lib/ledgerQuery'
 import type { AssistantPayload, ChartSpec, CitationDef } from '../src/lib/types'
 
-// Sonnet 5 on the funded path: strong reasoning with adaptive ("extended")
-// thinking on, at roughly a fifth of Opus's cost — a good fit for a public,
-// budget-capped demo. Adaptive thinking is how the model reasons through a
-// question before answering; the token + workspace caps keep spend bounded.
 const MODEL = 'claude-sonnet-5'
 
 export const AGENT_MODEL = MODEL
@@ -149,10 +139,7 @@ export interface AgentResult {
   usage: { inputTokens: number; outputTokens: number }
 }
 
-/**
- * Run one question through the agent. Streams text/chart/citation via callbacks
- * and returns the final payload plus token usage.
- */
+// Run one question through the agent: streams text/chart/citation via callbacks, returns the final payload + token usage.
 export async function ask(
   client: Anthropic,
   history: AgentTurn[],
@@ -174,9 +161,7 @@ export async function ask(
     const stream = client.messages.stream({
       model: MODEL,
       max_tokens: 8192,
-      // Adaptive thinking = the model decides how much to reason per question.
-      // The manual loop below already echoes assistant content (thinking blocks
-      // included) back on tool-use turns, which is required when thinking is on.
+      // Adaptive thinking; the loop echoes assistant content (thinking blocks included) back on tool-use turns, as required.
       thinking: { type: 'adaptive' },
       system: SYSTEM,
       tools,

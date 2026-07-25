@@ -1,7 +1,4 @@
-// Live mode, Phase 4: the browser no longer talks to Anthropic. It POSTs the
-// question to our own /api/ask proxy (which holds the funded key, runs the
-// tool-use loop, and enforces the budget) and renders the merged SSE stream it
-// streams back. No API key, no Anthropic SDK, no dangerouslyAllowBrowser here.
+// Live mode client: POSTs the question to /api/ask and renders the SSE stream the proxy sends back. No key, no SDK here.
 
 import type { AssistantPayload, ChartSpec, CitationDef } from './types'
 
@@ -36,12 +33,7 @@ export interface LiveTurn {
 
 export type CodeStatus = 'valid' | 'invalid' | 'unavailable'
 
-/**
- * Check a demo code against the proxy without spending budget, so the field can
- * confirm the code is live before the visitor asks anything. 'unavailable' means
- * live mode isn't configured on this server (or it's unreachable) — distinct from
- * a code that's simply wrong, so the UI doesn't cry "invalid" on a scripted-only host.
- */
+// Check a demo code without spending budget; 'unavailable' = live mode not configured/reachable, distinct from a wrong code.
 export async function verifyCode(code: string): Promise<CodeStatus> {
   let res: Response
   try {
@@ -77,11 +69,7 @@ function reasonForStatus(status: number): LiveErrorReason {
   return 'network'
 }
 
-/**
- * Ask a question in live mode via the proxy. Streams text/chart/citation via
- * callbacks and resolves with the final payload. Throws {@link LiveError} on
- * any failure so the caller can fall back to scripted mode.
- */
+// Ask via the proxy: streams text/chart/citation via callbacks, resolves the final payload, throws LiveError on any failure.
 export async function askLive(
   code: string,
   history: LiveTurn[],

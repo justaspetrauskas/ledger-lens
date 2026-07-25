@@ -1,9 +1,4 @@
-// Bookkeeping data for the fictional "Nordhavn Roastery ApS", a small Danish
-// coffee roastery. The data lives in ledger.csv — a realistic-sized export
-// (~1,400 rows over 30 months) that this module parses at load. The CSV is
-// produced by scripts/generate-ledger.mjs (a seeded, deterministic generator),
-// so every visitor sees the same books and the scripted answers always match
-// the data they cite.
+// Fictional bookkeeping for "Nordhavn Roastery ApS": parses the generated CSV (~1,400 rows) at load.
 
 import csvRaw from './ledgerCsv'
 
@@ -30,11 +25,7 @@ export interface LedgerEntry {
   amount: number
 }
 
-// --- CSV parsing ------------------------------------------------------------
-// Minimal RFC-4180-style parser: handles quoted fields, embedded commas and
-// escaped ("") quotes. Enough for a trusted, well-formed export — not a
-// general-purpose CSV library.
-
+// Minimal RFC-4180-style parser: quoted fields, embedded commas, escaped ("") quotes.
 function parseCsv(text: string): string[][] {
   const rows: string[][] = []
   let field = ''

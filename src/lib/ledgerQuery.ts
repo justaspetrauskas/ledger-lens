@@ -1,7 +1,4 @@
-// Query/aggregation engine over the ledger. This module is the "tool"
-// implementation: scripted answers call it directly, and in live mode the
-// model calls it through the query_ledger tool — same code path, so
-// scripted and live answers can never drift from the data.
+// Query/aggregation engine over the ledger — called directly by scripted mode and via the query_ledger tool in live mode.
 
 import { ledger, MONTHS, type Category, type LedgerEntry } from '../data/ledger'
 
@@ -55,12 +52,7 @@ export function categoryTotals(fromMonth: string, toMonth: string): { categories
   return { categories: sorted.map(([c]) => c), totals: sorted.map(([, t]) => Math.round(t)) }
 }
 
-/**
- * Entries that look like duplicate payments: same counterparty, description
- * and amount **within the same month**. The same-month constraint matters —
- * without it, legitimate recurring payments (rent, salaries, subscriptions)
- * are false positives.
- */
+// Suspected duplicate payments: same counterparty + description + amount within the same month (the same-month constraint avoids flagging recurring payments).
 function duplicateGroups(): LedgerEntry[][] {
   const seen = new Map<string, LedgerEntry[]>()
   for (const e of ledger) {
@@ -92,14 +84,7 @@ export const latestMonth = MONTHS[MONTHS.length - 1]
 /** The month before {@link latestMonth}, for month-over-month comparison. */
 export const priorMonth = MONTHS[MONTHS.length - 2]
 
-/**
- * Assumed cash on hand before the first ledger entry. The ledger records
- * movements, not balances, so any cash-position figure necessarily rests on an
- * opening balance we don't actually have. We state the assumption on the KPI
- * rather than present a derived number as if it were measured. (The books run a
- * cumulative cash burn over the period, so cash lands well below this opening —
- * the figure genuinely reflects the movements, it isn't a vanity number.)
- */
+// Assumed cash on hand before the first entry; the ledger records movements not balances, so the KPI states this assumption.
 export const ASSUMED_OPENING_BALANCE = 1_000_000
 
 /** Opening balance plus the net of every recorded movement. */

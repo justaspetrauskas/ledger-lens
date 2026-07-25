@@ -3,13 +3,7 @@ import type { AuditEntry } from '../lib/types'
 const fmtTime = (t: number) =>
   new Date(t).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
 
-/**
- * The accountability trail: every approve/reject the human made on an AI
- * proposal, newest first, with whether the draft was edited and whether the
- * action moved money. Session-scoped here; a real system would persist this
- * server-side against an identity — the point demonstrated is that the decision
- * is captured, not swallowed by the UI.
- */
+// The accountability trail: every approve/reject on an AI proposal, newest first. Session-scoped; a real system would persist it server-side.
 export function AuditDrawer({
   entries,
   onClose,

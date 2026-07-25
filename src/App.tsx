@@ -13,8 +13,7 @@ import { KpiStrip } from './components/KpiStrip'
 
 type Mode = 'scripted' | 'live'
 
-// Where a visitor without a code is pointed to request one. Live mode is gated
-// only to cap API spend, so the ask is low-friction on purpose.
+// Where a visitor without a code is pointed to request one.
 const CONTACT_EMAIL = 'justbeready@gmail.com'
 const requestCodeHref =
   `mailto:${CONTACT_EMAIL}` +
@@ -24,8 +23,7 @@ const requestCodeHref =
 let nextId = 0
 const uid = () => `m${++nextId}`
 
-// Computed once from the static ledger: how many items the assistant would
-// proactively flag, and the question that surfaces them.
+// How many items the assistant would flag, and the question that surfaces them.
 const reviewCount = flaggedForReviewCount()
 const anomalyQa = scriptedQAs.find((qa) => qa.id === 'anomalies')
 
@@ -59,8 +57,7 @@ export default function App() {
     remaining: number
     publicCode?: string | null
   } | null>(null)
-  // Whether the typed code has been confirmed live — null while empty/unchecked,
-  // 'checking' mid-request. Lets the field say so *before* the visitor asks.
+  // Whether the typed code is confirmed live (null = empty/unchecked, 'checking' = mid-request).
   const [codeStatus, setCodeStatus] = useState<CodeStatus | 'checking' | null>(null)
   const streamRef = useRef<TextStreamHandle | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -73,9 +70,7 @@ export default function App() {
       .catch(() => setLiveStatus({ available: false, remaining: 0 }))
   }, [])
 
-  // Confirm the demo code against the proxy as it's typed (debounced), so the
-  // field can show 'active' before the first question rather than only failing
-  // silently into scripted mode. Skips the round-trip when live mode is off.
+  // Confirm the demo code against the proxy as it's typed (debounced), so the field shows 'active' before the first question.
   useEffect(() => {
     const code = accessCode.trim()
     if (mode !== 'live' || !code) {
@@ -99,9 +94,7 @@ export default function App() {
     }
   }, [accessCode, mode, liveStatus])
 
-  // One-click "try live mode": switch to live and drop in the public demo code
-  // the server advertised (spend-capped like any other), so a stranger never
-  // hits a locked door with no way in.
+  // One-click "try live mode": switch to live and drop in the public demo code the server advertised.
   const useDemoCode = () => {
     if (!liveStatus?.publicCode) return
     setMode('live')
@@ -118,8 +111,7 @@ export default function App() {
     setItems((prev) => prev.map((it) => (it.id === id ? ({ ...it, ...patch } as ChatItem) : it)))
   }, [])
 
-  // Record a human decision on a proposed action into the audit trail. Keyed by
-  // the message id so each action logs exactly once (decisions are terminal).
+  // Record a human decision into the audit trail, keyed by message id so each action logs once.
   const recordDecision = useCallback(
     (
       id: string,
@@ -144,8 +136,7 @@ export default function App() {
     [],
   )
 
-  // Open the audit drawer; the two side drawers are mutually exclusive so they
-  // never fight for the right rail (or stack on top of each other on mobile).
+  // Open the audit drawer; the two side drawers are mutually exclusive.
   const openAudit = () => {
     setActive(null)
     setAuditOpen(true)
@@ -172,8 +163,7 @@ export default function App() {
 
   // --- live flow -------------------------------------------------------------
 
-  // Ask via the proxy. On any live failure (bad code, spent budget, unreachable),
-  // gracefully fall back to the supplied scripted payload so the demo never dead-ends.
+  // Ask via the proxy; on any live failure, fall back to the scripted payload so the demo never dead-ends.
   const askLiveMode = async (question: string, fallback: AssistantPayload) => {
     if (busy) return
     setBusy(true)
@@ -386,16 +376,15 @@ export default function App() {
             <div className="hint">
               {liveStatus && !liveStatus.available ? (
                 <>
-                  Live mode is currently unavailable (budget spent or not configured) — questions
-                  will answer from the scripted responses.
+                  Live mode is unavailable right now — questions will use the scripted answers
+                  instead.
                 </>
               ) : (
                 <>
-                  Live mode runs on a funded, budget-capped key (Claude Sonnet, with extended
-                  reasoning) behind a server proxy — your key is never involved. Enter a demo
-                  access code above{liveStatus?.publicCode ? ' (or use the public one)' : ''}, or{' '}
-                  <a href={requestCodeHref}>request one</a>. When the budget’s spent, it falls back
-                  to the scripted answers.
+                  Live mode answers with a real Claude model instead of the canned responses. Enter
+                  a demo access code above{liveStatus?.publicCode ? ' (or use the public one)' : ''},
+                  or <a href={requestCodeHref}>request one</a>. If the daily limit is reached, it
+                  falls back to the scripted answers.
                 </>
               )}
             </div>
