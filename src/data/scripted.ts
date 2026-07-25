@@ -116,6 +116,7 @@ I can prepare the missing rent payment to Ejendomsselskabet Nordhavn A/S for you
     citations: [
       { label: 'Rent payments, Jan–Jun 2026 (June absent)', filter: { category: 'Rent', fromMonth: '2026-01', toMonth: '2026-06' } },
     ],
+    advisory: true,
     action: {
       risk: 'elevated',
       confirmValue: String(rentAmount),

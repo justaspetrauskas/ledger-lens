@@ -16,15 +16,28 @@ export interface CitationDef {
   entryIds?: string[]
 }
 
-export interface ProposedAction {
+interface ProposedActionBase {
   title: string
   description: string
   draft: string
-  /** 'elevated' (moves money) needs a step-up confirmation; 'standard' (default) approves in one click. */
-  risk?: 'standard' | 'elevated'
-  /** For elevated actions: the exact string the user must re-type to authorize. */
-  confirmValue?: string
 }
+
+/**
+ * Discriminated on `risk` so an elevated (money-moving) action cannot exist
+ * without the confirmation value ApprovalCard's step-up requires.
+ */
+export type ProposedAction =
+  | (ProposedActionBase & {
+      /** 'standard' (default) approves in one click; no confirmation value. */
+      risk?: 'standard'
+      confirmValue?: never
+    })
+  | (ProposedActionBase & {
+      /** 'elevated' (moves money) needs a step-up confirmation. */
+      risk: 'elevated'
+      /** The exact (non-empty) string the user must re-type to authorize. */
+      confirmValue: string
+    })
 
 export interface AssistantPayload {
   answer: string

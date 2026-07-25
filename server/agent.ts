@@ -3,7 +3,7 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { MONTHS, type Category } from '../src/data/ledger'
 import { categoryTotals, filterEntries, monthlyTotals, type LedgerFilter } from '../src/lib/ledgerQuery'
-import type { AssistantPayload, ChartSpec, CitationDef } from '../src/lib/types'
+import type { AssistantPayload, ChartSpec, CitationDef, ProposedAction } from '../src/lib/types'
 
 const MODEL = 'claude-sonnet-5'
 
@@ -27,13 +27,18 @@ Rules:
   outside the coverage window — say so plainly and explain what data would be
   needed. Never estimate or fabricate a figure the ledger does not support; a
   confidently-wrong number is worse than an honest "I can't tell from this."
-- Moving money or any high-impact action must be proposed for explicit human
-  approval, never presented as done. Flag it clearly as needing sign-off.
+- Moving money or any high-impact action must be proposed via propose_action for
+  explicit human approval, never presented as done. For anything that moves money,
+  set risk to "elevated" and confirmValue to the exact amount the user must re-type
+  to authorize. Describe the action as pending sign-off, never as completed.
 - Cite sources: after querying, call add_citation for the rows backing each claim,
   and put the matching marker [1], [2], … in your text at the claim it supports.
   Citation numbers follow the order of your add_citation calls, starting at 1.
 - When a chart would help (trends, breakdowns, comparisons), call render_chart once
   with the aggregated data.
+- If your answer is interpretive — analysis, a judgment, or a recommendation rather
+  than a plain figure lookup — call flag_advisory once so the UI shows a quiet
+  "not financial advice" footer.
 - Keep answers short and decision-oriented. Use **bold** for the key numbers.
 - Markdown subset: paragraphs, "- " lists, **bold**, [n] markers. Nothing else.`
 
@@ -90,6 +95,28 @@ const tools: Anthropic.Tool[] = [
         entry_ids: { type: 'array', items: { type: 'string' }, description: 'Ledger row ids, e.g. ["L-0012"]' },
       },
       required: ['label', 'entry_ids'],
+    },
+  },
+  {
+    name: 'flag_advisory',
+    description:
+      'Flag this answer as interpretive — analysis, a judgment, or a recommendation rather than a plain figure lookup. Renders a quiet "not financial advice" footer. Call at most once, only when the answer goes beyond reporting figures.',
+    input_schema: { type: 'object', properties: {} },
+  },
+  {
+    name: 'propose_action',
+    description:
+      'Propose a high-impact action (sending a message, moving money) for explicit human approval. Never performed automatically — it renders an approval card the human must sign off before anything happens. For anything that moves money, set risk to "elevated" and confirmValue to the exact string the human must re-type to authorize (e.g. the amount). Call at most once.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        title: { type: 'string', description: 'Short action title shown on the approval card' },
+        description: { type: 'string', description: 'One line explaining what will happen once approved' },
+        draft: { type: 'string', description: 'The editable draft the human reviews — message body or payment instruction' },
+        risk: { type: 'string', enum: ['standard', 'elevated'], description: 'elevated = moves money; requires confirmValue and a step-up confirmation' },
+        confirmValue: { type: 'string', description: 'For elevated actions: the exact string the human must re-type to authorize, e.g. the amount' },
+      },
+      required: ['title', 'description', 'draft'],
     },
   },
 ]
@@ -154,6 +181,8 @@ export async function ask(
   let accumulated = ''
   const citations: CitationDef[] = []
   let chart: ChartSpec | undefined
+  let action: ProposedAction | undefined
+  let advisory = false
   let inputTokens = 0
   let outputTokens = 0
 
@@ -201,6 +230,12 @@ export async function ask(
           citations.push({ label: input.label, entryIds: input.entry_ids })
           cb.onCitation(citations[citations.length - 1])
           result = `Citation registered as [${citations.length}].`
+        } else if (block.name === 'flag_advisory') {
+          advisory = true
+          result = 'Advisory footer added.'
+        } else if (block.name === 'propose_action') {
+          action = block.input as unknown as ProposedAction
+          result = 'Action proposed — awaiting human approval.'
         } else {
           result = `Unknown tool: ${block.name}`
           isError = true
@@ -222,7 +257,7 @@ export async function ask(
   }
 
   return {
-    payload: { answer: accumulated, citations, chart },
+    payload: { answer: accumulated, citations, chart, action, advisory: advisory || undefined },
     usage: { inputTokens, outputTokens },
   }
 }
