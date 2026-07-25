@@ -4,10 +4,12 @@ import { streamText, type TextStreamHandle } from './lib/streamText'
 import { Markdown } from './lib/markdown'
 import { flaggedForReviewCount } from './lib/ledgerQuery'
 import { askLive, type LiveTurn } from './lib/liveClient'
-import type { AssistantPayload, ChatItem, CitationDef } from './lib/types'
+import type { AssistantPayload, AuditEntry, ChatItem, CitationDef, ProposedAction } from './lib/types'
 import { ChartMessage } from './components/ChartMessage'
 import { CitationDrawer } from './components/CitationDrawer'
 import { ApprovalCard } from './components/ApprovalCard'
+import { AuditDrawer } from './components/AuditDrawer'
+import { KpiStrip } from './components/KpiStrip'
 
 type Mode = 'scripted' | 'live'
 
@@ -26,6 +28,8 @@ export default function App() {
   const [input, setInput] = useState('')
   const [busy, setBusy] = useState(false)
   const [active, setActive] = useState<{ itemId: string; n: number } | null>(null)
+  const [audit, setAudit] = useState<AuditEntry[]>([])
+  const [auditOpen, setAuditOpen] = useState(false)
   const streamRef = useRef<TextStreamHandle | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
 
@@ -38,6 +42,39 @@ export default function App() {
   const patchItem = useCallback((id: string, patch: Partial<ChatItem>) => {
     setItems((prev) => prev.map((it) => (it.id === id ? ({ ...it, ...patch } as ChatItem) : it)))
   }, [])
+
+  // Record a human decision on a proposed action into the audit trail. Keyed by
+  // the message id so each action logs exactly once (decisions are terminal).
+  const recordDecision = useCallback(
+    (
+      id: string,
+      action: ProposedAction,
+      outcome: { decision: 'approved' | 'rejected'; draftEdited: boolean },
+    ) => {
+      setAudit((prev) => {
+        if (prev.some((e) => e.id === id)) return prev
+        return [
+          ...prev,
+          {
+            id,
+            at: Date.now(),
+            title: action.title,
+            risk: action.risk ?? 'standard',
+            decision: outcome.decision,
+            draftEdited: outcome.draftEdited,
+          },
+        ]
+      })
+    },
+    [],
+  )
+
+  // Open the audit drawer; the two side drawers are mutually exclusive so they
+  // never fight for the right rail (or stack on top of each other on mobile).
+  const openAudit = () => {
+    setActive(null)
+    setAuditOpen(true)
+  }
 
   // --- scripted flow ---------------------------------------------------------
 
@@ -136,27 +173,40 @@ export default function App() {
             </span>
           </div>
         </div>
-        <div className="mode">
-          <label className={`mode-pill${mode === 'scripted' ? ' mode-pill--on' : ''}`}>
-            <input type="radio" checked={mode === 'scripted'} onChange={() => setMode('scripted')} />
-            Scripted demo
-          </label>
-          <label className={`mode-pill${mode === 'live' ? ' mode-pill--on' : ''}`}>
-            <input type="radio" checked={mode === 'live'} onChange={() => setMode('live')} />
-            Live API
-          </label>
-          {mode === 'live' && (
-            <input
-              type="password"
-              className="key-input"
-              placeholder="Anthropic API key (memory only)"
-              value={apiKey}
-              onChange={(e) => setApiKey(e.target.value)}
-              autoComplete="off"
-            />
-          )}
+        <div className="topbar-right">
+          <div className="mode">
+            <label className={`mode-pill${mode === 'scripted' ? ' mode-pill--on' : ''}`}>
+              <input type="radio" checked={mode === 'scripted'} onChange={() => setMode('scripted')} />
+              Scripted demo
+            </label>
+            <label className={`mode-pill${mode === 'live' ? ' mode-pill--on' : ''}`}>
+              <input type="radio" checked={mode === 'live'} onChange={() => setMode('live')} />
+              Live API
+            </label>
+            {mode === 'live' && (
+              <input
+                type="password"
+                className="key-input"
+                placeholder="Anthropic API key (memory only)"
+                value={apiKey}
+                onChange={(e) => setApiKey(e.target.value)}
+                autoComplete="off"
+              />
+            )}
+          </div>
+          <button
+            type="button"
+            className="audit-toggle"
+            onClick={openAudit}
+            aria-haspopup="dialog"
+          >
+            Audit log
+            {audit.length > 0 && <span className="audit-toggle-count">{audit.length}</span>}
+          </button>
         </div>
       </header>
+
+      <KpiStrip />
 
       <div className="layout">
         <main className="chat" ref={scrollRef}>
@@ -186,15 +236,21 @@ export default function App() {
                 <Markdown
                   text={it.streamedText}
                   activeCitation={active?.itemId === it.id ? active.n : null}
-                  onCitationClick={(n) =>
+                  onCitationClick={(n) => {
+                    setAuditOpen(false)
                     setActive((cur) =>
                       cur?.itemId === it.id && cur.n === n ? null : { itemId: it.id, n },
                     )
-                  }
+                  }}
                 />
                 {!it.done && <span className="cursor" aria-hidden />}
                 {it.done && it.chart && <ChartMessage spec={it.chart} />}
-                {it.done && it.action && <ApprovalCard action={it.action} />}
+                {it.done && it.action && (
+                  <ApprovalCard
+                    action={it.action}
+                    onDecision={(o) => recordDecision(it.id, it.action!, o)}
+                  />
+                )}
                 {it.done && it.advisory && (
                   <div className="advisory-note">
                     Analysis, not financial advice — verify against the cited rows.
@@ -219,6 +275,8 @@ export default function App() {
             onClose={() => setActive(null)}
           />
         )}
+
+        {auditOpen && <AuditDrawer entries={audit} onClose={() => setAuditOpen(false)} />}
       </div>
 
       <footer className="composer">

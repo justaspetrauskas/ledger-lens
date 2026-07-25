@@ -45,3 +45,20 @@ export interface AssistantPayload {
 export type ChatItem =
   | { role: 'user'; id: string; text: string }
   | ({ role: 'assistant'; id: string; streamedText: string; done: boolean } & AssistantPayload)
+
+/**
+ * One recorded human decision on a proposed action. Accountability means every
+ * approve/reject on an AI proposal is logged with what it was, when, and whether
+ * the human altered the draft before deciding — the trail a bank would need.
+ */
+export interface AuditEntry {
+  /** The assistant message id that carried the action (one action per message). */
+  id: string
+  /** Wall-clock time the decision was made. */
+  at: number
+  title: string
+  risk: 'standard' | 'elevated'
+  decision: 'approved' | 'rejected'
+  /** True if the human changed the AI's draft before deciding. */
+  draftEdited: boolean
+}

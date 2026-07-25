@@ -84,8 +84,45 @@ export function sum(entries: LedgerEntry[]): number {
   return entries.reduce((acc, e) => acc + e.amount, 0)
 }
 
+// --- KPI helpers ------------------------------------------------------------
+
+/** The most recent month in the ledger ('yyyy-mm') — the "as of" date for KPIs. */
+export const latestMonth = MONTHS[MONTHS.length - 1]
+
+/** The month before {@link latestMonth}, for month-over-month comparison. */
+export const priorMonth = MONTHS[MONTHS.length - 2]
+
+/**
+ * Assumed cash on hand before the first ledger entry. The ledger records
+ * movements, not balances, so any cash-position figure necessarily rests on an
+ * opening balance we don't actually have. We state the assumption on the KPI
+ * rather than present a derived number as if it were measured. (The books run a
+ * cumulative cash burn over the period, so cash lands well below this opening —
+ * the figure genuinely reflects the movements, it isn't a vanity number.)
+ */
+export const ASSUMED_OPENING_BALANCE = 1_000_000
+
+/** Opening balance plus the net of every recorded movement. */
+export function cashPosition(): number {
+  return ASSUMED_OPENING_BALANCE + sum(ledger)
+}
+
+/** Expense magnitude (money out only) for a single month. */
+export function monthSpend(month: string): number {
+  return Math.abs(
+    filterEntries({ fromMonth: month, toMonth: month }).reduce(
+      (acc, e) => (e.amount < 0 ? acc + e.amount : acc),
+      0,
+    ),
+  )
+}
+
 export const fmtDKK = (n: number) =>
   new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK', maximumFractionDigits: 0 }).format(n)
+
+/** Compact form for headline KPI values, e.g. "1.2M kr", "285.8K kr". */
+export const fmtDKKCompact = (n: number) =>
+  `${new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(n)} kr`
 
 export const fmtMonth = (m: string) =>
   new Date(`${m}-01T00:00:00`).toLocaleDateString('en-GB', { month: 'short', year: '2-digit' })

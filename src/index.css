@@ -40,6 +40,48 @@ body { background: var(--bg); font-size: 15px; line-height: 1.55; }
   border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px;
   font-size: 13px; width: 250px;
 }
+.topbar-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.audit-toggle {
+  display: inline-flex; align-items: center; gap: 7px; padding: 5px 12px;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+  font-size: 13px; font-weight: 600; color: var(--text); cursor: pointer;
+}
+.audit-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.audit-toggle-count {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px;
+  background: var(--accent); color: #fff; font-size: 11px; font-weight: 700;
+}
+
+/* ---- KPI strip (always-on financial header) ---- */
+.kpi-strip {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 4px 0;
+  padding: 10px 20px; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.kpi { display: flex; flex-direction: column; gap: 1px; }
+.kpi + .kpi { border-left: 1px solid var(--border); margin-left: 24px; padding-left: 24px; }
+.kpi-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-dim);
+}
+.kpi-value { font-size: 20px; font-weight: 600; color: var(--text); line-height: 1.15; }
+.kpi-note { font-size: 11px; color: var(--text-dim); }
+/* delta color = direction × whether up is good; for spend, down is good.
+   The arrow glyph carries the direction too, so it never reads by color alone. */
+.kpi-delta { font-size: 11.5px; font-weight: 600; }
+.kpi-delta--good { color: var(--green); }
+.kpi-delta--bad { color: var(--red); }
+.kpi--warn .kpi-value { color: #b8860b; }
+.kpi-asof {
+  margin-left: auto; align-self: center; padding-left: 16px;
+  font-size: 11.5px; font-style: italic; color: var(--text-dim);
+}
+/* When the strip wraps onto multiple rows, the inter-tile dividers would strand
+   an orphaned line at each row start — drop them and separate by gap instead. */
+@media (max-width: 620px) {
+  .kpi-strip { column-gap: 28px; row-gap: 10px; }
+  .kpi + .kpi { border-left: none; margin-left: 0; padding-left: 0; }
+  .kpi-asof { margin-left: 0; padding-left: 0; }
+}
 
 /* ---- layout ---- */
 .layout { display: flex; flex: 1; min-height: 0; }
@@ -129,6 +171,37 @@ body { background: var(--bg); font-size: 15px; line-height: 1.55; }
 .drawer-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
 .amount-in { color: var(--green); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .amount-out { color: var(--red); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ---- audit drawer (decision log) ---- */
+.audit-body { overflow: auto; flex: 1; padding: 14px 16px; }
+.audit-empty { font-size: 13px; color: var(--text-dim); }
+.audit-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.audit-row {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border: 1px solid var(--border); border-radius: 10px; background: var(--surface);
+}
+.audit-badge {
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+  width: 22px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 700;
+}
+.audit-row--approved .audit-badge { background: #e6f6ec; color: var(--green); }
+.audit-row--rejected .audit-badge { background: var(--bg); color: var(--text-dim); }
+.audit-main { flex: 1; min-width: 0; }
+.audit-title { font-size: 13.5px; font-weight: 600; }
+.audit-tags { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 5px; }
+.audit-verdict {
+  font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+}
+.audit-verdict--approved { color: var(--green); }
+.audit-verdict--rejected { color: var(--text-dim); }
+.audit-chip {
+  font-size: 11px; padding: 1px 7px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--bg); color: var(--text-dim);
+}
+.audit-chip--elevated { color: var(--red); border-color: #e0a3a0; background: #fdeceb; }
+.audit-time {
+  margin-left: auto; font-size: 11px; color: var(--text-dim); font-variant-numeric: tabular-nums;
+}
 
 /* ---- chart ---- */
 .chart-card {

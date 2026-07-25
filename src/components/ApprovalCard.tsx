@@ -14,8 +14,17 @@ type Decision = 'pending' | 'approved' | 'rejected'
  * re-typing the amount — rather than clicking through a second dialog — is a
  * real friction pattern (GitHub's "type the repo name to delete" style), and
  * it scales the ceremony to the stakes.
+ *
+ * The decision is lifted out via `onDecision` so it can be recorded in the audit
+ * log — the card owns the interaction, the app owns the accountability trail.
  */
-export function ApprovalCard({ action }: { action: ProposedAction }) {
+export function ApprovalCard({
+  action,
+  onDecision,
+}: {
+  action: ProposedAction
+  onDecision?: (outcome: { decision: 'approved' | 'rejected'; draftEdited: boolean }) => void
+}) {
   const [decision, setDecision] = useState<Decision>('pending')
   const [draft, setDraft] = useState(action.draft)
   const [editing, setEditing] = useState(false)
@@ -25,6 +34,11 @@ export function ApprovalCard({ action }: { action: ProposedAction }) {
   const elevated = action.risk === 'elevated'
   const confirmMatches = typed.trim() === action.confirmValue
 
+  // Did the human alter the AI's draft? Compared at decision time, so editing
+  // and then reverting correctly reads as "not edited" — what matters is
+  // whether the acted-on text differs from what was proposed.
+  const draftEdited = () => draft.trim() !== action.draft.trim()
+
   const approve = () => {
     if (elevated && !confirming) {
       setConfirming(true)
@@ -32,6 +46,12 @@ export function ApprovalCard({ action }: { action: ProposedAction }) {
     }
     if (elevated && !confirmMatches) return
     setDecision('approved')
+    onDecision?.({ decision: 'approved', draftEdited: draftEdited() })
+  }
+
+  const reject = () => {
+    setDecision('rejected')
+    onDecision?.({ decision: 'rejected', draftEdited: draftEdited() })
   }
 
   return (
@@ -106,7 +126,7 @@ export function ApprovalCard({ action }: { action: ProposedAction }) {
             <button type="button" className="btn" onClick={() => setEditing((e) => !e)}>
               {editing ? 'Done editing' : 'Edit draft'}
             </button>
-            <button type="button" className="btn btn-danger" onClick={() => setDecision('rejected')}>
+            <button type="button" className="btn btn-danger" onClick={reject}>
               Reject
             </button>
           </div>
