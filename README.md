@@ -1,61 +1,46 @@
 # Ledger Lens
 
-**Ask your bookkeeping anything — and be able to verify every answer.**
+Ask a bookkeeping assistant a question and get an answer you can actually check —
+every claim links straight to the ledger rows behind it.
 
-A small exploration of the UX patterns that make AI assistants *trustworthy* in
-financial contexts: streamed responses, source citations that open the actual
-ledger rows, generated charts, and human-in-the-loop review for anything with
-side effects.
+It's a small demo of what *trustworthy* AI looks like in a financial UI: answers
+stream in, numbers come with clickable citations, charts are generated on the
+fly, and anything with a side effect (like emailing a supplier about a double
+payment) pauses for you to approve it first.
 
+## Running it
 
-## The data
-
-Two and a half years (~1,400 rows) of fictional bookkeeping for *Nordhavn
-Roastery ApS*, a Copenhagen coffee roastery. The data lives in a real CSV
-export (`src/data/ledger.csv`) that the app parses at load; the CSV is produced
-by a seeded, deterministic generator (`scripts/generate-ledger.mjs`) so every
-visitor sees the same books. Regenerate with `node scripts/generate-ledger.mjs`.
-
-Every line carries a unique invoice/order reference, so a *true* duplicate is
-the same reference appearing twice. Planted story hooks: a spring marketing
-campaign spike, and a duplicate invoice payment (invoice 8841, paid twice in
-May 2026). The duplicate detector keys on same payee + amount + **same month** —
-without that constraint, recurring rent and salaries become false positives.
-
-## Run it
-
-Scripted mode needs nothing but the front-end:
+**Scripted mode** needs no API key — a set of prepared questions answered from
+the real data. Enough to click around in:
 
 ```bash
 npm install
 npm run dev            # http://localhost:5173
 ```
 
-Live mode talks to a small proxy that holds the API key. Run both — Vite
-forwards `/api` to the proxy, so the browser only ever sees one origin:
+**Live mode** lets you ask anything. The browser sends your question to a small
+proxy that holds the API key server-side and runs the tool-use loop — the key
+never reaches the client. Live mode is gated by a demo code, spend-capped, and
+quietly falls back to scripted answers if the budget runs out.
 
 ```bash
-npm run dev            # client (Vite, :5173)
-## Live mode & the proxy
+npm run dev:server     # proxy
+npm run dev            # client — Vite forwards /api to the proxy
+```
 
-Live mode does **not** call Anthropic from the browser. The browser POSTs the
-question to `/api/ask`; the proxy (`server/`) holds the funded key, runs the
-tool-use loop, and streams the answer back. So:
+Set `ANTHROPIC_API_KEY` and `DEMO_ACCESS_CODES` in a `.env` file to enable it.
 
-- **The key is server-side only** — never in the bundle, never in the client.
-- **Access is gated by a demo code** (`DEMO_ACCESS_CODES`)
-- **Spend is capped three ways**: the funded path is pinned to **Claude Sonnet**
-  (extended reasoning on); an in-memory budget limits tokens/requests per day
-  (`DAILY_TOKEN_CAP`, `PER_CODE_DAILY_REQUESTS`); and the Anthropic **workspace
-  spend cap**
-- **It degrades gracefully** — a wrong code, a spent budget, or an unreachable
-  proxy falls back to the scripted answer, so the demo never dead-ends.
-- **Enforcement lives in the tool layer, not the prompt.** The model can only
-  touch the books through the `query_ledger` tool, which runs the same query
-  engine (`src/lib/ledgerQuery.ts`) the scripted answers use — so live and
-  scripted answers can't contradict the data, or each other.
+## The data
 
-Deploy is a single container (`Dockerfile`) that serves the static client and
-`/api` same-origin. Set `ANTHROPIC_API_KEY` and `DEMO_ACCESS_CODES` in the enviroment variables.
+Two and a half years of fictional books (~1,400 rows) for *Nordhavn Roastery
+ApS*, a made-up Copenhagen coffee roastery. It's generated deterministically
+(`scripts/generate-ledger.mjs`) so everyone sees the same numbers — planted
+stories included, like an invoice that got paid twice.
 
-*All company names, amounts and transactions are fictional.*
+All company names, amounts and transactions are fictional.
+
+## Built with
+
+React 19 · TypeScript · TanStack Table & Query · ApexCharts · Hono · the
+Anthropic API (tool use) · Vite. Ships as a single container that serves the app
+and the `/api` proxy from one origin.
