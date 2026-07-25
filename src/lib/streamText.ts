@@ -1,7 +1,4 @@
-// Token-by-token streaming for scripted mode — the same rendering pipeline a
-// real LLM stream feeds (partial markdown, abort, autoscroll), sourced from a
-// local string instead of a network stream. Live mode replaces this with the
-// actual Anthropic SSE stream; the consuming UI code is identical.
+// Token-by-token streaming for scripted mode: feeds the same rendering pipeline as the real SSE stream, from a local string.
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
@@ -17,8 +14,7 @@ export function streamText(
   onUpdate: (textSoFar: string, done: boolean) => void,
 ): TextStreamHandle {
   let stopped = false
-  // Word-ish tokens with whitespace attached: partial text is always a clean
-  // prefix of the final text.
+  // Word-ish tokens with whitespace attached, so partial text is always a clean prefix.
   const tokens = full.match(/\S+\s*/g) ?? []
 
   const done = (async () => {
