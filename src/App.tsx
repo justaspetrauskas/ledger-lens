@@ -20,8 +20,12 @@ const requestCodeHref =
   `?subject=${encodeURIComponent('Ledger Lens — demo access code')}` +
   `&body=${encodeURIComponent("Hi Justas,\n\nCould I get a demo access code to try Ledger Lens in live mode?\n\nThanks!")}`
 
+// Prefixed per page load so ids stay unique across browser sessions — the audit log now
+// keys shared server-side entries on these (see recordDecision), where two sessions
+// reaching the same counter value would otherwise collide and silently drop a decision.
+const sessionPrefix = Math.random().toString(36).slice(2, 8)
 let nextId = 0
-const uid = () => `m${++nextId}`
+const uid = () => `${sessionPrefix}-${++nextId}`
 
 // How many items the assistant would flag, and the question that surfaces them.
 const reviewCount = flaggedForReviewCount()
@@ -111,35 +115,48 @@ export default function App() {
     setItems((prev) => prev.map((it) => (it.id === id ? ({ ...it, ...patch } as ChatItem) : it)))
   }, [])
 
-  // Record a human decision into the audit trail, keyed by message id so each action logs once.
+  // Load the shared server-side log — used on mount and whenever the drawer opens, so a
+  // proposal made from another surface (e.g. MCP) shows up on refresh.
+  const loadAudit = useCallback(() => {
+    fetch('/api/audit')
+      .then((r) => (r.ok ? r.json() : []))
+      .then(setAudit)
+      .catch(() => {})
+  }, [])
+
+  useEffect(() => {
+    loadAudit()
+  }, [loadAudit])
+
+  // Record a human decision into the shared audit trail, keyed by message id so each action logs once.
   const recordDecision = useCallback(
     (
       id: string,
       action: ProposedAction,
       outcome: { decision: 'approved' | 'rejected'; draftEdited: boolean },
     ) => {
-      setAudit((prev) => {
-        if (prev.some((e) => e.id === id)) return prev
-        return [
-          ...prev,
-          {
-            id,
-            at: Date.now(),
-            title: action.title,
-            risk: action.risk ?? 'standard',
-            decision: outcome.decision,
-            draftEdited: outcome.draftEdited,
-          },
-        ]
+      fetch('/api/audit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id,
+          title: action.title,
+          risk: action.risk ?? 'standard',
+          decision: outcome.decision,
+          draftEdited: outcome.draftEdited,
+        }),
       })
+        .then(loadAudit)
+        .catch(() => {})
     },
-    [],
+    [loadAudit],
   )
 
   // Open the audit drawer; the two side drawers are mutually exclusive.
   const openAudit = () => {
     setActive(null)
     setAuditOpen(true)
+    loadAudit()
   }
 
   // --- scripted flow ---------------------------------------------------------

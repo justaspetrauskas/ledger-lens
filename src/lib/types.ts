@@ -52,15 +52,19 @@ export type ChatItem =
   | { role: 'user'; id: string; text: string }
   | ({ role: 'assistant'; id: string; streamedText: string; done: boolean } & AssistantPayload)
 
-// One recorded human decision on a proposed action (what, when, whether the draft was edited).
+// One recorded decision (or pending proposal) on an action. Server-side, shared across
+// every visitor and surface — see server/audit.ts for the storage ceiling this assumes.
 export interface AuditEntry {
   /** The assistant message id that carried the action (one action per message). */
   id: string
-  /** Wall-clock time the decision was made. */
+  /** Wall-clock time the entry was recorded (server clock). */
   at: number
   title: string
   risk: 'standard' | 'elevated'
-  decision: 'approved' | 'rejected'
-  /** True if the human changed the AI's draft before deciding. */
-  draftEdited: boolean
+  /** 'proposed' = an MCP client proposed this; no human has acted on it here. */
+  decision: 'approved' | 'rejected' | 'proposed'
+  /** True if the human changed the AI's draft before deciding. Meaningless for 'proposed'. */
+  draftEdited?: boolean
+  /** Which surface produced this entry. */
+  source: 'web' | 'mcp'
 }

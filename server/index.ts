@@ -7,8 +7,10 @@ import { Hono } from 'hono'
 import { streamSSE } from 'hono/streaming'
 import Anthropic from '@anthropic-ai/sdk'
 import { AGENT_MODEL, ask, type AgentTurn } from './agent'
+import * as audit from './audit'
 import * as budget from './budget'
 import { handleMcpRequest } from './mcp'
+import type { AuditEntry } from '../src/lib/types'
 
 const apiKey = process.env.ANTHROPIC_API_KEY
 const client = apiKey ? new Anthropic({ apiKey }) : null
@@ -86,6 +88,27 @@ app.post('/api/ask', async (c) => {
       })
     }
   })
+})
+
+// Shared decision log — read is public (it's the point: cross-surface visibility), write is
+// web-only. 'proposed' entries come from the MCP tool in-process, not through this route.
+app.get('/api/audit', (c) => c.json(audit.list()))
+
+app.post('/api/audit', async (c) => {
+  let body: Partial<AuditEntry>
+  try {
+    body = await c.req.json()
+  } catch {
+    return c.json({ error: 'bad_request' }, 400)
+  }
+  const { id, title, risk, decision, draftEdited } = body
+  const validRisk = risk === 'standard' || risk === 'elevated'
+  const validDecision = decision === 'approved' || decision === 'rejected'
+  if (typeof id !== 'string' || !id || typeof title !== 'string' || !title || !validRisk || !validDecision) {
+    return c.json({ error: 'bad_request' }, 400)
+  }
+  const entry = audit.record({ id, title, risk, decision, draftEdited: !!draftEdited, source: 'web' })
+  return c.json(entry)
 })
 
 // MCP endpoint — Phase 0 spike (one stub tool). Reuses the same demo codes as the web app,

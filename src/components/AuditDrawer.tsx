@@ -3,7 +3,15 @@ import type { AuditEntry } from '../lib/types'
 const fmtTime = (t: number) =>
   new Date(t).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
 
-// The accountability trail: every approve/reject on an AI proposal, newest first. Session-scoped; a real system would persist it server-side.
+const badge: Record<AuditEntry['decision'], string> = { approved: '✓', rejected: '✕', proposed: '○' }
+const verdictLabel: Record<AuditEntry['decision'], string> = {
+  approved: 'Approved',
+  rejected: 'Rejected',
+  proposed: 'Proposed',
+}
+
+// The accountability trail: every approve/reject/proposal, newest first. Shared server-side
+// across every visitor and surface — see server/audit.ts for what that assumes and its ceiling.
 export function AuditDrawer({
   entries,
   onClose,
@@ -17,7 +25,7 @@ export function AuditDrawer({
         <div>
           <strong>Decision log</strong>
           <div className="drawer-meta">
-            {entries.length} {entries.length === 1 ? 'decision' : 'decisions'} this session
+            {entries.length} logged — shared across visitors, resets on redeploy
           </div>
         </div>
         <button type="button" className="drawer-close" onClick={onClose} aria-label="Close audit log">
@@ -28,22 +36,23 @@ export function AuditDrawer({
       <div className="audit-body">
         {entries.length === 0 ? (
           <p className="audit-empty">
-            No decisions yet. Approvals and rejections are recorded here as you act on the
-            assistant's proposals — each with a timestamp and whether you edited the draft first.
+            Nothing logged yet. Approvals, rejections, and proposals from any surface — including
+            an MCP client like Claude Desktop — are recorded here as they happen.
           </p>
         ) : (
           <ol className="audit-list">
             {[...entries].reverse().map((e) => (
               <li key={e.id} className={`audit-row audit-row--${e.decision}`}>
                 <span className="audit-badge" aria-hidden>
-                  {e.decision === 'approved' ? '✓' : '✕'}
+                  {badge[e.decision]}
                 </span>
                 <div className="audit-main">
                   <div className="audit-title">{e.title}</div>
                   <div className="audit-tags">
                     <span className={`audit-verdict audit-verdict--${e.decision}`}>
-                      {e.decision === 'approved' ? 'Approved' : 'Rejected'}
+                      {verdictLabel[e.decision]}
                     </span>
+                    {e.source === 'mcp' && <span className="audit-chip audit-chip--mcp">MCP</span>}
                     {e.risk === 'elevated' && (
                       <span className="audit-chip audit-chip--elevated">Elevated</span>
                     )}

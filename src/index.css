@@ -215,6 +215,7 @@ body { background: var(--bg); font-size: 15px; line-height: 1.55; }
 }
 .audit-row--approved .audit-badge { background: #e6f6ec; color: var(--green); }
 .audit-row--rejected .audit-badge { background: var(--bg); color: var(--text-dim); }
+.audit-row--proposed .audit-badge { background: var(--bg); color: var(--accent); }
 .audit-main { flex: 1; min-width: 0; }
 .audit-title { font-size: 13.5px; font-weight: 600; }
 .audit-tags { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 5px; }
@@ -223,11 +224,13 @@ body { background: var(--bg); font-size: 15px; line-height: 1.55; }
 }
 .audit-verdict--approved { color: var(--green); }
 .audit-verdict--rejected { color: var(--text-dim); }
+.audit-verdict--proposed { color: var(--accent); }
 .audit-chip {
   font-size: 11px; padding: 1px 7px; border-radius: 999px;
   border: 1px solid var(--border); background: var(--bg); color: var(--text-dim);
 }
 .audit-chip--elevated { color: var(--red); border-color: #e0a3a0; background: #fdeceb; }
+.audit-chip--mcp { color: var(--accent); border-color: var(--accent); }
 .audit-time {
   margin-left: auto; font-size: 11px; color: var(--text-dim); font-variant-numeric: tabular-nums;
 }
