@@ -11,6 +11,7 @@ export const AGENT_MODEL = MODEL
 
 const CATEGORIES: Category[] = [
   'Revenue', 'COGS', 'Salaries', 'Marketing', 'Rent', 'Software', 'Travel', 'Utilities',
+  'Insurance', 'Fees', 'Maintenance',
 ]
 
 const SYSTEM = `You are Ledger Lens, an assistant that answers questions about the
