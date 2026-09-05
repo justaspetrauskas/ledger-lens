@@ -30,6 +30,27 @@ npm run dev            # client — Vite forwards /api to the proxy
 
 Set `ANTHROPIC_API_KEY` and `DEMO_ACCESS_CODES` in a `.env` file to enable it.
 
+## Connect to it via MCP
+
+The same ledger is also exposed as an MCP server at `/mcp` — five read-only
+query tools (`query_ledger`, `monthly_totals`, `category_totals`,
+`find_duplicates`, `cash_position`) plus `propose_action`, which only ever logs
+a pending proposal for a human to review in the app; it can't do anything on
+its own. Every tool result carries the exact ledger row ids behind it, same as
+the in-app citations.
+
+Auth reuses the same demo code as live mode — no OAuth:
+
+```bash
+claude mcp add --transport http ledger-lens <url>/mcp \
+  --header "Authorization: Bearer <demo code>"
+```
+
+Confirmed working end to end with Claude Code CLI. claude.ai and Claude
+Desktop should work the same way via a custom connector with a static header,
+but that's untested so far — propose something from wherever you try it and
+check the decision log in the app to see if it landed.
+
 ## The data
 
 Two and a half years of fictional books (~1,400 rows) for *Nordhavn Roastery
@@ -42,5 +63,5 @@ All company names, amounts and transactions are fictional.
 ## Built with
 
 React 19 · TypeScript · TanStack Table & Query · ApexCharts · Hono · the
-Anthropic API (tool use) · Vite. Ships as a single container that serves the app
-and the `/api` proxy from one origin.
+Anthropic API (tool use) · the MCP TypeScript SDK · Vite. Ships as a single
+container that serves the app, the `/api` proxy, and `/mcp` from one origin.
