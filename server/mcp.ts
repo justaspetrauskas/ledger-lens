@@ -2,9 +2,11 @@
 // No new query logic — every tool is a thin wrapper returning { result, entry_ids, source }
 // so a client can cite the exact rows behind a number, same shape as the in-app add_citation.
 
+import { randomUUID } from 'node:crypto'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js'
 import { z } from 'zod'
+import * as audit from './audit'
 import { CATEGORIES, MONTHS } from '../src/data/ledger'
 import {
   ASSUMED_OPENING_BALANCE,
@@ -120,6 +122,30 @@ function buildServer() {
         [],
         `Assumed opening balance ${fmtDKK(ASSUMED_OPENING_BALANCE)} (ASSUMED_OPENING_BALANCE) plus the net of every recorded ledger movement.`,
       ),
+  )
+
+  server.registerTool(
+    'propose_action',
+    {
+      description:
+        'Propose a high-impact action (sending a message, moving money) for explicit human sign-off. ' +
+        'Never performed — this only writes a pending line to the shared decision log for a human to ' +
+        'review in the web app. There is no approval UI on this surface; nothing happens automatically.',
+      inputSchema: {
+        title: z.string().describe('Short action title shown in the decision log'),
+        description: z.string().describe('One line explaining what will happen once approved'),
+        draft: z.string().describe('The draft a human would review — message body or payment instruction'),
+        risk: z.enum(['standard', 'elevated']).optional().describe('elevated = moves money'),
+      },
+    },
+    async ({ title, risk }) => {
+      audit.record({ id: `mcp-${randomUUID()}`, title, risk: risk ?? 'standard', decision: 'proposed', source: 'mcp' })
+      return {
+        content: [
+          { type: 'text', text: 'Proposed — requires human sign-off in the web app. Nothing happened.' },
+        ],
+      }
+    },
   )
 
   return server
