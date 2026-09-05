@@ -2,18 +2,14 @@
 
 import csvRaw from './ledgerCsv'
 
-export type Category =
-  | 'Revenue'
-  | 'COGS'
-  | 'Salaries'
-  | 'Marketing'
-  | 'Rent'
-  | 'Software'
-  | 'Travel'
-  | 'Utilities'
-  | 'Insurance'
-  | 'Fees'
-  | 'Maintenance'
+// Single source of truth: Category is derived from this list, so a hand-copied
+// subset elsewhere can no longer silently typecheck (the bug that shipped once).
+export const CATEGORIES = [
+  'Revenue', 'COGS', 'Salaries', 'Marketing', 'Rent', 'Software', 'Travel', 'Utilities',
+  'Insurance', 'Fees', 'Maintenance',
+] as const
+
+export type Category = (typeof CATEGORIES)[number]
 
 export interface LedgerEntry {
   id: string

@@ -1,18 +1,13 @@
 // Server-side agent: key, system prompt, tools, and the tool-use loop, reusing the same ledgerQuery engine as scripted mode.
 
 import Anthropic from '@anthropic-ai/sdk'
-import { MONTHS, type Category } from '../src/data/ledger'
+import { CATEGORIES, MONTHS, type Category } from '../src/data/ledger'
 import { categoryTotals, filterEntries, monthlyTotals, type LedgerFilter } from '../src/lib/ledgerQuery'
 import type { AssistantPayload, ChartSpec, CitationDef, ProposedAction } from '../src/lib/types'
 
 const MODEL = 'claude-sonnet-5'
 
 export const AGENT_MODEL = MODEL
-
-const CATEGORIES: Category[] = [
-  'Revenue', 'COGS', 'Salaries', 'Marketing', 'Rent', 'Software', 'Travel', 'Utilities',
-  'Insurance', 'Fees', 'Maintenance',
-]
 
 const SYSTEM = `You are Ledger Lens, an assistant that answers questions about the
 bookkeeping of Nordhavn Roastery ApS (a fictional Danish coffee roastery) strictly
