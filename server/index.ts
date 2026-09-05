@@ -8,6 +8,7 @@ import { streamSSE } from 'hono/streaming'
 import Anthropic from '@anthropic-ai/sdk'
 import { AGENT_MODEL, ask, type AgentTurn } from './agent'
 import * as budget from './budget'
+import { handleMcpRequest } from './mcp'
 
 const apiKey = process.env.ANTHROPIC_API_KEY
 const client = apiKey ? new Anthropic({ apiKey }) : null
@@ -85,6 +86,15 @@ app.post('/api/ask', async (c) => {
       })
     }
   })
+})
+
+// MCP endpoint — Phase 0 spike (one stub tool). Reuses the same demo codes as the web app,
+// no new auth system: `Authorization: Bearer <code>`.
+app.post('/mcp', async (c) => {
+  const auth = c.req.header('authorization') ?? ''
+  const code = auth.startsWith('Bearer ') ? auth.slice(7).trim() : ''
+  if (!code || !CODES.has(code)) return c.json({ error: 'unauthorized' }, 401)
+  return handleMcpRequest(c.req.raw)
 })
 
 // Static SPA (API routes registered first win); unknown paths fall through to index.html.
